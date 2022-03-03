@@ -1,0 +1,86 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    position: relative;
+    overflow-x: hidden;
+    line-height: 1.5;
+    background: #171717;
+    font-size: 14px;
+    text-align: center;
+    display: table;
+    height: 100vh;
+}
+
+body .logo-wrap {
+    position: absolute;
+    top: 50%;
+    left: 51%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+}
+
+.st0 {
+    stroke: #fff;
+    fill: #fff;
+    stroke-dasharray: 920;
+    opacity: 1;
+    -webkit-animation: 5s logo-animation cubic-bezier(0.67, 0.5, 0.175, 1);
+    animation: 5s logo-animation cubic-bezier(0.67, 0.5, 0.175, 1);
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+}
+
+.st2 {
+    font-size: 150px;
+    letter-spacing: 15px;
+}
+
+@-webkit-keyframes logo-animation {
+    0% {
+        opacity: 0;
+        fill: none;
+        stroke-dasharray: 920;
+    }
+    30% {
+        opacity: 1;
+    }
+    50% {
+        fill: rgba(255, 255, 255, 0);
+    }
+    100% {
+        opacity: 1;
+        stroke-dasharray: 200;
+        stroke: transparent;
+        fill: white;
+    }
+}
+
+@keyframes logo-animation {
+    0% {
+        opacity: 0;
+        fill: none;
+        stroke-dasharray: 920;
+    }
+    30% {
+        opacity: 1;
+    }
+    50% {
+        fill: rgba(255, 255, 255, 0);
+    }
+    100% {
+        opacity: 1;
+        stroke-dasharray: 200;
+        stroke: transparent;
+        fill: white;
+    }
+}
