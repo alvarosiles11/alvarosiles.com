@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.11.2/css/all.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
+    />
+
+    <!-- Plugin file -->
+    <link rel="stylesheet" href="./css/addons/datatables.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+
+    <style>
+      ul,
+      li {
+        list-style-type: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="demo"></div>
+    <!-- JQuery -->
+    <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"
+    ></script>
+    <!-- Bootstrap tooltips -->
+    <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"
+    ></script>
+    <!-- Bootstrap core JavaScript -->
+    <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.min.js"
+    ></script>
+    <!-- MDB core JavaScript -->
+    <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/js/mdb.min.js"
+    ></script>
+
+    <script>
+      // Treeview Initialization
+      $(document).ready(function () {
+        $(".treeview-animated").mdbTreeview();
+      });
+
+      const data = [
+        {
+          cargo: "desarrollador",
+          empresa: "servisofts",
+          time: "FEB 2022",
+          tareas: ["cableador", "carpintero", "pintor", "albañil", "tecnico"],
+        },
+        {
+          cargo: "desarrollador",
+          empresa: "servisis",
+          time: "FEB 2022",
+          tareas: [
+            "cableador888888888",
+            "carpintero",
+            "pintor",
+            "albañil",
+            "tecnico",
+          ],
+        },
+        {
+          cargo: "desarrollador",
+          empresa: "strasol",
+          time: "FEB 2022",
+          tareas: [
+            "cableador888888888",
+            "carpintero",
+            "pintor",
+            "albañil",
+            "tecnico",
+          ],
+        },
+        {
+          cargo: "desarrollador",
+          empresa: "el deber",
+          time: "FEB 2022",
+          tareas: [
+            "cableador888888888",
+            "carpintero",
+            "pintor",
+            "albañil",
+            "tecnico",
+          ],
+        },
+        {
+          cargo: "desarrollador",
+          empresa: "unitel",
+          time: "FEB 2022",
+          tareas: [
+            "cableador888888888",
+            "carpintero",
+            "pintor",
+            "albañil",
+            "tecnico",
+          ],
+        },
+        {
+          cargo: "desarrollador",
+          empresa: "el mundo",
+          time: "FEB 2022",
+          tareas: [
+            "cableador888888888",
+            "carpintero",
+            "pintor",
+            "albañil",
+            "tecnico",
+          ],
+        },
+      ];
+
+      //recorro el arreto de datos
+      data.map((obj) => {
+        let html = ``;
+        html += ` <div class="treeview-animated w-20 border mx-4 my-4">`;
+        html += ` <li class="treeview-animated-items">`;
+        html += ` <a class="closed">`;
+        html += ` <i class="fas fa-angle-right"></i>`;
+        html += `<span><i class="far fa-envelope-open ic-w mx-1"></i> Empresa ${obj.empresa}</span>`;
+        html += `  </a>`;
+        html += ` <ul class="nested">`;
+        html += ` <h3>${obj.cargo} - ${obj.empresa}</h3>`;
+        html += ` <h4>fecha ${obj.time}</h4>`;
+        html += ` <hr />`;
+        html += ` <p>Tareas realizadas</p>`;
+        for (let clave in obj.tareas) {
+          html += ` <li>${obj.tareas[clave]}</li>`;
+        }
+        html += `  </li>`;
+        html += `   </div>`;
+        document.getElementById("demo").innerHTML += html;
+      });
+    </script>
+  </body>
+</html>
