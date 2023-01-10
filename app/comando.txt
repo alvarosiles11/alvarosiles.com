@@ -1,0 +1,64 @@
+Abrir archivo actual en una nueva ventana/instancia
+Windows y Linux
+Ctrl + K O
+
+
+Abrir la última pestaña cerrada
+Para abrir la última pestaña que se haya cerrada (se puede utilizar múltiples veces).
+Windows y Linux
+Ctrl + Shift + T
+
+
+
+Guardar todo
+Para guardar todos los cambios no aplicados en el proyecto
+Windows y Linux
+Ctrl + K S
+
+
+Ver panel de problemas
+Para ver el panel de problemas, aquí podrás ver errores del editor, de alguna extensión o un linter que estés usando.
+Windows y Linux
+Ctrl + Shift + M
+
+
+Búsqueda en todos los archivos
+Para realizar una búsqueda en todos los archivos del proyecto.
+Windows y Linux
+Ctrl + Shift + F
+
+Buscar
+Para realizar una búsqueda en el documento actual.
+Windows y Linux
+Ctrl + F
+
+Pantalla completa
+Muestra el editor a pantalla completa.
+Windows y Linux
+F11
+
+
+Formatear documento
+Para formatear todo el código de un documento.
+Windows
+Shift + Alt + F
+
+Linux
+Ctrl + Shift + I
+
+
+
+Ir al inicio/final de un archivo
+Para navegar al inicio o final de un archivo.
+Windows y Linux
+Ctrl + Home / End
+
+Ocultar/Mostrar sidebar
+Para ver u ocultar el sidebar del editor.
+Windows y Linux
+Ctrl + B
+
+Nueva pestaña
+Para abrir una nueva pestaña en el editor y crear un nuevo archivo.
+Windows y Linux
+Ctrl + N
