@@ -1,0 +1,8 @@
+{
+  "PostgreSQL": {
+    "host": "jdbc:postgresql://192.168.3.4:5432/servicio.alvarosiles",
+    "status": "exito"
+  },
+  "- SLog": "RealTime Log from server Servisofts",
+  "- Fecha": "2023-01-09T23:57:36.000360"
+}
