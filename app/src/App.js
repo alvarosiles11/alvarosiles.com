@@ -2,7 +2,7 @@ import { Provider } from 'react-redux';
 import { applyMiddleware, createStore } from 'redux';
 import reduxThunk from 'redux-thunk';
 import { SComponentContainer, SNavigation } from 'servisofts-component';
-import SSocket, { setProps } from 'servisofts-socket';
+import { setProps } from 'servisofts-socket';
 import Assets from './Assets';
 import Pages from './Pages';
 import Reducer from './Reducer';
@@ -25,10 +25,10 @@ const App = (props) => {
                     pages: Pages,
                     title: "App Alvaro",
                 }} />
-                <SSocket identificarse={(props) => {
+                {/* <SSocket identificarse={(props) => {
                     var usuario = props.state.usuarioReducer.usuarioLog;
                     return { data: usuario ? usuario : {}, deviceKey: "as-asa-as", }
-                }} />
+                }} /> */}
                 {/* <NavBar /> barraaaaaaaa  */}
             </SComponentContainer>
         </Provider>

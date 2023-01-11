@@ -1,20 +1,23 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { SHr, SPage, SText, SView } from 'servisofts-component';
+import { SHr, SPage, SText, STheme, SView } from 'servisofts-component';
 const data_experiencia = [
     {
+        "key": "2001",
         "empresa": "SERVISOFTS SRL",
         "cargo": "IT – Sistemas / Desarrollador Full Stack 2022",
         "time": "Actualmente trabajando",
         "tareas": ["Creación de diseños apps web y móvil", "Desarrollador full stack para aplicaciones web y móvil,", "Testing de aplicaciones", "Instalación y configuración de sistemas operativos"],
     },
     {
+        "key": "2002",
         "empresa": "SYSLINK BOLIVIA",
         "cargo": "IT – Sistemas / Desarrollador Full Stack 2022",
         "time": "Actualmente trabajando",
         "tareas": ["Creación de diseños apps web y móvil", "Desarrollador full stack para aplicaciones web y móvil,", "Testing de aplicaciones", "Instalación y configuración de sistemas operativos"],
     },
     {
+        "key": "2003",
         "empresa": "EL MORDISCO",
         "cargo": "IT – Sistemas / Desarrollador Full Stack 2022",
         "time": " marzo 2021  ",
@@ -26,6 +29,7 @@ const data_experiencia = [
         ],
     },
     {
+        "key": "2004",
         "empresa": "MEGASYSTEM SRL",
         "cargo": "IT – Sistemas / Desarrollador Full Stack 2022",
         "time": " septiembre 2021  ",
@@ -36,6 +40,7 @@ const data_experiencia = [
         ],
     },
     {
+        "key": "2005",
         "empresa": "MALL FACILITO",
         "cargo": "IT – Sistemas / Desarrollador Full Stack 2022",
         "time": " septiembre 2021  ",
@@ -46,6 +51,7 @@ const data_experiencia = [
         ],
     },
     {
+        "key": "2006",
         "empresa": "CHINREPUESTOS AUTO PARTES",
         "cargo": "IT – Sistemas / Desarrollador Full Stack 2022",
         "time": " septiembre 2021  ",
@@ -56,6 +62,7 @@ const data_experiencia = [
         ],
     },
     {
+        "key": "2007",
         "empresa": "Transportadora",
         "cargo": "IT – Sistemas / Desarrollador Full Stack 2022",
         "time": " septiembre 2021  ",
@@ -66,6 +73,7 @@ const data_experiencia = [
         ],
     },
     {
+        "key": "2008",
         "empresa": "Universidad Nur",
         "cargo": "IT – Sistemas / Desarrollador Full Stack 2022",
         "time": " septiembre 2021  ",
@@ -79,57 +87,54 @@ const data_experiencia = [
 class root extends React.Component {
     constructor(props) {
         super(props);
-        this.state = {
-        };
+        this.state = { selectValue: 2001 };
+
+
+    }
+
+
+    item({ key, title }) {
+        // var color = STheme.color.color
+        return <SView flex center height onPress={() => { this.setState({ selectValue: key }) }} >
+            <SView style={{ borderRadius: 16, width: 55, height: 45 }} center>
+                <SText col={"xs-12"} font={"Arial"} fontSize={8} center color={STheme.color.color}  >{title}</SText>
+            </SView>
+        </SView>
     }
 
 
     getExperiencia(data) {
-
         return data_experiencia.map((obj) => {
-            // console.log(obj.empresa)
-            return <SText>{JSON.stringify(obj.empresa, "\n", "\t")}</SText>
-
-            // return <SView col={"xs-12"} row height  >
-
-            //     <SView col={"xs-3 md-3 lg-3"} height border={'yellow'} center  >
-            //         {JSON.stringify(obj.empresa)}
-
-            //     </SView>
-
-            //     <SView col={"xs-9 md-9 lg-9"} height border={'blue'} center  >
-
-            //     </SView>
-            // </SView>
-
+            return <SView col={"xs-12"} center border={'yellow'}   >
+                {this.item({ key: obj.key, title: obj.empresa })}
+            </SView>
         })
-
-
-
-
     }
+
+    modelo() {
+        return data_experiencia.map((obj) => {
+            if (obj.key == this.state.selectValue)
+                return <SText col={"xs-12"}>{JSON.stringify(obj, "\n", "\t")}</SText>
+            // return <SText font={"Arial"} fontSize={8} center style={{ color: "red", fontSize: 20 }} >{obj.empresa}</SText>
+        })
+    }
+
+
 
     render() {
         return (
-            <SPage title={''} hidden disableScroll height >
-                <SView col={"xs-12"} center height backgroundColor={'transparent'}>
-                    <SView col={"xs-12"} flex height backgroundColor={'transparent'}  >
-
-
-                        <SHr height={70} />
-                        <SView col={"xs-12"} height center    >
-                            <SText style={{ color: "red", fontSize: 20 }} >02.<SText style={{ color: "blue", fontSize: 20 }}>Experiencia</SText> </SText>
-                            <SHr height={20} />
-                            <SView col={"xs-11 md-8 lg-7 xl-5 "} height center  >
-                                {this.getExperiencia()}
-                            </SView>
+            <SPage title={''} hidden     >
+                <SView col={"xs-12"} center backgroundColor={'transparent'}>
+                    <SView col={"xs-11 md-8 lg-7 xl-5 "} backgroundColor={'transparent'} row>
+                        <SHr height={20} />
+                        <SText style={{ color: "red", fontSize: 20 }} >02.<SText style={{ color: "blue", fontSize: 20 }}>Experiencia</SText> </SText>
+                        <SHr height={20} />
+                        <SView col={"xs-3"} center border={'red'}   >
+                            {this.getExperiencia()}
                         </SView>
-
-
-
-                    </SView>
-                    <SView col={"xs-11"} flex height backgroundColor={'red'} center>
-                        <SText style={{ fontSize: 50 }} >proyecto</SText>
+                        <SView col={"xs-9"} center border={'red'}   >
+                            {this.modelo()}
+                        </SView>
                     </SView>
                 </SView>
             </SPage >
