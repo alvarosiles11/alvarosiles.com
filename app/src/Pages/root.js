@@ -86,18 +86,26 @@ class root extends React.Component {
 
     getExperiencia(data) {
 
+        return data_experiencia.map((obj) => {
+            // console.log(obj.empresa)
+            return <SText>{JSON.stringify(obj.empresa, "\n", "\t")}</SText>
+
+            // return <SView col={"xs-12"} row height  >
+
+            //     <SView col={"xs-3 md-3 lg-3"} height border={'yellow'} center  >
+            //         {JSON.stringify(obj.empresa)}
+
+            //     </SView>
+
+            //     <SView col={"xs-9 md-9 lg-9"} height border={'blue'} center  >
+
+            //     </SView>
+            // </SView>
+
+        })
 
 
 
-        return <SView col={"xs-12"} row height  >
-
-            <SView col={"xs-3 md-3 lg-3"} height border={'yellow'} center  >
-            </SView>
-
-            <SView col={"xs-9 md-9 lg-9"} height border={'blue'} center  >
-
-            </SView>
-        </SView>
 
     }
 
@@ -112,7 +120,7 @@ class root extends React.Component {
                         <SView col={"xs-12"} height center    >
                             <SText style={{ color: "red", fontSize: 20 }} >02.<SText style={{ color: "blue", fontSize: 20 }}>Experiencia</SText> </SText>
                             <SHr height={20} />
-                            <SView col={"xs-11 md-8 lg-7 xl-5 "} height center row>
+                            <SView col={"xs-11 md-8 lg-7 xl-5 "} height center  >
                                 {this.getExperiencia()}
                             </SView>
                         </SView>

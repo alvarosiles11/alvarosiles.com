@@ -1,4 +1,3 @@
-import React from 'react';
 import { Provider } from 'react-redux';
 import { applyMiddleware, createStore } from 'redux';
 import reduxThunk from 'redux-thunk';
@@ -16,8 +15,8 @@ const App = (props) => {
     return (
         <Provider store={store}>
             <SComponentContainer
-                debug
-                socket={SSocket}
+                // debug
+                // socket={SSocket}
                 assets={Assets}
                 // background={<BackgroundImage />}
                 theme={{ initialTheme: "dark", themes: SConfig.SThemeProps }}>
