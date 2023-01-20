@@ -2,30 +2,628 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <title>Alvaro</title>
-  <link rel="stylesheet" href="style.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Alvaro Siles | Frontend Developer</title>
+  <meta name="title" content="Alvaro Siles | Frontend Developer" />
+  <meta name="description" content="Con 4 años de experiencia desarrollando sistemas y soluciones tecnológicas." />
+  <!-- <base href="/" /> -->
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" type="image/x-icon" href="asset/svg/leon.svg" />
+  <link rel="manifest" href="manifest.webmanifest" />
+  <meta name="theme-color" content="#1976d2" />
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://alvarosiles.com/" />
+  <meta property="og:title" content="Alvaro Siles | Frontend Developer" />
+  <meta property="og:description"
+    content="Con 4 años de experiencia desarrollando sistemas y soluciones tecnológicas." />
+  <meta property="og:image" content="svg/leon.svg" />
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image" />
+  <meta property="twitter:url" content="https://alvarosiles.com/" />
+  <meta property="twitter:title" content="Alvaro Siles | Frontend Developer" />
+  <meta property="twitter:description"
+    content="Con 4 años de experiencia desarrollando sistemas y soluciones tecnológicas." />
+  <meta property="twitter:image" content="asset/svg/leon.svg" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://getbootstrap.com/docs/5.2/assets/css/docs.css" rel="stylesheet">
+  <link rel="stylesheet" href="asset/css/style.css">
+  <link rel="stylesheet" href="asset/css/nav.css">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+
+
+  <meta http-equiv="Expires" content="0">
+
+  <meta http-equiv="Last-Modified" content="0">
+
+  <meta http-equiv="Cache-Control" content="no-cache, mustrevalidate">
+
+  <meta http-equiv="Pragma" content="no-cache">
 </head>
 
 <body>
-  <!-- <nav>
-    <ul>
-      <li><a href="alvarosiles.com">Home</a></li>
-      <li>About me</li>
-      <li>Portfolio</li>
-      <li>Contact me</li>
-      <li class="slide"></li>
-    </ul>
-  </nav> -->
+  <nav class="navbar fixed-top   navbar-expand-md navbar-dark ">
+    <div class="container">
+      <a href="#home" class="navbar-brand active"><img src="asset/svg/leon.svg" alt="logo"></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#navbarOffcanvas"
+        aria-controls="navbarOffcanvas" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
 
-  <section>
-    <div class="title"><span>Alvaro Siles</span><span>Graphic Designer and<a target="_blanck" href="salfia.com">Web
-          Developer</a></span></div>
-  </section>
+      <div class="offcanvas offcanvas-end      " id="navbarOffcanvas" tabindex="-1"
+        aria-labelledby="offcanvasNavbarLabel">
+        <div class="offcanvas-header ">
+          <h5 class="offcanvas-title  " id="offcanvasNavbarLabel"></h5>
+          <button type="button" class="btn-close btn-close-white text-reset" data-bs-dismiss="offcanvas"
+            aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body ">
+          <div class="navbar-nav justify-content-end flex-grow-1">
 
-  <!-- partial -->
-  <script src="script.js"></script>
+
+
+            <a class="nav-item nav-link text-nowrap" aria-current="page" href="#about">
+              01. <span>Acerca de mi</span>
+            </a>
+            <a class="nav-item nav-link text-nowrap" href="#experience">
+              02. <span>Experiencia</span>
+            </a>
+            <a class="nav-item nav-link text-nowrap" href="#project">
+              03. <span>Proyecto</span>
+            </a>
+            <a class="nav-item nav-link text-nowrap" href="#contact">
+              04. <span>Contacto</span>
+            </a>
+
+            <div class="btnCV">
+              <a class="btn-cv" href="docs/CV_Alvaro_Siles_Estrada_Español.pdf"
+                download="CV_Alvaro_Siles_Estrada_Español"><span>Curriculum</span></a>
+            </div>
+
+
+
+
+            <!-- <li class="nav-item dropdown ">
+              <a class="nav-link dropdown-toggle text-nowrap" href="#" role="button" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                <span>Idioma</span>
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="?"><img src="https://www.worldometers.info/img/flags/sp-flag.gif"
+                      alt="Español"> Español</a></li>
+                <li>
+                  <hr class="dropdown-divider">
+                </li>
+                <li><a class="dropdown-item" href="?"><img src="https://www.worldometers.info/img/flags/us-flag.gif"
+                      alt="English"> Ingles</a></li>
+              </ul>
+            </li> -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container">
+
+
+
+    <section id="home" class="section-home clearfix">
+      <div class="contenido">
+        <h1>Hola! Mi nombre es</h1>
+        <h2>Alvaro Siles.</h2>
+        <h3>Frontend Developer</h3>
+
+        <p>
+          Tengo <span>4 años de experiencia </span> desarrollando sistemas,
+          interfaces, bots y soluciones tecnológicas. Me dedico a escribir y refactorizar código limpio,
+          reutilizable y escalable en <span>React</span> y en ocaciones en <span>Angular</span> aplicando buenas
+          practicas y estandares de desarrollo.
+        </p>
+        <a class="btn-saludo" href="mailto:alvarosiles1@gmail.com">Salúdame</a>
+
+        <!-- <a href="https://github.com/alvarosiles11" target="_blank" rel="noopener noreferrer">
+          <path fill-rule="evenodd" clip-rule="evenodd"
+            d="M6.07537 1.56652C3.95064 2.22919 2.22756 3.98778 1.58585 6.14873C0.810603 8.75857 0.80208 73.2107 1.57626 75.7836C2.25491 78.0387 3.96165 79.7561 6.17801 80.4142C8.78784 81.1894 73.24 81.1979 75.8129 80.4237C78.068 79.7451 79.7854 78.0383 80.4434 75.822C81.2265 73.1859 81.2265 8.78485 80.4434 6.14873C79.7854 3.93238 78.068 2.22564 75.8129 1.54699C73.3487 0.805479 8.45793 0.823591 6.07537 1.56652ZM22.4965 10.4C27.9843 12.693 29.479 20.15 25.2899 24.3387C23.0658 26.5633 19.8004 27.4227 16.7772 26.5796C14.607 25.9745 11.7042 23.159 11.083 21.057C9.377 15.2826 13.2014 9.97204 19.0969 9.92836C20.3238 9.91913 21.8537 10.1315 22.4965 10.4ZM64.181 31.0105C66.8346 32.2222 69.2796 34.69 70.5272 37.4153C72.2851 41.2546 72.5021 43.2365 72.6981 57.2321C72.8618 68.9226 72.8203 70.375 72.2989 71.1709C71.7176 72.0576 71.7083 72.0591 65.9823 72.0591C61.1444 72.0591 60.1457 71.9671 59.5981 71.4713C58.9941 70.9248 58.9486 70.0703 58.9486 59.284C58.9486 46.606 58.7629 45.1045 56.9538 43.1655C54.3309 40.3543 49.4567 40.6192 47.136 43.6989C45.246 46.2068 45.0986 47.3418 45.0986 59.3853C45.0986 68.8526 45.0176 70.5963 44.5457 71.2696C44.0148 72.0282 43.7754 72.0591 38.4478 72.0591C33.7864 72.0591 32.7991 71.9653 32.2533 71.4713C31.6389 70.9155 31.6041 69.8257 31.6091 51.3178C31.6123 40.5567 31.7319 31.5763 31.8754 31.3614C32.5178 30.3997 33.8695 30.154 38.5216 30.154C43.1802 30.154 43.3869 30.1856 44.2268 31.0258C44.8791 31.6778 45.0986 32.2776 45.0986 33.408V34.9184L46.6079 33.4613C49.5839 30.5876 52.0893 29.8003 57.8832 29.9171C61.5176 29.9906 62.2108 30.1106 64.181 31.0105ZM25.0499 31.0258L25.9217 31.8973V51.1889C25.9217 68.0745 25.8528 70.5789 25.3688 71.2696C24.8371 72.0292 24.6017 72.0591 19.1743 72.0591C13.7468 72.0591 13.5114 72.0292 12.9798 71.2696C12.4957 70.5789 12.4268 68.0745 12.4268 51.1889V31.8973L13.2987 31.0258C14.1414 30.1827 14.3349 30.154 19.1743 30.154C24.0136 30.154 24.2071 30.1827 25.0499 31.0258Z"
+            stroke="#64FFDA" stroke-width="2" />
+        </a> -->
+
+        <!-- <a href="https://github.com/alvarosiles11" target="_blank" rel="noopener noreferrer"><img
+            src="svg/redes/github.svg" alt="" style="height: 40px;"></a> -->
+
+        <!-- <div class="col-sm-10 row">
+          <ul class="redes ">
+            <a href="https://www.linkedin.com/in/alvarosiles11/" target="_blank" rel="noopener noreferrer">
+              <svg width="83" height="82" viewBox="0 0 83 82" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                  d="M6.07537 1.56652C3.95064 2.22919 2.22756 3.98778 1.58585 6.14873C0.810603 8.75857 0.80208 73.2107 1.57626 75.7836C2.25491 78.0387 3.96165 79.7561 6.17801 80.4142C8.78784 81.1894 73.24 81.1979 75.8129 80.4237C78.068 79.7451 79.7854 78.0383 80.4434 75.822C81.2265 73.1859 81.2265 8.78485 80.4434 6.14873C79.7854 3.93238 78.068 2.22564 75.8129 1.54699C73.3487 0.805479 8.45793 0.823591 6.07537 1.56652ZM22.4965 10.4C27.9843 12.693 29.479 20.15 25.2899 24.3387C23.0658 26.5633 19.8004 27.4227 16.7772 26.5796C14.607 25.9745 11.7042 23.159 11.083 21.057C9.377 15.2826 13.2014 9.97204 19.0969 9.92836C20.3238 9.91913 21.8537 10.1315 22.4965 10.4ZM64.181 31.0105C66.8346 32.2222 69.2796 34.69 70.5272 37.4153C72.2851 41.2546 72.5021 43.2365 72.6981 57.2321C72.8618 68.9226 72.8203 70.375 72.2989 71.1709C71.7176 72.0576 71.7083 72.0591 65.9823 72.0591C61.1444 72.0591 60.1457 71.9671 59.5981 71.4713C58.9941 70.9248 58.9486 70.0703 58.9486 59.284C58.9486 46.606 58.7629 45.1045 56.9538 43.1655C54.3309 40.3543 49.4567 40.6192 47.136 43.6989C45.246 46.2068 45.0986 47.3418 45.0986 59.3853C45.0986 68.8526 45.0176 70.5963 44.5457 71.2696C44.0148 72.0282 43.7754 72.0591 38.4478 72.0591C33.7864 72.0591 32.7991 71.9653 32.2533 71.4713C31.6389 70.9155 31.6041 69.8257 31.6091 51.3178C31.6123 40.5567 31.7319 31.5763 31.8754 31.3614C32.5178 30.3997 33.8695 30.154 38.5216 30.154C43.1802 30.154 43.3869 30.1856 44.2268 31.0258C44.8791 31.6778 45.0986 32.2776 45.0986 33.408V34.9184L46.6079 33.4613C49.5839 30.5876 52.0893 29.8003 57.8832 29.9171C61.5176 29.9906 62.2108 30.1106 64.181 31.0105ZM25.0499 31.0258L25.9217 31.8973V51.1889C25.9217 68.0745 25.8528 70.5789 25.3688 71.2696C24.8371 72.0292 24.6017 72.0591 19.1743 72.0591C13.7468 72.0591 13.5114 72.0292 12.9798 71.2696C12.4957 70.5789 12.4268 68.0745 12.4268 51.1889V31.8973L13.2987 31.0258C14.1414 30.1827 14.3349 30.154 19.1743 30.154C24.0136 30.154 24.2071 30.1827 25.0499 31.0258Z"
+                  stroke="#64FFDA" stroke-width="2" />
+              </svg>
+              <object data="svg/redes/linkedin 1.svg" type="image/svg+xml">
+              </object>
+              <img src="svg/redes/linkedin 1.svg" alt=""> </a>
+            <a href="https://github.com/alvarosiles11" target="_blank" rel="noopener noreferrer"><img
+                src="svg/redes/github.svg" alt=""></a>
+            <a href="https://www.facebook.com/alvarosiles11/" target="_blank" rel="noopener noreferrer"><img
+                src="svg/redes/facb.svg" alt="facb"></a>
+            <a href="https://twitter.com/alvarosiles11" target="_blank" rel="noopener noreferrer"><img
+                src="svg/redes/twt.svg" alt=""></a>
+            <a href="https://api.whatsapp.com/send?phone=59169050028&text=Hola,%20Alvaro%20estuve%20viendo%20su%20CV!!"
+              target="_blank" rel="noopener noreferrer"><img src="svg/redes/wasap.svg" alt=""></a>
+          </ul>
+        </div> -->
+      </div>
+    </section>
+
+    <section id="about" class="section-about clearfix">
+      <div class="contenido  ">
+        <div class="row  ">
+          <h1 class="linea">01.<span> Acerca de mi</span></h1>
+
+          <div class=" col-12 col-sm-6">
+            <p>En mis <span> 4 años como desarrollador</span> busco capacitarme
+              cada día. Al mismo tiempo he trabajado con <span> pruebas unitarias</span>,
+              realizando <span> integración continua</span> y también cubriendo roles de <span> frontend y
+                backend</span> developer. También he
+              liderado equipos teniendo empatía, ejerciendo motivación a
+              compañeros, trabajando con la <span>metodologia Scrum</span> y
+              llevando control de versiones en <span>GitHub/Gitlab </span>.
+            </p>
+            <p>
+              Mis capacidades también incluyen implementar mejoras en sistemas, optimizar sitios, estandarizar patrones
+              y sugerir y ejecutar ideas que añadan valor al proyecto en el que este trabajando.
+            </p>
+
+            <p> Algunas de las tecnologías en las que me he capacitado y trabajado incluyen (pero no se limitan) a:</p>
+
+
+
+            <div class=" row">
+              <div class="col-4 pasada">
+                <ul>
+                  <li class="active">FRONT-END</li>
+                  <li>Html5</li>
+                  <li>Css3</li>
+                  <li>Bootstrap</li>
+                  <li>Javascript</li>
+                  <li>Jquery</li>
+                  <li>Typescript</li>
+                  <li>React</li>
+                  <li>Angular</li>
+                </ul>
+              </div>
+              <div class="col-4">
+                <ul>
+                  <li class="active">BACK-END</li>
+                  <li>Java</li>
+                  <li>Maven</li>
+                  <li>ASP.NET</li>
+                  <li>Php</li>
+                  <li>Laravel</li>
+                  <li>Junit</li>
+                  <li>JSON</li>
+                  <li>Postman</li>
+                </ul>
+              </div>
+              <div class="col-4">
+                <ul>
+                  <li class="active">SERVER</li>
+                  <li>Ubuntu Linux</li>
+                  <li>Nginx</li>
+                  <li>Docker</li>
+                  <li>PostgreSQL</li>
+                  <li>Mongodb</li>
+                  <li>Google Cloud</li>
+                  <li>Digitalocean</li>
+                  <li>Azure</li>
+                </ul>
+              </div>
+
+            </div>
+
+
+
+
+          </div>
+          <div class="col-12    col-md-6          ">
+            <div class="content-img ">
+
+              <img src="https://avatars.githubusercontent.com/u/61075383?v=4" alt="sdsd" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+
+
+    <section id="experience" class="section-experience clearfix">
+      <div class="contenido">
+
+        <div class="d-flex justify-content-center">
+
+
+          <div class="col-11 col-md-12 col-lg-9 col-xl-7 row">
+
+            <h1 class=" linea">02. <span class="animated">Experiencia</span></h1>
+
+            <!-- <ul class="nav flex-column md-tabs  nav-pills  " role="tablist" aria-orientation="vertical" -->
+
+            <div id="exp_menu" class="col-12  col-md-3 col-lg-3 col-xl-3  menu">
+            </div>
+
+            <div id="exp_detalle" class="col-12  col-md-9 col-lg-9  col-xl-9 detalle">
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="project" class="section-projects clearfix">
+      <div class="contenido">
+
+        <div class="row">
+          <h1 class="linea">03. <span>Proyectos</span></h1>
+
+          <!-- <div class="proyecto-foto col-sm-7">
+            <img src="https://i.ytimg.com/vi/KVMn06NGFdg/maxresdefault.jpg" alt="dss">
+          </div>
+          <div class="proyecto-descripcion col-sm-5">
+            <div class="proyecto-float">
+              <h4>Featured Project</h4>
+              <h5>Agrourbana</h5>
+              <div class="mensaje">
+                <p>
+                  Monitoring application made from scratch with auth module, configurable graphics,
+                  <span>configurable alarms, and user management. </span> It also has feedback form logic for
+                  parameter
+                  configuration.
+                </p>
+              </div>
+              <ul>
+                <li>Laravel</li>
+                <li>Angular</li>
+                <li>SASS</li>
+                <li>Angular</li>
+                <li>Material </li>
+                <li>RxJS </li>
+              </ul>
+            </div>
+          </div> -->
+
+          <div class="izquierda">
+            <div class="proyecto-foto col-lg-7 col-md-4 col-sm-12">
+              <img src="https://i.ytimg.com/vi/KVMn06NGFdg/maxresdefault.jpg" alt="dss">
+            </div>
+            <div class="proyecto-descripcion col-lg-5 col-md-8 col-sm-12">
+              <div class="proyecto-float">
+                <h4>Proyecto destacado</h4>
+                <!-- <h4>Featured Project</h4> -->
+                <h5>Agrourbana</h5>
+                <div class="mensaje">
+                  <p>
+                    Monitoring application made from scratch with auth module, configurable graphics,
+                    <span>configurable alarms, and user management. </span> It also has feedback form logic for
+                    parameter
+                    configuration.
+                  </p>
+                </div>
+                <ul>
+                  <li>Laravel</li>
+                  <li>Angular</li>
+                  <li>SASS</li>
+                  <li>Angular</li>
+                  <li>Material </li>
+                  <li>RxJS </li>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="derecha">
+            <div class="proyecto-foto col-lg-7 col-md-4 col-sm-12">
+              <img src="https://i.ytimg.com/vi/KVMn06NGFdg/maxresdefault.jpg" alt="dss">
+            </div>
+            <div class="proyecto-descripcion col-lg-5 col-md-8 col-sm-12">
+              <div class="proyecto-float">
+                <h4>Proyecto destacado</h4>
+                <!-- <h4>Featured Project</h4> -->
+                <h5>Agrourbana</h5>
+                <div class="mensaje">
+                  <p>
+                    Monitoring application made from scratch with auth module, configurable graphics,
+                    <span>configurable alarms, and user management. </span> It also has feedback form logic for
+                    parameter
+                    configuration.
+                  </p>
+                </div>
+                <ul>
+                  <li>Laravel</li>
+                  <li>Angular</li>
+                  <li>SASS</li>
+                  <li>Angular</li>
+                  <li>Material </li>
+                  <li>RxJS </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+
+
+
+
+          <!-- <br>
+
+          <div class="col-sm-6">
+            <img src="https://i.ytimg.com/vi/KVMn06NGFdg/maxresdefault.jpg" alt="">
+          </div>
+          <div class="col-sm-6">
+            <h4>Featured Project</h4>
+            <h5>Agrourbana</h5>
+            <div class="mensaje">
+              <p>
+                Monitoring application made from scratch with auth module, configurable graphics,
+                <span>configurable alarms, and user management. </span> It also has feedback form logic for
+                parameter
+                configuration.
+              </p>
+            </div>
+          </div> -->
+
+        </div>
+      </div>
+    </section>
+
+
+    <section id="contact" class="section-contact clearfix">
+      <div class="contenido">
+        <h1>05. Y... ¿Ahora?</h1>
+        <h2>¡Saludame!</h2>
+        <p>
+          Estaré encantado de recibir tu contacto si quieres conversar acerca
+          de nuevas oportunidades. Escríbeme, y te responderé tan pronto como
+          vea tu mensaje.
+        </p>
+      </div>
+    </section>
+
+
+
+
+
+
+  </div>
+  <div class="uno"></div>
+  <div class="dos"></div>
+  <footer>
+    <h5>Built with React by Alvaro Siles</h5>
+  </footer>
+
+
+  <!-- javascript -->
+  <!-- <script src="js/bootstrap.min.js"></script> -->
+
+  <script src="asset/js/scroll.js"></script>
+  <script src="asset/js/jquery-3.4.1.min.js"></script>
+  <!-- Bootstrap tooltips -->
+  <script type="text/javascript" src="asset/js/bootstrap.js"></script>
+  <!-- <script type="text/javascript" src="js/popper.min.js"></script> -->
+  <!-- Bootstrap core JavaScript -->
+  <!-- MDB core JavaScript -->
+  <!-- <script type="text/javascript" src="js/mdb.min.js"></script> -->
+
+  <script>
+    // SideNav Initialization
+    $(".button-collapse").sideNav();
+
+    var container = document.querySelector('.custom-scrollbar');
+    var ps = new PerfectScrollbar(container, {
+      wheelSpeed: 2,
+      wheelPropagation: true,
+      minScrollbarLength: 20
+    });
+
+  </script>
+
+  <script>
+    // Treeview Initialization
+    $(document).ready(function () {
+      $(".treeview-animated").mdbTreeview();
+    });
+
+    const data =
+      [
+        {
+          "empresa": "SERVISOFTS SRL         ",
+          "cargo": "Fullstack developer",
+          // "cargo": "IT – Sistemas / Desarrollador Full Stack 2022",
+          "time": "Junio 2021 –  Actualmente trabajando",
+          "tareas": [
+            "Creación de diseño UX/UI Web y Mobile (FIGMA).",
+            "Elaborar un prototipo para confirmar los requisitos acordados.",
+            "Desarrollo móvil en plataforma Híbrida como React Native.",
+            "Desarrollo Full-stack Java, Node, React.",
+            "Testing de aplicaciones web y móvil.",
+            "Administración y respaldo de servidores físicos de la empresa.",
+            "Instalación y configuración de SO Linux Ubuntu.",
+            "Instalación y configuración de redes LAN-WAN.",
+            "Soporte y mantenimiento a la infraestructura de la empresa.",
+            "Reportes de toda índole."
+          ]
+        },
+        {
+          "empresa": "SYSLINK BOLIVIA",
+          "cargo": "Fullstack developer",
+          "time": " Octubre 2021 – Mayo 2022",
+          "tareas": [
+            "Creación de diseño UX/UI Web y Mobile (FIGMA).",
+            "Desarrollo móvil en plataforma Híbrida como React Native.",
+            "Desarrollo Full-stack Java, Node, React.",
+            "Testing de aplicaciones web y móvil.",
+            "Administración y respaldo de servidores de Google Cloud.",
+            "Diseño e implementación de un sistema de cámaras.",
+            "Instalación y configuración de SO Windows y Linux Ubuntu.",
+            "Instalación y configuración de redes LAN-WAN.",
+            "Creaciones de manuales de usuario.",
+            "Soporte y mantenimiento a la infraestructura de la empresa.",
+            "Reportes de toda índole."
+          ]
+        },
+        {
+          "empresa": "EL MORDISCO",
+          "cargo": "IT – Sistemas / Encargado",
+          "time": "Mayo 2021 – Agosto 2021",
+          "tareas": [
+            "Manejo del software que tiene el restaurante.",
+            "Manejo del software de restaurante PEDIDOS YA.",
+            "Manejo del software de restaurante PEDIDOS ONLINE.",
+            "Proceso de cobro y facturación del servicio.",
+            "Manejo de facturación electrónica y físico.",
+            "Ejecutar formas de pagos tarjeta, efectivo Y transferencias.",
+            "Proceso y manejo de LINKSER (cobro, anulación, reporte).",
+            "Manejo de efectivo.",
+            "Apertura y cierre de caja.",
+            "Control de caja, contabilidad básica y arqueo.",
+            "Imprimir reportes de caja y ventas.",
+            "Reportes de toda índole."
+          ]
+        },
+        {
+          "empresa": "MALL FACILITO",
+          "cargo": "Desarrollador Front End",
+          "time": "Junio 2021 – Septiembre 2021",
+          "tareas": [
+            "Creación de diseño Web (FIGMA).",
+            "Desarrollado de sitio web (html, css, javascript y jquery).",
+            "Venta de software.",
+            "Asistencia telefónica a los clientes.",
+            "Elaboración de informes."
+          ]
+        },
+        {
+          "empresa": "CHINREPUESTOS",
+          "cargo": "Desarrollador Front End",
+          "time": "Marzo 2020 – mayo 2020",
+          "tareas": [
+            "Desarrollado de sitio web (html, css, javascript y jquery).",
+            "Configuración y mantenimiento de equipos de computación.",
+            "Comunicaciones redes y sistemas internos.",
+            "Soporte de impresoras térmicas Epson.",
+            "Soporte de impresora de etiquetas Zebra.",
+            "Elaboración de informes."
+          ]
+        },
+        {
+          "empresa": "MEGASYSTEM SRL",
+          "cargo": "Encargado de proyecto",
+          "time": "Febrero 2017 – Febrero 2020",
+          "tareas": [
+            "Creaciones de manuales de usuario y videos tutoriales.",
+            // "Implementación y mantenimiento de servidores para los clientes.",
+            "Testing de aplicaciones web, móvil y escritorio.",
+            "Mantenimiento y respaldo de servidores físicos.",
+            "Instalación y mantenimiento de SO.",
+            "Instalación y configuración de redes LAN-WAN.",
+            "Capacitación y seguimiento de los interesados.",
+            // "Implementación de aplicaciones/software (web, móvil, escritorio) de Gestión de distribución, abarrotes, restobar salón-spa, minimarket, ferretería, logísticas, fast food, sistemas contabilidad, autorrepuesto, sistema de facturación SFV.",
+            "Soporte de impresoras multifuncional, térmicas Epson",
+            "Soporte de impresora móviles y de etiquetas Zebra.",
+            // "Soporte de impresoras móviles de Zebra.",
+            "Soporte de control de asistencias.",
+            "Instalación de cajas registradora para punto de ventas.",
+            "Instalación de lector de código barras, lector QR.",
+            // "Gestor y planificador de proyectos de software (a cargo de 3 personas).",
+            // "Gestión de clientes.",
+            "Diseño e implementación de un sistema de cámaras.",
+            "Administración y respaldo de Servidores Cloud.",
+            "Desarrollador de aplicación web (Angular).",
+            "Soporte y mantenimiento a la infraestructura de la empresa.",
+            "Elaboración de informes."
+          ]
+        },
+        {
+          "empresa": "TRANSPORTADORA ROART",
+          "cargo": "Asistente de logística y operaciones de contenedores",
+          "time": "Enero 2017 – Julio 2017",
+          "tareas": [
+            "Asistente de logística y operaciones de contenedores.",
+            "Administrar los sistemas que tiene la transportadora.",
+            "Asistencia telefónica a los clientes.",
+            "Entregar y recoger documentación de empresa.",
+            "Manejo de volúmenes de dinero.",
+            "Atención y coordinación de solicitudes de piso.",
+            "Reportes de toda índole."
+          ]
+        },
+        {
+          "empresa": "UNIVERSIDAD NUR",
+          "cargo": "IT – Sistemas / Supervisor",
+          "time": "Febrero 2012 – Diciembre 2014",
+          "tareas": [
+            "Responsable de mantener, organizar, solucionar y supervisar los laboratorios de centros de cómputo de la Universidad Nur.",
+            "Atención y coordinación de reserva de aulas.",
+            "Solicitud de instalación de software en aulas.",
+            "Solicitud de configuración de aulas para exámenes.",
+            "Soporte técnico a salas y aulas de docencias.",
+            "Instalación y mantenimiento de sistemas operativos.",
+            "Instalación y configuración de redes LAN-WAN.",
+            "Administración de servidor proxy.",
+            "Reportes de toda índole."
+          ]
+        }
+      ];
+
+
+    function activar(value) {
+      if (value == "0") {
+        return "active";
+      } else {
+        return " ";
+      }
+    }
+    function activar1(value) {
+      if (value == "0") {
+        return "in show  active";
+      } else {
+        return " ";
+      }
+    }
+
+    let html0 = ``;
+    html0 += ` <ul class="nav flex-column nav-pills  " role="tablist" aria-orientation="vertical">`;
+    html0 += `<li class="nav-item waves-effect waves-light">`;
+    data.map((obj, keys) => {
+      html0 += `<a class="nav-link  ` + activar(keys) + `   "   data-toggle="tab" href="#panel` + keys + `" role="tab"><i class="fas fa-user"></i>${obj.empresa}</a>`;
+    });
+    html0 += `</li>`;
+    html0 += `</ul>`;
+    document.getElementById("exp_menu").innerHTML += html0;
+
+
+
+
+    let html = ``;
+    html += `<div class="tab-content col-12">`;
+    data.map((obj, keys) => {
+      html += `<div     class="tab-pane fade   ` + activar1(keys) + `   " id="panel` + keys + `" role="tabpanel">`;
+      html += `<h4 styl class="cargo "> ${obj.cargo} | <span>  ${obj.empresa} </span> </h4>`;
+      html += `<h5 class="tiempo"> ${obj.time} </h5>`;
+      for (let clave in obj.tareas) {
+        html += ` <li>${obj.tareas[clave]}</li>`;
+      }
+      html += `</div>`;
+    });
+    html += `</div>`;
+    document.getElementById("exp_detalle").innerHTML += html;
+  </script>
 
 </body>
 
