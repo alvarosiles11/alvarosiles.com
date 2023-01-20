@@ -1,2 +1,0 @@
- #!/bin/bash
- scp -r build 10:/home/servisofts/servicios/tapeke/entornos/tapeke/
