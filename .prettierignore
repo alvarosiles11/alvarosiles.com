@@ -1,0 +1,28 @@
+ # Ignore artifacts:
+build
+coverage
+
+# Ignore all extension files:
+*.html
+*.js
+*.java
+*.yaml
+*.md
+*.jpg
+*.png
+*.xml
+
+
+# Ignore all folder con extensions
+**/.git
+**/.svn
+**/.hg
+**/.xml
+
+# Ignore all folder:
+**/node_modules
+**/target
+# **/test
+# **/bin
+**/lib
+.vscode

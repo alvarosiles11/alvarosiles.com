@@ -1,0 +1,29 @@
+# linter señala reglas o mejoras de tu codigo
+# pretty formate tu codigo
+
+# linter .editorconfig helps developers define and maintain
+# consistent coding styles between different editors and IDEs
+# install editorconfig extension in visual code
+
+root = true # no va heredar de nadie
+
+[*]
+trim_trailing_whitespace = true # regla no espacios
+indent_style             = tab # regla tabs
+charset                  = utf-8 # UTF-8 caracter ASCII para usar puntos de código de 8 bits
+end_of_line              = lf # CRLF y LF son caracteres de control ASCII y Unicode
+indent_size              = 2 # salto de linea
+insert_final_newline     = false # agrega una linea al final
+# final_newlines = 0 # agrega una linea al final
+
+
+[*.java] # reglas para java
+trim_trailing_whitespace = true # regla no espacios
+indent_style             = tab # regla tabs
+charset                  = utf-8 # UTF-8 caracter ASCII para usar puntos de código de 8 bits
+end_of_line              = lf # CRLF y LF son caracteres de control ASCII y Unicode
+indent_size              = 2 # salto de linea
+insert_final_newline     = false # agrega una linea al final
+brake_line_length        = 120 # longitud de linea
+bracketSpacing 				 = false # espacio entre llaves
+final_newlines = 0 # agrega una linea al final
