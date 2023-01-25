@@ -360,18 +360,14 @@ p {
     width: 80%;
   }
 
-   .navbar-nav .nav-link {
+  .navbar-nav .nav-link {
     padding-right: 4px;
     padding-left: 0px;
   }
 
-  .navbar-brand{
-
-    margin-right: 0px; 
-   }
-
- 
-
+  .navbar-brand {
+    margin-right: 0px;
+  }
 }
 
 /* mobil */
