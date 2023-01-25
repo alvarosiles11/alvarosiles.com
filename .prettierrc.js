@@ -47,8 +47,9 @@ module.exports = {
   // requirePragma : false,
 
   // Sensibilidad de espacios en blanco HTML
-  htmlWhitespaceSensitivity: "css",
+  // htmlWhitespaceSensitivity: "css",
   // htmlWhitespaceSensitivity: 'strict',
+  // htmlWhitespaceSensitivity: 'ignore',
 
   // Fin de la línea
   // endOfLine: 'auto',
