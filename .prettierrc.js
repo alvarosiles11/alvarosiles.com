@@ -14,15 +14,13 @@ module.exports = {
   semi: true,
 
   /*Utilice comillas simples en lugar de comillas dobles.*/
-  // singleQuote: true,
+  singleQuote: true,
 
   /*Use comillas simples en lugar de comillas dobles en JSX.*/
-  // jsxSingleQuote: true,
-
-
+  jsxSingleQuote: true,
 
   /*Sin comas finales*/
-  trailingComma: "none",
+  trailingComma: 'none',
 
   /*Quitar espacios entre corchetes en literales de objetos. {foo: bar} */
   bracketSpacing: false,
@@ -34,7 +32,7 @@ module.exports = {
   jsxBracketSameLine: true,
 
   // Incluya paréntesis alrededor de un único parámetro de función de flecha (x) => x
-  arrowParens: "always",
+  arrowParens: 'always',
 
   // Formatee solo un segmento de un archivo.
   rangeStart: 0,
@@ -62,6 +60,6 @@ module.exports = {
   // importOrderSortSpecifiers: true,
   // documentacion https://prettier.io/docs/en/options.html
 
-  embeddedLanguageFormatting: "auto",
-  proseWrap: "preserve"
+  embeddedLanguageFormatting: 'auto',
+  proseWrap: 'preserve'
 };

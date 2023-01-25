@@ -1,14 +1,16 @@
  # Ignore artifacts:
 build
 coverage
-
+asset
+# old.html
+# json.html
 
 # Ignore all extension files:
 # *.html
-*.js
+# *.js
+# *.md
 *.java
 *.yaml
-*.md
 *.jpg
 *.png
 *.xml
