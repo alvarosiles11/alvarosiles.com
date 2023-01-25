@@ -19,6 +19,8 @@ module.exports = {
   /*Use comillas simples en lugar de comillas dobles en JSX.*/
   // jsxSingleQuote: true,
 
+
+
   /*Sin comas finales*/
   trailingComma: "none",
 
