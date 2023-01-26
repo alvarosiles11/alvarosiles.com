@@ -5,7 +5,7 @@ module.exports = {
 	printWidth: 1000,
 
 	/*Sangre las líneas con tabulaciones en lugar de espacios.*/
-	useTabs: true,
+	// useTabs: true,
 
 	/*Imprima punto y coma al final de las declaraciones.*/
 	semi: false,
@@ -20,43 +20,17 @@ module.exports = {
 	trailingComma: 'all',
 
 	/*Quitar espacios entre corchetes en literales de objetos. {foo: bar} */
-	// bracketSpacing: false,
+	bracketSpacing: false,
 
 	// Quitar espacios de elementos(HTML, JSX, Vue, Angular) dentro de <button>
-	// bracketSameLine: true,
+	bracketSameLine: true,
 
 	// Quitar espacios de elementos(HTML, JSX, Vue, Angular) dentro de <button>
-	// jsxBracketSameLine: true,
+	jsxBracketSameLine: true,
 
 	// Incluya paréntesis alrededor de un único parámetro de función de flecha (x) => x
-	// arrowParens: 'always',
-
-	// Formatee solo un segmento de un archivo.
-	// rangeStart: 0,
-	// rangeEnd: Infinity,
-
-	// /** @format */
-	// insertPragma: false
-
-	// Se formateará un archivo con lo siguiente como su primer comentario cuando se proporcione --require - pragma
-	// requirePragma : false,
+	arrowParens: 'always',
 
 	// Sensibilidad de espacios en blanco HTML
 	// htmlWhitespaceSensitivity: "css",
-	// htmlWhitespaceSensitivity: 'strict',
-	// htmlWhitespaceSensitivity: 'ignore',
-
-	// Fin de la línea
-	// endOfLine: 'auto',
-	// importOrder: ['ARRAY OF IMPORT NAMES'],
-	// importOrderSeparation: true,
-	// importOrderSortSpecifiers: true,
-
-	// importOrder: ['^@core/(.*)$', '^@server/(.*)$', '^@ui/(.*)$', '^[./]'],
-	// importOrderSeparation: true,
-	// importOrderSortSpecifiers: true,
-	// documentacion https://prettier.io/docs/en/options.html
-
-	// embeddedLanguageFormatting: 'auto',
-	// proseWrap: 'preserve'
 }
