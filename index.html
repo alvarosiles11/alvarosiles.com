@@ -186,7 +186,6 @@
 								</div>
 							</div>
 						</div>
-
 						<div class="derecha">
 							<div class="proyecto-foto col-lg-7 col-md-4 col-sm-12">
 								<img src="https://i.ytimg.com/vi/KVMn06NGFdg/maxresdefault.jpg" alt="dss" />
@@ -231,7 +230,6 @@
 								</div>
 							</div>
 						</div>
-
 						<div class="derecha">
 							<div class="proyecto-foto col-lg-7 col-md-4 col-sm-12">
 								<img src="https://i.ytimg.com/vi/KVMn06NGFdg/maxresdefault.jpg" alt="dss" />
@@ -275,6 +273,14 @@
 								</div>
 							</div>
 						</div>
+					</div>
+				</div>
+			</section>
+
+			<section id="project" class="section-projects">
+				<div class="contenido">
+					<div id="test" class="row">
+						<h1 class="linea">03.<span>test Proyectos</span></h1>
 					</div>
 				</div>
 			</section>
@@ -474,6 +480,53 @@
 			})
 			html += `</div>`
 			document.getElementById('exp_detalle').innerHTML += html
+
+			let htmlProject = ``
+
+			let estado = 0
+
+			proyecto.map((obj, keys) => {
+				if (estado === 0) {
+					htmlProject += `<div class="izquierda">`
+					htmlProject += `<div class="proyecto-foto col-lg-7 col-md-4 col-sm-12">`
+					htmlProject += `<img src="https://i.ytimg.com/vi/KVMn06NGFdg/maxresdefault.jpg" alt="dss" />`
+					htmlProject += `</div>`
+					htmlProject += `<div class="proyecto-descripcion col-lg-5 col-md-8 col-sm-12">`
+					htmlProject += `<div class="proyecto-float">`
+					htmlProject += `<h4>Proyecto destacado</h4>`
+					htmlProject += `<h5>` + obj.nombre + `</h5>`
+					htmlProject += ` <div class="mensaje"> <p>` + obj.decripcion + `</p></div>`
+					htmlProject += `<ul>`
+					for (let clave in obj.tecnologia) {
+						htmlProject += `<li>${obj.tecnologia[clave]}</li>`
+					}
+					htmlProject += `<ul>`
+					htmlProject += `</div>`
+					htmlProject += `</div>`
+					htmlProject += `</div>`
+					estado = 1
+				} else {
+					htmlProject += `<div class="derecha">`
+					htmlProject += `<div class="proyecto-foto col-lg-7 col-md-4 col-sm-12">`
+					htmlProject += `<img src="https://i.ytimg.com/vi/KVMn06NGFdg/maxresdefault.jpg" alt="dss" />`
+					htmlProject += `</div>`
+					htmlProject += `<div class="proyecto-descripcion col-lg-5 col-md-8 col-sm-12">`
+					htmlProject += `<div class="proyecto-float">`
+					htmlProject += `<h4>Proyecto destacado</h4>`
+					htmlProject += `<h5>` + obj.nombre + `</h5>`
+					htmlProject += ` <div class="mensaje"> <p>` + obj.decripcion + `</p></div>`
+					htmlProject += `<ul>`
+					for (let clave in obj.tecnologia) {
+						htmlProject += `<li>${obj.tecnologia[clave]}</li>`
+					}
+					htmlProject += `<ul>`
+					htmlProject += `</div>`
+					htmlProject += `</div>`
+					htmlProject += `</div>`
+					estado = 0
+				}
+			})
+			document.getElementById('test').innerHTML += htmlProject
 		</script>
 	</body>
 </html>
