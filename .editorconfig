@@ -7,8 +7,8 @@
 
 root = true # no va heredar de nadie
 
-# [*]
-# trim_trailing_whitespace = true # regla no espacios
+[*]
+trim_trailing_whitespace = true # regla no espacios
 # indent_style             = tab # regla tabs
 # charset                  = utf-8 # UTF-8 caracter ASCII para usar puntos de código de 8 bits
 # end_of_line              = lf # CRLF y LF son caracteres de control ASCII y Unicode
