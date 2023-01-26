@@ -29,7 +29,7 @@ module.exports = {
 	// jsxBracketSameLine: true,
 
 	// Incluya paréntesis alrededor de un único parámetro de función de flecha (x) => x
-	arrowParens: 'always',
+	// arrowParens: 'always',
 
 	// Formatee solo un segmento de un archivo.
 	// rangeStart: 0,
