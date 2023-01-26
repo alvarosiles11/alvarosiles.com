@@ -6,7 +6,7 @@ a {
 body {
 	margin: 0;
 	padding: 0;
-	font-family: "Open Sans", sans-serif;
+	font-family: 'Open Sans', sans-serif;
 }
 ::selection {
 	background-color: #f7ca18;
@@ -52,7 +52,7 @@ nav li.active {
 	color: #efefef;
 }
 nav li.active::after {
-	content: "";
+	content: '';
 	position: absolute;
 	bottom: -2px;
 	left: 0;
@@ -156,7 +156,7 @@ section .title span a {
 	color: #f7ca18;
 }
 section .title span a::after {
-	content: "";
+	content: '';
 	height: 2px;
 	background-color: #189af7;
 	position: absolute;
