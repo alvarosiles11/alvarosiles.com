@@ -144,7 +144,7 @@
 				</div>
 			</section>
 
-			<section id="certification" class="section-experience clearfix">
+			<!-- <section id="certification" class="section-experience clearfix">
 				<div class="contenido">
 					<div class="d-flex justify-content-center">
 						<div class="col-11 col-md-12 col-lg-9 col-xl-7 row">
@@ -155,7 +155,7 @@
 						<div class="proyecto-foto col-lg-7 col-md-4 col-sm-12">
 							<img src="asset/img/proyecto/calistenia/home.PNG" alt="dss" />
 						</div>
-						<!-- <div class="col-11 col-md-12 row">
+						<div class="col-11 col-md-12 row">
 							<ul class="nav flex-column md-tabs nav-pills" role="tablist" aria-orientation="vertical">
 								<div id="exp_menu" class="col-12 col-md-3 col-lg-3 col-xl-3 menu">
 									<h1 class="linea">Desarrollo de Apps Avanzadas en Especialización Android.</h1>
@@ -163,18 +163,18 @@
 									<h1 class="linea">Credential ID: 8AUNJFVX47DU <a href="?">[Certificate]</a></h1>
 								</div>
 							</ul>
-						</div> -->
+						</div>
 					</div>
 				</div>
-			</section>
+			</section> -->
 
-			<!-- <section id="project" class="section-projects">
+			<section id="project" class="section-projects">
 				<div class="contenido">
 					<div id="test" class="row">
 						<h1 class="linea">03.<span>Proyectos</span></h1>
 					</div>
 				</div>
-			</section> -->
+			</section>
 
 			<!-- <section id="contact" class="section-contact clearfix">
 				<div class="contenido">
@@ -216,7 +216,7 @@
 				$('.treeview-animated').mdbTreeview()
 			})
 
-			const data = [
+			const data_experiencia = [
 				{
 					empresa: 'SERVISOFTS SRL',
 					cargo: 'Fullstack developer',
@@ -270,6 +270,7 @@
 			const data_proyecto_destacado = [
 				{
 					nombre: 'DARMOTOS',
+					image: 'asset/img/proyecto/darmotos/home.PNG',
 					decripcion: 'El sistema integrado DarMotos cuenta con innumerables opciones para facilitar la gestión de la empresa. Realizada desde cero con módulo de auth, sucursales, clientes, bancos, inventario, compras, ventas, cobranza y cajas.',
 					tecnologia: ['HTML5', 'CSS 3', 'React', 'Java', 'Postgres'],
 					github: 'https://github.com/servisofts/darmotos',
@@ -277,6 +278,7 @@
 				},
 				{
 					nombre: 'CASAGRANDE',
+					image: 'asset/img/proyecto/casagrande/home.PNG',
 					decripcion: 'Aplicación de gestión en ventas de tickets y reservas de mesas. Cuenta con opciones de temas, autentificación por gmail, facebook, creación de usuario. Registro de compras de tickets para eventos, reservas de mesas, pagos online (tarjeta de crédito/ debito) y facturación.',
 					tecnologia: ['HTML5', 'CSS 3', 'React', 'Java', 'Postgres'],
 					github: 'https://github.com/servisofts/CasaGrande',
@@ -284,6 +286,7 @@
 				},
 				{
 					nombre: 'TAPEKE',
+					image: 'asset/img/proyecto/tapeke/home.PNG',
 					decripcion: 'Sistema de gestión de pedidos de comida realizada desde cero con módulo de autentificación, notificaciones, gestión clientes , gestión restaurantes,  gestión delivery y monitoreo de conductores por geolocalización, compras, novedades, billetera móvil, tipos de pagos online (tarjeta de crédito/debito), facturación online.',
 					tecnologia: ['HTML5', 'CSS 3', 'React', 'Java', 'Postgres'],
 					github: 'https://github.com/AlejandroChileno/Tapeke',
@@ -291,6 +294,7 @@
 				},
 				{
 					nombre: 'CENTRO MULTIFUNCIONAL ADOLFO KOLPING',
+					image: 'asset/img/proyecto/kolping/home.PNG',
 					decripcion: 'Aplicación de venta de servicios con integración es el acto de unir, incorporar o entrelazar partes para que formen un todo realizada desde cero módulos de punto de venta de farmacia, óptica, laboratorio y servicios de enfermería e imagenología y electromedicina. Cuenta con chat en línea, sistema de notificaciones por WhatsApp y correo, auth, y gestión de información internet a través del rol de administrador.',
 					tecnologia: ['HTML5', 'CSS 3', 'React', 'Java', 'Postgres'],
 					github: 'https://github.com/AlejandroChileno/kolping',
@@ -298,6 +302,7 @@
 				},
 				{
 					nombre: 'CALISTENIA BOLIVIA',
+					image: 'asset/img/proyecto/calistenia/home.PNG',
 					decripcion: 'Software de gestión de entrenamientos es una herramienta administrativa que abarca desde la gestión del cliente, hasta las altas gerencias de la empresa. Llevando módulo de sucursales, clientes, empresa, inventario, kardex editorial, venta, compras, cajas y gestión de información internet a través del rol de administrador.',
 					tecnologia: ['HTML5', 'CSS 3', 'React', 'Java', 'Postgres'],
 					github: 'https://github.com/servisofts/CalisteniaBolivia',
@@ -388,7 +393,7 @@
 			let html0 = ``
 			html0 += `<ul class="nav flex-column nav-pills" role="tablist" aria-orientation="vertical">`
 			html0 += `<li class="nav-item waves-effect waves-light">`
-			data.map((obj, keys) => {
+			data_experiencia.map((obj, keys) => {
 				html0 += `<a class="nav-link ` + activar(keys) + `" data-toggle="tab" href="#panel` + keys + `" role="tab"><i class="fas fa-user"></i>${obj.empresa}</a>`
 			})
 			html0 += `</li>`
@@ -397,7 +402,7 @@
 
 			let html = ``
 			html += `<div class="tab-content col-sm-12">`
-			data.map((obj, keys) => {
+			data_experiencia.map((obj, keys) => {
 				html += `<div class="tab-pane fade ` + activar1(keys) + `" id="panel` + keys + `" role="tabpanel">`
 				html += `<h4 styl class="cargo"> ${obj.cargo} | <span>  ${obj.empresa} </span> </h4>`
 				html += `<h5 class="tiempo"> ${obj.time} </h5>`
@@ -410,14 +415,14 @@
 			document.getElementById('exp_detalle').innerHTML += html
 
 			let htmlProject = ``
-
 			let estado = 0
 
 			data_proyecto_destacado.map((obj, keys) => {
 				if (estado === 0) {
 					htmlProject += `<div class="izquierda">`
 					htmlProject += `<div class="proyecto-foto col-lg-7 col-md-4 col-sm-12">`
-					htmlProject += `<img src="https://i.ytimg.com/vi/KVMn06NGFdg/maxresdefault.jpg" alt="dss" />`
+					htmlProject += `<img src="` + obj.image + `" alt="dss" />`
+					// htmlProject += `<img src="https://i.ytimg.com/vi/KVMn06NGFdg/maxresdefault.jpg" alt="dss" />`
 					htmlProject += `</div>`
 					htmlProject += `<div class="proyecto-descripcion col-lg-5 col-md-8 col-sm-12">`
 					htmlProject += `<div class="proyecto-float">`
@@ -436,7 +441,7 @@
 				} else {
 					htmlProject += `<div class="derecha">`
 					htmlProject += `<div class="proyecto-foto col-lg-7 col-md-4 col-sm-12">`
-					htmlProject += `<img src="https://i.ytimg.com/vi/KVMn06NGFdg/maxresdefault.jpg" alt="dss" />`
+					htmlProject += `<img src="` + obj.image + `" alt="dss" />`
 					htmlProject += `</div>`
 					htmlProject += `<div class="proyecto-descripcion col-lg-5 col-md-8 col-sm-12">`
 					htmlProject += `<div class="proyecto-float">`
