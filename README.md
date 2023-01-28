@@ -11,6 +11,6 @@
 E-mail alvarosiles1@gmail.com \
 Phone [+591 69050028](https://api.whatsapp.com/send?phone=59169050028&text=Hola,%20Alvaro%20vi%20repositorio%20GitHub%20y%20quiero%20preguntarle…) \
 Portfolio [www.alvarosiles.com](https://alvarosiles.com) \
-Bolivia - santa cruz de la sierra
+Bolivia - Santa cruz de la sierra
 
 ![](https://komarev.com/ghpvc/?username=alvarosiles11&label=PROFILE+VIEWS)
