@@ -31,6 +31,7 @@
 
 			.cardHeader .justify-content-end {
 				padding: 0;
+				margin: 0;
 			}
 
 			.cardHeader .folder {
@@ -40,6 +41,7 @@
 			.cardHeader i {
 				padding-left: 20px;
 				font-size: 20px;
+				color: aliceblue;
 			}
 
 			.cardBody {
@@ -54,7 +56,7 @@
 			}
 
 			.cardBody p {
-				font-size: 17px;
+				font-size: 16px;
 				flex-wrap: wrap;
 			}
 
@@ -63,9 +65,9 @@
 				list-style-type: none;
 				list-style: none;
 				display: flex;
-				margin: 8px 0 10px;
+				padding: 0;
+				margin: 18px 0 0px;
 				flex-wrap: wrap;
-				/* margin: 25px 0 10px; */
 			}
 
 			.cardFooter ul li {
@@ -75,9 +77,6 @@
 		</style>
 
 		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" />
-		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
-		<link href="https://getbootstrap.com/docs/5.2/assets/css/docs.css" rel="stylesheet" />
-
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 	</head>
 
@@ -87,17 +86,19 @@
 			<div class="parent">
 				<div class="box">
 					<div class="cardHeader">
-						<div class="container row">
-							<div class="col-6 justify-content-end">
-								<img class="folder" src="asset/svg/folder.svg" alt="logo" />
-							</div>
-							<div class="col-6 d-flex justify-content-end">
-								<a href="https://github.com/servisofts/servisofts-server" target="_blank">
-									<i class="links fas fa-external-link-alt"></i>
-								</a>
-								<a href="https://github.com/servisofts/servisofts-server" target="_blank">
-									<i class="links fa-brands fa-github"></i>
-								</a>
+						<div class="container">
+							<div class="row">
+								<div class="col-6 justify-content-end">
+									<img class="folder" src="asset/svg/folder.svg" alt="logo" />
+								</div>
+								<div class="col-6 d-flex justify-content-end">
+									<a href="https://github.com/servisofts/servisofts-server" target="_blank">
+										<i class="links fas fa-external-link-alt"></i>
+									</a>
+									<a href="https://github.com/servisofts/servisofts-server" target="_blank">
+										<i class="links fa-brands fa-github"></i>
+									</a>
+								</div>
 							</div>
 						</div>
 					</div>
@@ -176,12 +177,9 @@
 			</div>
 		</div>
 
-		<div id="asasdas"></div>
+		<div id="proyecto"></div>
 
-		<script src="asset/js/scroll.js"></script>
-		<script src="asset/js/jquery-3.4.1.min.js"></script>
-		<script type="text/javascript" src="asset/js/bootstrap.js"></script>
-		<script type="text/javascript" src="asset/js/popper.min.js"></script>
+		<br />
 
 		<script>
 			const data_proyecto = [
@@ -249,14 +247,14 @@
 					webpage: '',
 				},
 			]
-
 			let html = ``
 			html += `<div class="container">`
 			html += `<div class="parent">`
 			data_proyecto.map((obj, keys) => {
 				html += `<div class='box'>`
 				html += `<div class="cardHeader">`
-				html += `<div class="container row">`
+				html += `<div class="container">`
+				html += `<div class="row">`
 				html += `<div class="col-6 justify-content-end"> <img class="folder" src="asset/svg/folder.svg" alt="logo" /> </div>`
 				html += `<div class="col-6 d-flex justify-content-end">`
 				html += `<a href="` + obj.webpage + `" target="_blank"> <i class="links fas fa-external-link-alt"></i> </a>`
@@ -276,10 +274,11 @@
 				html += `</ul>`
 				html += `</div>`
 				html += `</div>`
+				html += `</div>`
 			})
 			html += `</div>`
 			html += `</div>`
-			document.getElementById('asasdas').innerHTML += html
+			document.getElementById('proyecto').innerHTML += html
 		</script>
 	</body>
 </html>
