@@ -30,6 +30,75 @@
 		<meta http-equiv="Last-Modified" content="0" />
 		<meta http-equiv="Cache-Control" content="no-cache, mustrevalidate" />
 		<meta http-equiv="Pragma" content="no-cache" />
+
+		<style>
+			body * {
+				margin: 0;
+				padding: 0;
+			}
+
+			.parent {
+				display: grid;
+				grid-gap: 0.5rem;
+				grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+			}
+
+			.box {
+				background-color: blue;
+				color: aliceblue;
+				border: 1px solid #ccc;
+				height: 350px;
+				align-items: center;
+				justify-content: center;
+				padding: 20px;
+			}
+
+			.cardHeader .justify-content-end {
+				padding: 0;
+				margin: 0;
+			}
+
+			.cardHeader .folder {
+				height: 40px;
+			}
+
+			.cardHeader i {
+				padding-left: 20px;
+				font-size: 20px;
+				color: aliceblue;
+			}
+
+			.cardBody {
+				height: 220px;
+			}
+
+			.cardBody h1 {
+				padding-top: 12px;
+				padding-bottom: 10px;
+				font-size: 20px;
+				font-weight: bold;
+			}
+
+			.cardBody p {
+				font-size: 16px;
+				flex-wrap: wrap;
+			}
+
+			.cardFooter ul {
+				color: aqua;
+				list-style-type: none;
+				list-style: none;
+				display: flex;
+				padding: 0;
+				margin: 18px 0 0px;
+				flex-wrap: wrap;
+			}
+
+			.cardFooter ul li {
+				padding-right: 10px;
+				font-size: 12px;
+			}
+		</style>
 	</head>
 
 	<body>
@@ -172,6 +241,15 @@
 				<div class="contenido">
 					<div id="test" class="row">
 						<h1 class="linea">03.<span>Proyectos</span></h1>
+					</div>
+				</div>
+			</section>
+
+			<section id="project" class="section-projects">
+				<div class="contenido">
+					<div class="row">
+						<h1 class="linea">03.<span>Mas Proyectos</span></h1>
+						<div id="proyecto"></div>
 					</div>
 				</div>
 			</section>
@@ -461,6 +539,39 @@
 				}
 			})
 			document.getElementById('test').innerHTML += htmlProject
+
+			let htmlProyectos = ``
+			htmlProyectos += `<div class="container">`
+			htmlProyectos += `<div class="parent">`
+			data_proyecto.map((obj, keys) => {
+				htmlProyectos += `<div class='box'>`
+				htmlProyectos += `<div class="cardHeader">`
+				htmlProyectos += `<div class="container">`
+				htmlProyectos += `<div class="row">`
+				htmlProyectos += `<div class="col-6 justify-content-end"> <img class="folder" src="asset/svg/folder.svg" alt="logo" /> </div>`
+				htmlProyectos += `<div class="col-6 d-flex justify-content-end">`
+				htmlProyectos += `<a href="` + obj.webpage + `" target="_blank"> <i class="links fas fa-external-link-alt"></i> </a>`
+				htmlProyectos += `<a href="` + obj.github + `" target="_blank"> <i class="links fa-brands fa-github"></i> </a>`
+				htmlProyectos += `</div>`
+				htmlProyectos += `</div>`
+				htmlProyectos += `</div>`
+				htmlProyectos += `<div class="cardBody">`
+				htmlProyectos += `<h1>` + obj.nombre + `</h1>`
+				htmlProyectos += `<p>` + obj.decripcion + `</p>`
+				htmlProyectos += `</div>`
+				htmlProyectos += `<div class="cardFooter">`
+				htmlProyectos += `<ul>`
+				for (let clave in obj.tecnologia) {
+					htmlProyectos += `<li>${obj.tecnologia[clave]}</li>`
+				}
+				htmlProyectos += `</ul>`
+				htmlProyectos += `</div>`
+				htmlProyectos += `</div>`
+				htmlProyectos += `</div>`
+			})
+			htmlProyectos += `</div>`
+			htmlProyectos += `</div>`
+			document.getElementById('proyecto').innerHTML += htmlProyectos
 		</script>
 	</body>
 </html>

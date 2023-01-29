@@ -247,38 +247,39 @@
 					webpage: '',
 				},
 			]
-			let html = ``
-			html += `<div class="container">`
-			html += `<div class="parent">`
+
+			let htmlProyectos = ``
+			htmlProyectos += `<div class="container">`
+			htmlProyectos += `<div class="parent">`
 			data_proyecto.map((obj, keys) => {
-				html += `<div class='box'>`
-				html += `<div class="cardHeader">`
-				html += `<div class="container">`
-				html += `<div class="row">`
-				html += `<div class="col-6 justify-content-end"> <img class="folder" src="asset/svg/folder.svg" alt="logo" /> </div>`
-				html += `<div class="col-6 d-flex justify-content-end">`
-				html += `<a href="` + obj.webpage + `" target="_blank"> <i class="links fas fa-external-link-alt"></i> </a>`
-				html += `<a href="` + obj.github + `" target="_blank"> <i class="links fa-brands fa-github"></i> </a>`
-				html += `</div>`
-				html += `</div>`
-				html += `</div>`
-				html += `<div class="cardBody">`
-				html += `<h1>` + obj.nombre + `</h1>`
-				html += `<p>` + obj.decripcion + `</p>`
-				html += `</div>`
-				html += `<div class="cardFooter">`
-				html += `<ul>`
+				htmlProyectos += `<div class='box'>`
+				htmlProyectos += `<div class="cardHeader">`
+				htmlProyectos += `<div class="container">`
+				htmlProyectos += `<div class="row">`
+				htmlProyectos += `<div class="col-6 justify-content-end"> <img class="folder" src="asset/svg/folder.svg" alt="logo" /> </div>`
+				htmlProyectos += `<div class="col-6 d-flex justify-content-end">`
+				htmlProyectos += `<a href="` + obj.webpage + `" target="_blank"> <i class="links fas fa-external-link-alt"></i> </a>`
+				htmlProyectos += `<a href="` + obj.github + `" target="_blank"> <i class="links fa-brands fa-github"></i> </a>`
+				htmlProyectos += `</div>`
+				htmlProyectos += `</div>`
+				htmlProyectos += `</div>`
+				htmlProyectos += `<div class="cardBody">`
+				htmlProyectos += `<h1>` + obj.nombre + `</h1>`
+				htmlProyectos += `<p>` + obj.decripcion + `</p>`
+				htmlProyectos += `</div>`
+				htmlProyectos += `<div class="cardFooter">`
+				htmlProyectos += `<ul>`
 				for (let clave in obj.tecnologia) {
-					html += `<li>${obj.tecnologia[clave]}</li>`
+					htmlProyectos += `<li>${obj.tecnologia[clave]}</li>`
 				}
-				html += `</ul>`
-				html += `</div>`
-				html += `</div>`
-				html += `</div>`
+				htmlProyectos += `</ul>`
+				htmlProyectos += `</div>`
+				htmlProyectos += `</div>`
+				htmlProyectos += `</div>`
 			})
-			html += `</div>`
-			html += `</div>`
-			document.getElementById('proyecto').innerHTML += html
+			htmlProyectos += `</div>`
+			htmlProyectos += `</div>`
+			document.getElementById('proyecto').innerHTML += htmlProyectos
 		</script>
 	</body>
 </html>
