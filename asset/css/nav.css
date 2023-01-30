@@ -1,165 +1,165 @@
 .navbar,
 .bg-dark {
-  height: 70px;
+	height: 70px;
 }
 
 .navbar,
 .bg-dark,
 .dropdown * {
-  background-color: #0a192f !important;
+	background-color: #0a192f !important;
 }
 
 .navbar img {
-  height: 45px;
+	height: 45px;
 }
 
 /* Menu item */
 .offcanvas-body * {
-  font-size: 13px;
+	font-size: 13px;
 }
 
 .offcanvas-body a {
-  color: #64ffda;
+	color: #64ffda;
 }
 
 .offcanvas-body span,
 .dropdown * {
-  color: #ccd6f6;
+	color: #ccd6f6;
 }
 
 .offcanvas-body *:hover {
-  color: #64ffda;
+	color: #64ffda;
 }
 
 /* curriculum */
 .btn-cv {
-  width: 112px;
-  margin-top: 4px;
-  height: 29px;
-  display: grid;
-  place-items: center;
-  color: var(--Green);
-  background-color: transparent;
-  border: 1px solid var(--Green);
-  border-radius: 3px;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  cursor: pointer;
-  font-family: Monospace;
+	width: 112px;
+	margin-top: 4px;
+	height: 29px;
+	display: grid;
+	place-items: center;
+	color: var(--Green);
+	background-color: transparent;
+	border: 1px solid var(--Green);
+	border-radius: 3px;
+	-webkit-text-decoration: none;
+	text-decoration: none;
+	cursor: pointer;
+	font-family: Monospace;
 }
 
 .btn-cv:hover {
-  color: var(--Green);
-  background-color: var(--GreenOpacity);
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  cursor: pointer;
+	color: var(--Green);
+	background-color: var(--GreenOpacity);
+	-webkit-text-decoration: none;
+	text-decoration: none;
+	cursor: pointer;
 }
 
 .navbar-nav .nav-item span,
 .btnCV {
-  padding-right: 20px;
+	padding-right: 20px;
 }
 
 /* idiomas */
 .dropdown-item img {
-  height: 15px;
+	height: 15px;
 }
 
 .redes a {
-  color: var(--Green);
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-  /* margin-top: 20px; */
-  padding-right: 10px;
+	color: var(--Green);
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+	/* margin-top: 20px; */
+	padding-right: 10px;
 }
 .redes img,
 svg,
 object {
-  height: 40px;
+	height: 40px;
 }
 
 .redes svg:hover,
 object:hover,
 img:hover {
-  fill: red;
+	fill: red;
 }
 
 /* table */
 @media (min-width: 767px) and (max-width: 992px) {
-  /* .navbar a .nav-item {
+	/* .navbar a .nav-item {
     width: 50px;
   } */
 
-  .navbar-nav .nav-item span,
-  .btnCV {
-    padding-right: 2px;
-  }
+	.navbar-nav .nav-item span,
+	.btnCV {
+		padding-right: 2px;
+	}
 
-  .offcanvas-body .dropdown * {
-    color: #ccd6f6;
-    font-size: 12px;
-  }
+	.offcanvas-body .dropdown * {
+		color: #ccd6f6;
+		font-size: 12px;
+	}
 
-  .offcanvas-body a {
-    color: #64ffda;
-    font-size: 12px;
-  }
+	.offcanvas-body a {
+		color: #64ffda;
+		font-size: 12px;
+	}
 
-  /* curriculum */
-  .btn-cv {
-    width: 90px;
-  }
+	/* curriculum */
+	.btn-cv {
+		width: 90px;
+	}
 }
 
 /* movil */
 @media (max-width: 766px) {
-  .navbar img {
-    height: 40px;
-  }
+	.navbar img {
+		height: 40px;
+	}
 
-  .offcanvas {
-    max-width: 240px;
-  }
+	.offcanvas {
+		max-width: 240px;
+	}
 
-  .offcanvas-header,
-  .offcanvas-body,
-  .dropdown * {
-    background-color: #0a192f;
-  }
+	.offcanvas-header,
+	.offcanvas-body,
+	.dropdown * {
+		background-color: #0a192f;
+	}
 
-  .offcanvas-body {
-    width: 100%;
-  }
+	.offcanvas-body {
+		width: 100%;
+	}
 
-  .offcanvas-body a {
-    font-size: 16px;
-    height: 46px;
-    padding: 0;
-    margin-right: 200px;
-  }
+	.offcanvas-body a {
+		font-size: 16px;
+		height: 46px;
+		padding: 0;
+		margin-right: 200px;
+	}
 
-  .offcanvas-body a p {
-    color: #64ffda;
-  }
+	.offcanvas-body a p {
+		color: #64ffda;
+	}
 
-  .offcanvas-body a span {
-    color: #ccd6f6;
-  }
+	.offcanvas-body a span {
+		color: #ccd6f6;
+	}
 
-  .offcanvas-body .dropdown-item img {
-    height: 15px;
-  }
-  /* curriculum */
-  .offcanvas-body .btn-cv {
-    width: 110px;
-    height: 40px;
-  }
+	.offcanvas-body .dropdown-item img {
+		height: 15px;
+	}
+	/* curriculum */
+	.offcanvas-body .btn-cv {
+		width: 110px;
+		height: 40px;
+	}
 
-  /* idioma */
-  .offcanvas-body .dropdown {
-    margin-top: 30px;
-  }
+	/* idioma */
+	.offcanvas-body .dropdown {
+		margin-top: 30px;
+	}
 }

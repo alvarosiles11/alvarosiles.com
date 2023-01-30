@@ -19,10 +19,8 @@
 	--White: #e6f1ff;
 	--Green: #64ffda;
 	--GreenOpacity: rgba(100, 255, 218, 0.07);
-	--Font1: Calibre, San Francisco, SF Pro Text, -apple-system, system-ui,
-		BlinkMacSystemFont, Roboto, Helvetica Neue, Segoe UI, Arial, sans-serif;
-	--Font2: SF Mono, Fira Code, Fira Mono, Roboto Mono, Lucida Console, Monaco,
-		Monospace;
+	--Font1: Calibre, San Francisco, SF Pro Text, -apple-system, system-ui, BlinkMacSystemFont, Roboto, Helvetica Neue, Segoe UI, Arial, sans-serif;
+	--Font2: SF Mono, Fira Code, Fira Mono, Roboto Mono, Lucida Console, Monaco, Monospace;
 }
 
 body {
@@ -64,7 +62,7 @@ body {
 }
 
 .uno::after {
-	content: "";
+	content: '';
 	display: block;
 	width: 1px;
 	height: 90px;
@@ -80,7 +78,7 @@ body {
 }
 
 .dos::after {
-	content: "";
+	content: '';
 	display: block;
 	width: 1px;
 	height: 90px;
@@ -129,7 +127,7 @@ a {
 }
 
 li:hover {
-	content: "";
+	content: '';
 	background-color: #151515;
 	color: #efefef;
 	/* border-bottom: #f7ca18 solid 2px; */
@@ -161,7 +159,7 @@ h3 {
 }
 
 .linea:after {
-	content: "";
+	content: '';
 	height: 1px;
 	width: 200px;
 	/* width: 50%; */
@@ -224,7 +222,6 @@ section .contenido {
 
 /* table */
 @media (min-width: 768px) and (max-width: 992px) {
-
 	.section-about,
 	.section-experience,
 	.section-projects {
@@ -260,7 +257,6 @@ section .contenido {
 
 /* mobil */
 @media (min-width: 320px) and (max-width: 425px) {
-
 	.section-about,
 	.section-experience,
 	.section-projects {
@@ -298,7 +294,6 @@ section .contenido {
 
 /* mobil */
 @media (max-width: 320px) {
-
 	h1,
 	p,
 	li,
@@ -314,8 +309,6 @@ section .contenido {
 		width: 120px;
 	}
 }
-
-
 
 /*
 ██╗░░██╗░█████╗░███╗░░░███╗███████╗
@@ -406,7 +399,7 @@ p {
 }
 
 .section-about li::before {
-	content: "\25b9";
+	content: '\25b9';
 	color: #64ffda;
 	font-size: 14px;
 	line-height: 12px;
@@ -425,13 +418,13 @@ p {
 	color: #feffff;
 
 	font-weight: 500;
-	content: "";
+	content: '';
 }
 
 .section-about .active::before {
 	color: var(--White);
 	font-weight: 500;
-	content: "";
+	content: '';
 }
 
 .content-img {
@@ -441,7 +434,7 @@ p {
 }
 
 .content-img::after {
-	content: "";
+	content: '';
 	border: 2px solid #64ffda;
 	z-index: 0;
 	display: block;
@@ -547,7 +540,7 @@ p {
 
 /* menu activado */
 .nav-pills .nav-link.active,
-.nav-pills .show>.nav-link {
+.nav-pills .show > .nav-link {
 	color: #64ffda;
 	background-color: #112240;
 }
@@ -589,7 +582,7 @@ p {
 }
 
 .section-experience .detalle li::before {
-	content: "\25b9";
+	content: '\25b9';
 	color: #64ffda;
 	font-size: 14px;
 	line-height: 12px;
@@ -874,7 +867,6 @@ p {
 	}
 }
 
-
 /*
 ░█████╗░████████╗██╗░░██╗███████╗██████╗░░██████╗  ██████╗░██████╗░░█████╗░░░░░░██╗███████╗░█████╗░████████╗
 ██╔══██╗╚══██╔══╝██║░░██║██╔════╝██╔══██╗██╔════╝  ██╔══██╗██╔══██╗██╔══██╗░░░░░██║██╔════╝██╔══██╗╚══██╔══╝
@@ -882,9 +874,6 @@ p {
 ██║░░██║░░░██║░░░██╔══██║██╔══╝░░██╔══██╗░╚═══██╗  ██╔═══╝░██╔══██╗██║░░██║██╗░░██║██╔══╝░░██║░░██╗░░░██║░░░
 ╚█████╔╝░░░██║░░░██║░░██║███████╗██║░░██║██████╔╝  ██║░░░░░██║░░██║╚█████╔╝╚█████╔╝███████╗╚█████╔╝░░░██║░░░
 ░╚════╝░░░░╚═╝░░░╚═╝░░╚═╝╚══════╝╚═╝░░╚═╝╚═════╝░  ╚═╝░░░░░╚═╝░░╚═╝░╚════╝░░╚════╝░╚══════╝░╚════╝░░░░╚═╝░░░ */
-
-
-
 
 .parent {
 	display: grid;
@@ -981,9 +970,6 @@ p {
 	opacity: 0.4;
 	width: 60%;
 }
-
-
-
 
 /* table */
 @media (min-width: 768px) and (max-width: 992px) {
