@@ -874,6 +874,82 @@ p {
 	}
 }
 
+
+/*
+░█████╗░████████╗██╗░░██╗███████╗██████╗░░██████╗  ██████╗░██████╗░░█████╗░░░░░░██╗███████╗░█████╗░████████╗
+██╔══██╗╚══██╔══╝██║░░██║██╔════╝██╔══██╗██╔════╝  ██╔══██╗██╔══██╗██╔══██╗░░░░░██║██╔════╝██╔══██╗╚══██╔══╝
+██║░░██║░░░██║░░░███████║█████╗░░██████╔╝╚█████╗░  ██████╔╝██████╔╝██║░░██║░░░░░██║█████╗░░██║░░╚═╝░░░██║░░░
+██║░░██║░░░██║░░░██╔══██║██╔══╝░░██╔══██╗░╚═══██╗  ██╔═══╝░██╔══██╗██║░░██║██╗░░██║██╔══╝░░██║░░██╗░░░██║░░░
+╚█████╔╝░░░██║░░░██║░░██║███████╗██║░░██║██████╔╝  ██║░░░░░██║░░██║╚█████╔╝╚█████╔╝███████╗╚█████╔╝░░░██║░░░
+░╚════╝░░░░╚═╝░░░╚═╝░░╚═╝╚══════╝╚═╝░░╚═╝╚═════╝░  ╚═╝░░░░░╚═╝░░╚═╝░╚════╝░░╚════╝░╚══════╝░╚════╝░░░░╚═╝░░░ */
+
+
+
+
+.parent {
+	display: grid;
+	grid-gap: 1rem;
+	grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+}
+
+.box {
+	background-color: #112240;
+	color: aliceblue;
+	/* border: 1px solid #ccc; */
+	height: 350px;
+	align-items: center;
+	justify-content: center;
+	padding: 20px;
+}
+
+.cardHeader .justify-content-end {
+	padding: 0;
+	margin: 0;
+}
+
+.cardHeader .folder {
+	height: 40px;
+}
+
+.cardHeader i {
+	padding-left: 20px;
+	font-size: 20px;
+	color: aliceblue;
+}
+
+.cardBody {
+	height: 220px;
+}
+
+.cardBody h1 {
+	padding-top: 12px;
+	padding-bottom: 10px;
+	font-size: 20px;
+	font-weight: bold;
+	margin: 0;
+}
+
+.cardBody p {
+	font-size: 16px;
+	flex-wrap: wrap;
+	width: 100%;
+}
+
+.cardFooter ul {
+	color: aqua;
+	list-style-type: none;
+	list-style: none;
+	display: flex;
+	padding: 0;
+	margin: 18px 0 0px;
+	flex-wrap: wrap;
+}
+
+.cardFooter ul li {
+	padding-right: 10px;
+	font-size: 12px;
+}
+
 /*
 ░█████╗░░█████╗░███╗░░██╗████████╗░█████╗░░█████╗░████████╗
 ██╔══██╗██╔══██╗████╗░██║╚══██╔══╝██╔══██╗██╔══██╗╚══██╔══╝
@@ -887,7 +963,7 @@ p {
 	place-items: center;
 	padding: 0;
 	margin: 0;
- }
+}
 
 /* .section-contact div {
 
@@ -930,11 +1006,13 @@ footer * {
 	color: var(--White);
 	margin-top: -100px;
 }
+
 @media (min-width: 768px) and (max-width: 992px) {
 	footer * {
 		margin-top: -80px;
 	}
 }
+
 @media (min-width: 320px) and (max-width: 425px) {
 	footer * {
 		margin-top: -50px;
