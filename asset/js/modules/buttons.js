@@ -1,5 +1,4 @@
 'use strict'
-
 ;(function ($) {
 	var _this = this
 

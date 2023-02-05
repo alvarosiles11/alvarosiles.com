@@ -1,7 +1,6 @@
 'use strict'
 
 var WOW
-
 ;(function ($) {
 	WOW = function WOW() {
 		return {

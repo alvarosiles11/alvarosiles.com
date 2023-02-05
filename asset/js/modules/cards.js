@@ -1,5 +1,4 @@
 'use strict'
-
 ;(function ($) {
 	$(document).on('click.card', '.card', function (e) {
 		var $reveal = $(this).find('.card-reveal')

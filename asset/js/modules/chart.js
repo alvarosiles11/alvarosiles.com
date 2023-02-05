@@ -1572,7 +1572,6 @@
 						}
 						return vals
 					}
-
 					;['rgb', 'hsl', 'hsv', 'cmyk', 'keyword'].forEach(function (space) {
 						Converter.prototype[space] = function (vals) {
 							return this.routeSpace(space, arguments)

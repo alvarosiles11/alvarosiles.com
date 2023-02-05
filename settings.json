@@ -1,0 +1,186 @@
+{
+	// ░░█ ▄▀█ █░█ ▄▀█
+	// █▄█ █▀█ ▀▄▀ █▀█
+	"java.configuration.updateBuildConfiguration": "automatic",
+	"java.project.importOnFirstTimeStart": false,
+	"java.import.gradle.enabled": true,
+	"java.errors.incompleteClasspath.severity": "ignore",
+	"java.format.settings.url": "https://raw.githubusercontent.com/google/styleguide/gh-pages/eclipse-java-google-style.xml",
+	"java.format.enabled": true,
+	"java.format.settings.profile": "GoogleStyle",
+	"java.imports.gradle.wrapper.checksums": [
+		{
+			"sha256": "6b797654e5e31fbed7671f621bd6e789418f54f458eb6a5ba1e051b58ae5f889",
+			"allowed": false
+		}
+	],
+	// ░░█ █▀ █▀█ █▄░█
+	// █▄█ ▄█ █▄█ █░▀█
+	"json.schemas": [
+		{
+			"fileMatch": ["/*.schema.json"],
+			"url": "http://json-schema.org/draft-07/schema#"
+		}
+	],
+	"json.format.enable": true,
+	"json.format.space": 4,
+	// █░█ ▀█▀ █▀▄▀█ █░░
+	// █▀█ ░█░ █░▀░█ █▄▄
+	"html.format.enable": true,
+	"html.format.endWithNewline": true,
+	"html.format.indentHandlebars": false,
+	"html.format.indentInnerHtml": false,
+	"html.format.maxPreserveNewLines": 1,
+	"html.format.preserveNewLines": true,
+	"html.format.wrapLineLength": 12000,
+	"emmet.syntaxProfiles": {
+		"html": {
+			"attributes": {
+				"order": "alpha"
+			}
+		}
+	},
+	// █▀▀ █▀ █▀
+	// █▄▄ ▄█ ▄█
+	"css.validate": false,
+	"css.lint.at-rule-no-unknown": true,
+	"css.lint.property-no-unknown": [
+		true,
+		{
+			"ignoreProperties": ["composes"]
+		}
+	],
+	"css.lint.selector-max-specificity": "0,4,0",
+	"css.format.enable": true,
+	"css.format.preserveCursor": true,
+	"css.format.wrapAt": 80,
+	"scss.lint.finalNewline": false,
+	"scss.lint.noTrailingWhitespace": false,
+	"scss.lint.lintOnSave": true,
+	// ░░█ ▄▀█ █░█ ▄▀█ █▀ █▀▀ █▀█ █ █▀█ ▀█▀
+	// █▄█ █▀█ ▀▄▀ █▀█ ▄█ █▄▄ █▀▄ █ █▀▀ ░█░
+	"javascript.validate": false,
+	"javascript.format.enable": true,
+	"javascript.format.preserveCursor": true,
+	"javascript.format.wrapLineLength": 80,
+	"javascript.updateImportsOnFileMove.enabled": "always",
+	"javascript.referencesCodeLens.enabled": true,
+	"javascript.suggest.completeFunctionCalls": true,
+	"javascript.suggest.includeAutomaticOptionalChainCompletions": true,
+	"javascript.suggest.includeCompletionsForModuleExports": true,
+	"javascript.suggest.includeCompletionsWithInsertText": true,
+	"javascript.suggest.localityBonus": true,
+	"javascript.suggest.paths": true,
+	"javascript.suggest.showAbstractMethods": false,
+	"javascript.suggest.showAccessorCompletions": true,
+	"javascript.suggest.showModuleExports": true,
+	"javascript.suggest.showPropertySignatures": true,
+	"javascript.suggest.showUnwrittenCompletions": true,
+	"javascript.suggest.useCodeSnippetsOnMethodSuggest": false,
+	"javascript.suggest.uniqueSnippets": false,
+	"javascript.lint.eslint.enable": true,
+	"javascript.lint.eslint.options": {
+		"extensions": [".js", ".jsx"]
+	},
+	// █▀█ █▀▀ ▄▀█ █▀▀ ▀█▀
+	// █▀▄ ██▄ █▀█ █▄▄ ░█░
+	"javascriptreact.jsxBracketSameLine": false,
+	"javascriptreact.format.enable": true,
+	// "javascriptreact.format.wrapLineLength": 80,
+	"javascriptreact.format.preserveCursor": true,
+	// █▀▄ █▀█ █▀▀ █▄▀ █▀▀ █▀█
+	// █▄▀ █▄█ █▄▄ █░█ ██▄ █▀▄
+	"docker.host": "tcp://localhost:2375",
+	"docker.apiVersion": "1.40",
+	"docker.certPath": "~/.docker/machine/certs",
+	"docker.autoRefresh": true,
+	// █░░ █ █▄░█ █░█ ▀▄▀
+	// █▄▄ █ █░▀█ █▄█ █░█
+	// "ssh.remotePath": "/path/on/remote/server",
+	// "ssh.remoteUser": "username",
+	// "ssh.remoteServer": "server.example.com",
+	// "ssh.remotePort": 22,
+	// "ssh.keepAlive": true,
+	"remote.SSH.remotePlatform": {
+		"190.104.5.211": "linux",
+		"192.168.6.10": "linux"
+	},
+	// █░░ █ █▄░█ ▀█▀ █▀▀ █▀█
+	// █▄▄ █ █░▀█ ░█░ ██▄ █▀▄
+	"eslint.alwaysShowStatus": true,
+	"eslint.options": {
+		"extensions": [".js", ".jsx"]
+	},
+	// █▀▄ █▀▀ █▀▀ ▄▀█ █░█ █░░ ▀█▀
+	// █▄▀ ██▄ █▀░ █▀█ █▄█ █▄▄ ░█░
+	"locale": "es",
+	"workbench.colorTheme": "Visual Studio Dark",
+	"workbench.iconTheme": "material-icon-theme",
+	"workbench.startupEditor": "newUntitledFile",
+	"liveServer.settings.donotVerifyTags": true,
+	"[java]": {
+		"editor.defaultFormatter": "redhat.java"
+	},
+	"[html]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode"
+	},
+	"[css]": {
+		"editor.defaultFormatter": "vscode.css-language-features"
+	},
+	"[javascript]": {
+		"editor.defaultFormatter": "vscode.typescript-language-features"
+	},
+	"[jsonc]": {
+		"editor.defaultFormatter": "vscode.json-language-features"
+	},
+	// "editor.defaultFormatter": "esbenp.prettier-vscode",
+	"diffEditor.ignoreTrimWhitespace": false,
+	"diffEditor.maxComputationTime": 0,
+	"editor.formatOnSave": true, // 📒 formatear todo el documento java,js, html
+	"editor.codeActionsOnSave": {
+		"source.organizeImports": true
+	}, // 🍕 organizara los imports de todo archivo java, js, atc
+	"editor.foldingImportsByDefault": true, // ☕ los imports estaran ocultos
+	"editor.tabSize": 2,
+	"editor.wordWrap": "on", // se cortan en el ancho de la ventana
+	"editor.detectIndentation": false,
+	"editor.bracketPairColorization.enabled": true,
+	"editor.guides.bracketPairs": true,
+	"editor.formatOnPaste": true,
+	"editor.formatOnType": true,
+	"editor.autoClosingBrackets": "languageDefined",
+	"editor.letterSpacing": 0,
+	"editor.multiCursorModifier": "ctrlCmd",
+	// "editor.renderWhitespace": "all",
+	// "editor.minimap.enabled": false,
+	"files.trimFinalNewlines": true,
+	"files.autoSave": "onFocusChange", // guarda automáticamente cuando se pierde el foco
+	"files.eol": "\n",
+	"files.trimTrailingWhitespace": true,
+	"files.encoding": "utf8",
+	"explorer.confirmDelete": false,
+	"terminal.integrated.fontFamily": "\"DejaVu Sans Mono\", \"Lucida Console\", monospace",
+	"terminal.integrated.fontSize": 14,
+	"terminal.integrated.scrollback": 5000,
+	"terminal.integrated.cursorBlinking": true,
+	"terminal.integrated.rightClickBehavior": "default",
+	// "terminal.integrated.defaultProfile.windows": "Git Bash",
+	"search.exclude": {
+		"**/node_modules": true,
+		"**/bower_components": true,
+		"**/tmp": true,
+		"**/.git": true,
+		"**/.DS_Store": true,
+		"**/dist": true
+	},
+	"security.workspace.trust.untrustedFiles": "open",
+	"window.openFilesInNewWindow": "off",
+	"window.closeWhenEmpty": true,
+	"window.nativeTabs": false,
+	"window.autoDetectHighContrast": true,
+	"window.titleBarStyle": "native",
+	"window.enableMenuBarMnemonics": true,
+	"window.enableMenuBarShortcuts": true,
+	"window.readyAction": "showWindow",
+	"window.zoomLevel": -2
+}

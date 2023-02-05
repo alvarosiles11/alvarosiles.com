@@ -3061,7 +3061,6 @@ jQuery.Velocity
 						}
 						return vals
 					}
-
 					;['rgb', 'hsl', 'hsv', 'cmyk', 'keyword'].forEach(function (space) {
 						Converter.prototype[space] = function (vals) {
 							return this.routeSpace(space, arguments)
@@ -16049,11 +16048,9 @@ jQuery.Velocity
 		[7],
 	)(7)
 })
-
 ;('use strict')
 
 var WOW
-
 ;(function ($) {
 	WOW = function WOW() {
 		return {
@@ -16229,9 +16226,7 @@ var WOW
 		}
 	}
 })(jQuery)
-
 ;('use strict')
-
 ;(function ($) {
 	var SCROLLING_NAVBAR_OFFSET_TOP = 50
 	$(window).on('scroll', function () {
@@ -16247,7 +16242,6 @@ var WOW
 	})
 })(jQuery)
 ;('use strict')
-
 ;(function ($) {
 	$.fn.characterCounter = function () {
 		return this.each(function () {
@@ -16303,7 +16297,6 @@ var WOW
  * Released under the MIT license
  * https://github.com/fians/Waves/blob/master/LICENSE
  */
-
 ;(function (window, factory) {
 	'use strict'
 
@@ -16877,7 +16870,6 @@ $(document).ready(function () {
 	Waves.attach('.pagination .page-item .page-link', ['waves-effect'])
 	Waves.init()
 })
-
 ;('use strict')
 
 var _this = void 0
@@ -17060,7 +17052,6 @@ var _this = void 0
 	$body.on('keyup keydown', textAreaSelector, textAreaAutoResize)
 })(jQuery)
 ;('use strict')
-
 ;(function ($) {
 	$(document).on('click.card', '.card', function (e) {
 		var $reveal = $(this).find('.card-reveal')
@@ -17562,7 +17553,6 @@ $('.map-card').click(function () {
 				}
 		  },
 )
-
 ;('use strict')
 
 var SMOOTH_SCROLL_DURATION = 700
@@ -17587,7 +17577,6 @@ $('.smooth-scroll').on('click', 'a', function () {
 	}
 })
 ;('use strict')
-
 ;(function ($) {
 	$.fn.scrollTo = function (elem) {
 		$(this).scrollTop($(this).scrollTop() - $(this).offset().top + $(elem).offset().top)
@@ -17951,7 +17940,6 @@ $('.multi-level-dropdown .dropdown').on('hidden.bs.dropdown', function () {
 	$('.multi-level-dropdown .dropdown-menu.show').removeClass('show')
 })
 ;('use strict')
-
 ;(function ($) {
 	var _this = this
 
@@ -18670,7 +18658,6 @@ $(function ($) {
 	})
 })
 ;('use strict')
-
 ;(function ($) {
 	$.fn.collapsible = function (options) {
 		var defaults = {
@@ -18824,7 +18811,6 @@ $(function ($) {
  * @author Robert Fleischmann <rendro87@gmail.com> (http://robert-fleischmann.de)
  * @version 2.1.7
  **/
-
 ;(function (root, factory) {
 	if (typeof define === 'function' && define.amd) {
 		// AMD. Register as an anonymous module unless amdModuleId is set
@@ -19182,9 +19168,7 @@ $(function ($) {
 		})
 	}
 })
-
 ;('use strict')
-
 ;(function ($) {
 	$(document).on('change', '.file-field input[type="file"]', function (e) {
 		var $this = $(e.target)
@@ -20300,7 +20284,6 @@ function _createClass(Constructor, protoProps, staticProps) {
 	}
 
 	$.fn.material_select = $.fn.materialSelect
-
 	;(function (originalVal) {
 		$.fn.val = function (value) {
 			if (!arguments.length) {
@@ -20337,7 +20320,6 @@ $('select')
  * Hosted on http://amsul.github.io/pickadate.js
  * Licensed under MIT
  */
-
 ;(function (factory) {
 	// AMD.
 	if (typeof define == 'function' && define.amd) define('picker', ['jquery'], factory)
@@ -21410,7 +21392,6 @@ $('select')
  * Date picker for pickadate.js v3.6.3
  * http://amsul.github.io/pickadate.js/date.htm
  */
-
 ;(function (factory) {
 	// AMD.
 	if (typeof define == 'function' && define.amd) define(['picker', 'jquery'], factory)
@@ -22671,7 +22652,6 @@ $.extend($.fn.pickadate.defaults, {
  * Further modified
  * Copyright 2015 Ching Yaw Hao.
  */
-
 ;(function () {
 	var $ = window.jQuery,
 		$win = $(window),
@@ -25413,7 +25393,6 @@ initPhotoSwipeFromDOM('.mdb-lightbox')
  * Description: A jQuery plugin that keeps select DOM
  * element(s) in view while scrolling the page.
  */
-
 ;(function ($) {
 	$.fn.sticky = function (options) {
 		var defaults = {
@@ -26594,7 +26573,8 @@ function _createClass(Constructor, protoProps, staticProps) {
  * Author  : nK <https://nkdev.info>
  * GitHub  : https://github.com/nk-o/jarallax
  */
-/******/ ;(function (modules) {
+/******/
+;(function (modules) {
 	// webpackBootstrap
 	/******/ // The module cache
 	/******/ var installedModules = {}
@@ -26734,7 +26714,8 @@ function _createClass(Constructor, protoProps, staticProps) {
 		/* 3 */ /* 4 */
 		/***/ function (module, exports, __webpack_require__) {
 			'use strict'
-			/* WEBPACK VAR INJECTION */ ;(function (global) {
+			/* WEBPACK VAR INJECTION */
+			;(function (global) {
 				var win
 
 				if (typeof window !== 'undefined') {
@@ -26864,7 +26845,8 @@ function _createClass(Constructor, protoProps, staticProps) {
 		/* 13 */
 		/***/ function (module, exports, __webpack_require__) {
 			'use strict'
-			/* WEBPACK VAR INJECTION */ ;(function (global) {
+			/* WEBPACK VAR INJECTION */
+			;(function (global) {
 				Object.defineProperty(exports, '__esModule', {
 					value: true,
 				})
@@ -27814,7 +27796,8 @@ function _createClass(Constructor, protoProps, staticProps) {
  * Author  : nK <https://nkdev.info>
  * GitHub  : https://github.com/nk-o/jarallax
  */
-/******/ ;(function (modules) {
+/******/
+;(function (modules) {
 	// webpackBootstrap
 	/******/ // The module cache
 	/******/ var installedModules = {}
@@ -27954,7 +27937,8 @@ function _createClass(Constructor, protoProps, staticProps) {
 		/* 3 */ /* 4 */
 		/***/ function (module, exports, __webpack_require__) {
 			'use strict'
-			/* WEBPACK VAR INJECTION */ ;(function (global) {
+			/* WEBPACK VAR INJECTION */
+			;(function (global) {
 				var win
 
 				if (typeof window !== 'undefined') {
@@ -28041,7 +28025,6 @@ function _createClass(Constructor, protoProps, staticProps) {
 
 			// add video worker globally to fallback jarallax < 1.10 versions
 			_global2.default.VideoWorker = _global2.default.VideoWorker || _videoWorker2.default
-
 			;(0, _jarallaxVideo2.default)()
 
 			// data-jarallax-video initialization
@@ -29452,7 +29435,6 @@ function _createClass(Constructor, protoProps, staticProps) {
     https://mdbootstrap.com
     office@mdbootstrap.com
 */
-
 ;(function ($) {
 	$('body').on('shown.bs.modal', '.modal', function () {
 		if (!$('.modal-backdrop').length) {
@@ -29646,9 +29628,7 @@ function _createClass(Constructor, protoProps, staticProps) {
 document.addEventListener('DOMContentLoaded', function () {
 	bsCustomFileInput.init()
 })
-
 ;('use strict')
-
 ;(function ($) {
 	$.fn.mdbTreeview = function () {
 		var $this = $(this)

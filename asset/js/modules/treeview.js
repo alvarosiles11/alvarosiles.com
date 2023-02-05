@@ -1,5 +1,4 @@
 'use strict'
-
 ;(function ($) {
 	$.fn.mdbTreeview = function () {
 		var $this = $(this)

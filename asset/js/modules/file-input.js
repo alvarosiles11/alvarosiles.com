@@ -1,5 +1,4 @@
 'use strict'
-
 ;(function ($) {
 	$(document).on('change', '.file-field input[type="file"]', function (e) {
 		var $this = $(e.target)

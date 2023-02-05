@@ -1,5 +1,4 @@
 'use strict'
-
 ;(function ($) {
 	$.fn.characterCounter = function () {
 		return this.each(function () {

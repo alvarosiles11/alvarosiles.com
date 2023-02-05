@@ -144,7 +144,8 @@
 		/* 3 */ /* 4 */
 		/***/ function (module, exports, __webpack_require__) {
 			'use strict'
-			/* WEBPACK VAR INJECTION */ ;(function (global) {
+			/* WEBPACK VAR INJECTION */
+			;(function (global) {
 				var win
 
 				if (typeof window !== 'undefined') {
@@ -231,7 +232,6 @@
 
 			// add video worker globally to fallback jarallax < 1.10 versions
 			_global2.default.VideoWorker = _global2.default.VideoWorker || _videoWorker2.default
-
 			;(0, _jarallaxVideo2.default)()
 
 			// data-jarallax-video initialization

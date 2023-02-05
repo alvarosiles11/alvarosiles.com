@@ -8150,7 +8150,6 @@ Prerequisite: the object being mixed into needs to be a *Grid*
 			}
 
 			seg.level = j
-
 			;(levels[j] || (levels[j] = [])).push(seg)
 		}
 

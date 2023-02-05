@@ -4413,7 +4413,6 @@
 	 * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
 	 * --------------------------------------------------------------------------
 	 */
-
 	;(function () {
 		if (typeof $ === 'undefined') {
 			throw new TypeError("Bootstrap's JavaScript requires jQuery. jQuery must be included before Bootstrap's JavaScript.")

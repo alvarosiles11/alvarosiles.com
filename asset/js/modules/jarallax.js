@@ -144,7 +144,8 @@
 		/* 3 */ /* 4 */
 		/***/ function (module, exports, __webpack_require__) {
 			'use strict'
-			/* WEBPACK VAR INJECTION */ ;(function (global) {
+			/* WEBPACK VAR INJECTION */
+			;(function (global) {
 				var win
 
 				if (typeof window !== 'undefined') {
@@ -274,7 +275,8 @@
 		/* 13 */
 		/***/ function (module, exports, __webpack_require__) {
 			'use strict'
-			/* WEBPACK VAR INJECTION */ ;(function (global) {
+			/* WEBPACK VAR INJECTION */
+			;(function (global) {
 				Object.defineProperty(exports, '__esModule', {
 					value: true,
 				})

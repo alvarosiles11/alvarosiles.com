@@ -1,5 +1,4 @@
 'use strict'
-
 ;(function ($) {
 	$.fn.collapsible = function (options) {
 		var defaults = {

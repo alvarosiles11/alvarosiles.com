@@ -1099,7 +1099,6 @@ function _createClass(Constructor, protoProps, staticProps) {
 	}
 
 	$.fn.material_select = $.fn.materialSelect
-
 	;(function (originalVal) {
 		$.fn.val = function (value) {
 			if (!arguments.length) {
