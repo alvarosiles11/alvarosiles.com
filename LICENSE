@@ -1,9 +1,21 @@
-Licencia MIT
+MIT License
 
-Derechos de autor (c) 2023 Alvaro Siles
+Copyright (c) 2023 Alvaro Siles Estrada
 
-Se permite la distribución, copia, modificación y uso de este trabajo y sus derivados, siempre y cuando se reconozca el trabajo original y se proporcione un enlace a la licencia. Además, si se realiza una obra derivada, esta debe estar disponible bajo la misma licencia.
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
 
-El trabajo se proporciona "tal cual" sin garantía de ningún tipo, expresa o implícita. Los titulares de los derechos de autor no serán responsables de cualquier reclamo, daño u otra responsabilidad que surja de, fuera de o en conexión con el trabajo o el uso u otras acciones en el trabajo.
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
 
-En este ejemplo, al igual que en la Licencia MIT, se otorga el permiso de distribuir, copiar y modificar el trabajo original y sus derivados, siempre que se reconozca el trabajo original y se proporcione un enlace a la licencia. Además, se establece una condición adicional de que cualquier obra derivada debe estar disponible bajo la misma licencia. También se incluye una exención de responsabilidad similar para los titulares de derechos de autor.
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
