@@ -1,0 +1,18 @@
+{
+  "Servicios": {
+    "usuario": {
+      "host": "192.168.5.2:10002",
+      "status": "exito"
+    },
+    "geolocation": {
+      "host": "192.168.5.5:10005",
+      "status": "exito"
+    }
+  },
+  "PostgreSQL": {
+    "host": "jdbc:postgresql://192.168.5.4:5432/servisofts.motonet",
+    "status": "exito"
+  },
+  "- SLog": "RealTime Log from server Servisofts",
+  "- Fecha": "2022-09-13T07:38:48.000637"
+}

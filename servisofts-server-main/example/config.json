@@ -1,0 +1,35 @@
+{
+    "nombre": "example",
+    "ss": "servisofts.example",
+    "ssl": {
+        "pass_jks": "Servisofts123.",
+        "cert": {
+            "ST": "Av Banzer",
+            "C": "BO",
+            "E": "servisofts.srl@gmail.com",
+            "OU": "example",
+            "CN": "example.servisofts.com",
+            "L": "Santa Cruz",
+            "O": "SERVISOFTS S.R.L."
+        },
+        "nombre_jks": "servisofts"
+    },
+    "socket_client": {
+        "servicio": {
+            "puerto": 10001,
+            "ip": "192.168.5.1",
+            "cert": {
+                "OU": "servicio",
+                "pem": "servicio.pem"
+            }
+        },
+        "reconectTime": 10000
+    },
+    "data_base": {
+        "ip": "192.168.5.31",
+        "puerto": 5432,
+        "bd_name": "servisofts.tapeke",
+        "user": "postgres",
+        "pass": "postgres"
+    }
+}
