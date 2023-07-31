@@ -35,6 +35,9 @@
 
 1. Genera código para una aplicación web que muestre una lista de usuarios y su información, incluido el nombre, la edad y la dirección, utilizando React.js.
 
+2. Dame consultas SQL que puedas hacer con esto: select \* from usuarios.
+
+
 # Músico:
 
 1. Genera un estribillo para una canción de amor sobre una relación a larga distancia.
