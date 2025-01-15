@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contador de Visitas</title>
+</head>
+
+<body>
+
+  <section id="counter-section">
+    <h1>Bienvenido a mi página</h1>
+    <p>Esta es la visita número: <span id="visit-count">0</span></p>
+  </section>
+
+  <footer>
+    <h5>Desarrollado con React por Álvaro Siles</h5>
+  </footer>
+
+  <script>
+    // Verificar si ya existe un contador en el localStorage
+    let visitCount = localStorage.getItem('visitCount');
+
+    // Si no existe, inicializarlo en 0
+    if (!visitCount) {
+      visitCount = 0;
+    }
+
+    // Incrementar el contador
+    visitCount++;
+
+    // Guardar el contador actualizado en el localStorage
+    localStorage.setItem('visitCount', visitCount);
+
+    // Mostrar el contador en la página
+    document.getElementById('visit-count').textContent = visitCount;
+  </script>
+
+</body>
+
+</html>

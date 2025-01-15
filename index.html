@@ -1,153 +1,306 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<link rel="icon" type="image/x-icon" href="/favicon.ico" />
-		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1.0, user-scalable=0" />
-		<meta name="title" content="Alvaro Siles |PortafolioWeb|" />
-		<meta name="description" content="Con 4 años de experiencia desarrollando sistemas y soluciones tecnológicas." />
-		<link rel="apple-touch-icon" href="https://alvarosiles.com/asset/img/perfil_180.png" />
-		<meta name="theme-color" content="#1976d2" />
-		<title>Alvaro Siles | Frontend Developer</title>
-		<!-- Open Graph / Facebook / Twitter -->
-		<meta name="twitter:site" content="@alvarosiles11" />
-		<meta name="twitter:creator" content="@alvarosiles11" />
-		<meta name="twitter:title" content="Alvaro Siles |PortafolioWeb|" />
-		<meta property="twitter:description" content="Con 4 años de experiencia desarrollando sistemas." />
-		<meta property="twitter:image" content="https://alvarosiles.com/asset/img/perfil_180.png" />
-		<meta property="og:url" content="https://alvarosiles.com/" />
-		<meta property="og:image" content="https://alvarosiles.com/asset/img/perfil_180.png" />
-		<meta property="og:title" content="Alvaro Siles |PortafolioWeb|" />
-		<meta property="og:description" content="Con 4 años de experiencia desarrollando sistemas." />
-		<meta property="og:site_name" content="Alvaro Siles |PortafolioWeb|" />
-		<meta property="og:type" content="website" />
-		<meta property="og:locale" content="es_ES" />
-		<link rel="manifest" href="/manifest.json" />
 
-		<meta http-equiv="Expires" content="0" />
-		<meta http-equiv="Last-Modified" content="0" />
-		<meta http-equiv="Cache-Control" content="no-cache, mustrevalidate" />
-		<meta http-equiv="Pragma" content="no-cache" />
-		<!-- tools -->
-		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" />
-		<link rel="stylesheet" href="asset/css/style.css" />
-		<link rel="stylesheet" href="asset/css/nav.css" />
-	</head>
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1.0, user-scalable=0" />
+  <meta name="title" content="Alvaro Siles |PortafolioWeb|" />
+  <meta name="description" content="Con 4 años de experiencia desarrollando sistemas y soluciones tecnológicas." />
+  <link rel="apple-touch-icon" href="https://alvarosiles.com/asset/img/perfil_180.png" />
+  <meta name="theme-color" content="#1976d2" />
+  <title>Alvaro Siles | Frontend Developer</title>
+  <!-- Open Graph / Facebook / Twitter -->
+  <meta name="twitter:site" content="@alvarosiles11" />
+  <meta name="twitter:creator" content="@alvarosiles11" />
+  <meta name="twitter:title" content="Alvaro Siles |PortafolioWeb|" />
+  <meta property="twitter:description" content="Con 4 años de experiencia desarrollando sistemas." />
+  <meta property="twitter:image" content="https://alvarosiles.com/asset/img/perfil_180.png" />
+  <meta property="og:url" content="https://alvarosiles.com/" />
+  <meta property="og:image" content="https://alvarosiles.com/asset/img/perfil_180.png" />
+  <meta property="og:title" content="Alvaro Siles |PortafolioWeb|" />
+  <meta property="og:description" content="Con 4 años de experiencia desarrollando sistemas." />
+  <meta property="og:site_name" content="Alvaro Siles |PortafolioWeb|" />
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="es_ES" />
+  <link rel="manifest" href="/manifest.json" />
 
-	<body>
-		<nav class="navbar fixed-top navbar-expand-sm navbar-dark">
-			<div class="container">
-				<a href="#home" class="navbar-brand active">
-					<img src="asset/svg/leon.svg" alt="logo" />
-				</a>
-				<button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#navbarOffcanvas" aria-controls="navbarOffcanvas" aria-expanded="false" aria-label="Toggle navigation">
-					<span class="navbar-toggler-icon"></span>
-				</button>
-				<div class="offcanvas offcanvas-end" id="navbarOffcanvas" tabindex="-1" aria-labelledby="offcanvasNavbarLabel">
-					<div class="offcanvas-header">
-						<h5 class="offcanvas-title" id="offcanvasNavbarLabel"></h5>
-						<button type="button" class="btn-close btn-close-white text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-					</div>
-					<div class="offcanvas-body justify-content-end">
-						<div class="navbar-nav">
-							<a class="nav-item nav-link text-nowrap" aria-current="page" href="#about">01. <span>Sobre mí</span></a>
-							<a class="nav-item nav-link text-nowrap" href="#experience">02.<span>Experiencia</span></a>
-							<a class="nav-item nav-link text-nowrap" href="#experience">03.<span>Certificados</span></a>
-							<a class="nav-item nav-link text-nowrap" href="#project">04.<span> Proyecto</span></a>
-							<a class="nav-item nav-link text-nowrap" href="#contact">05.<span>Contacto</span></a>
-							<div class="btnCV">
-								<a class="btn-cv" href="asset/docs/CV_Alvaro_Siles_Estrada_Español.pdf" download="CV_Alvaro"><span>Curriculum</span> </a>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</nav>
+  <meta http-equiv="Expires" content="0" />
+  <meta http-equiv="Last-Modified" content="0" />
+  <meta http-equiv="Cache-Control" content="no-cache, mustrevalidate" />
+  <meta http-equiv="Pragma" content="no-cache" />
+  <!-- tools -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="asset/css/style.css" />
+  <link rel="stylesheet" href="asset/css/nav.css" />
+  <!-- 8888888 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
-		<div class="container">
-			<section id="home" class="section-home clearfix">
-				<div class="contenido">
-					<h1>Hola! Mi nombre es</h1>
-					<h2>Alvaro Siles.</h2>
-					<h3>Frontend Developer</h3>
-					<p>Tengo <span>4 años de experiencia</span> desarrollando sistemas, interfaces, bots y soluciones tecnológicas. Me dedico a escribir y refactorizar código limpio, reutilizable y escalable en<span>React</span> y en ocaciones en <span>Angular</span> aplicando buenas practicas y estandares de desarrollo.</p>
-					<a class="btn-saludo" href="mailto:alvarosiles1@gmail.com"> Salúdame </a>
-				</div>
-			</section>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-2RD6D0Q91C"></script>
+</head>
 
-			<section id="about" class="section-about clearfix">
-				<div class="contenido">
-					<div class="row">
-						<h1 class="linea">01. <span>Acerca de mi</span></h1>
-						<div class="col-sm-12 col-md-6">
-							<p>En mis <span>4 años como desarrollador</span> busco capacitarme cada día. Al mismo tiempo he trabajado con <span>pruebas unitarias</span>, <span>integración continua</span> y también cubriendo roles de <span>frontend y backend</span> developer. También he liderado equipos teniendo empatía, ejerciendo motivación a compañeros, trabajando con la <span>metodologia Scrum</span> y llevando control de versiones en <span>GitHub/Gitlab</span>.</p>
-							<p>Mis capacidades también incluyen implementar mejoras en sistemas, optimizar sitios, estandarizar patrones y sugerir y ejecutar ideas que añadan valor al proyecto en el que este trabajando.</p>
-							<p>Algunas de las tecnologías en las que me he capacitado y trabajado incluyen (pero no se limitan) a:</p>
-							<div class="d-flex flex-row">
-								<div class="flex-fill">
-									<ul>
-										<li class="active">FRONT-END</li>
-										<li>Html5</li>
-										<li>Css3</li>
-										<li>Bootstrap</li>
-										<li>Javascript</li>
-										<li>Jquery</li>
-										<li>Typescript</li>
-										<li>React</li>
-										<li>Angular</li>
-									</ul>
-								</div>
-								<div class="flex-fill">
-									<ul>
-										<li class="active">BACK-END</li>
-										<li>Java</li>
-										<li>Maven</li>
-										<li>ASP.NET</li>
-										<li>Php</li>
-										<li>Laravel</li>
-										<li>Junit</li>
-										<li>JSON</li>
-										<li>Postman</li>
-									</ul>
-								</div>
-								<div class="flex-fill">
-									<ul>
-										<li class="active">SERVER</li>
-										<li>Ubuntu Linux</li>
-										<li>Nginx</li>
-										<li>Docker</li>
-										<li>PostgreSQL</li>
-										<li>Mongodb</li>
-										<li>Google Cloud</li>
-										<li>Digitalocean</li>
-										<li>Azure</li>
-									</ul>
-								</div>
-							</div>
-						</div>
-						<div class="col-sm-12 col-md-6">
-							<div class="content-img">
-								<img src="https://avatars.githubusercontent.com/u/61075383?v=4" alt="sdsd" />
-							</div>
-						</div>
-					</div>
-				</div>
-			</section>
+<body>
+  <nav class="navbar fixed-top navbar-expand-sm navbar-dark">
+    <div class="container">
+      <a href="#home" class="navbar-brand active">
+        <img src="asset/svg/leon.svg" alt="logo" />
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#navbarOffcanvas" aria-controls="navbarOffcanvas" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="offcanvas offcanvas-end" id="navbarOffcanvas" tabindex="-1" aria-labelledby="offcanvasNavbarLabel">
+        <div class="offcanvas-header">
+          <h5 class="offcanvas-title" id="offcanvasNavbarLabel"></h5>
+          <button type="button" class="btn-close btn-close-white text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body justify-content-end">
+          <div class="navbar-nav">
+            <a class="nav-item nav-link text-nowrap" aria-current="page" href="#about">01. <span>Sobre mí</span></a>
+            <a class="nav-item nav-link text-nowrap" href="#experience">02.<span>Experiencia</span></a>
+            <a class="nav-item nav-link text-nowrap" href="#experience">03.<span>Certificados</span></a>
+            <a class="nav-item nav-link text-nowrap" href="#project">04.<span> Proyecto</span></a>
+            <a class="nav-item nav-link text-nowrap" href="#contact">05.<span>Contacto</span></a>
+            <a class="nav-item nav-link text-nowrap" href="#contact">06.<span>Otros</span></a>
+            <div class="btnCV">
+              <a class="btn-cv" href="asset/docs/CV_Alvaro_Siles_Estrada_Español.pdf" download="CV_Alvaro"><span>Curriculum</span> </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
 
-			<section id="experience" class="section-experience clearfix">
-				<div class="contenido">
-					<div class="d-flex justify-content-center">
-						<div class="col-sm-11 col-md-12 col-lg-9 col-xl-7 row">
-							<h1 class="linea">02.<span class="animated">Experiencia</span></h1>
-							<div id="exp_menu" class="col-sm-12 col-md-3 col-lg-3 col-xl-3 menu"></div>
-							<div id="exp_detalle" class="col-sm-12 col-md-9 col-lg-9 col-xl-9 detalle"></div>
-						</div>
-					</div>
-				</div>
-			</section>
+  <div class="container">
+    <section id="home" class="section-home clearfix">
+      <div class="contenido">
+        <h1>¡Hola! 👋, Soy</h1>
+        <h2>Alvaro Siles.</h2>
+        <h3>Frontend Developer</h3>
+        <p>Con <span>6 años de experiencia</span>
 
-			<!-- <section id="certification" class="section-experience clearfix">
+          en el diseño y desarrollo de sistemas, interfaces de usuario, bots y soluciones tecnológicas innovadoras. A lo largo de mi trayectoria profesional, me he especializado en la creación de aplicaciones utilizando
+          <span>React</span> como tecnología principal y, en ocasiones, <span>Angular,</span> aplicando siempre las mejores prácticas y estándares de la industria para garantizar soluciones eficientes, escalables y de alta calidad.
+
+          .
+        </p>
+        <a class="btn-saludo" href="mailto:alvarosiles1@gmail.com"> Salúdame </a>
+      </div>
+    </section>
+
+    <section id="about" class="section-about clearfix">
+      <div class="contenido">
+        <div class="row">
+          <h1 class="linea">01. <span>Acerca de mi</span></h1>
+          <div class="col-sm-12 col-md-6">
+            <p>Durante mis <span>6 años como desarrollador,</span>
+
+              me he dedicado a
+
+              <span> capacitarme continuamente</span> para mantenerme actualizado y mejorar mis habilidades. He trabajado en <span>pruebas unitarias</span>, <span>integración continua</span> y desempeñado roles tanto de <span>frontend</span> como de <span>backend developer</span>. Además, he tenido la oportunidad de <span>liderar equipos</span>, demostrando empatía, motivando a mis compañeros y aplicando la <span>metodología Scrum</span>, junto con la gestión de versiones utilizando <span>GitHub y GitLab</span>.
+            </p>
+
+            <p> Entre mis principales capacidades se encuentran la <span> implementación de mejoras en sistemas, optimización de sitios, estandarización de patrones</span> y la <span>propuesta y ejecución de ideas</span> que añaden valor a cada proyecto en el que colaboro.
+            </p>
+
+            <p> He adquirido experiencia y trabajado con diversas tecnologías, incluidas, pero no limitadas a:
+            </p>
+            <!--
+            <div class="d-flex flex-row">
+              <div class="flex-fill">
+                <ul>
+                  <li class="active">Front-End</li>
+                  <li>HTML5</li>
+                  <li>CSS3</li>
+                  <li>Bootstrap</li>
+                  <li>JavaScript</li>
+                  <li>jQuery</li>
+                  <li>TypeScript</li>
+                  <li>React</li>
+                  <li>Angular</li>
+                </ul>
+              </div>
+              <div class="flex-fill">
+                <ul>
+                  <li class="active">Back-End</li>
+                  <li>Java</li>
+                  <li>Maven</li>
+                  <li>ASP.NET</li>
+                  <li>PHP</li>
+                  <li>Laravel</li>
+                  <li>JUnit</li>
+                  <li>JSON</li>
+                  <li>Postman</li>
+                </ul>
+              </div>
+              <div class="flex-fill">
+                <ul>
+                  <li class="active">Server</li>
+                  <li>Ubuntu Linux</li>
+                  <li>Nginx</li>
+                  <li>Docker</li>
+                  <li>PostgreSQL</li>
+                  <li>MongoDB</li>
+                  <li>Google Cloud</li>
+                  <li>DigitalOcean</li>
+                  <li>Azure</li>
+                </ul>
+              </div>
+            </div> -->
+
+            <!-- <div class="d-flex flex-row">
+              <div class="flex-fill">
+                <ul>
+                  <li class="active">Front-End</li>
+                  <li>HTML5</li>
+                  <li>CSS3</li>
+                  <li>Bootstrap</li>
+                  <li>JavaScript</li>
+                  <li>jQuery</li>
+                  <li>TypeScript</li>
+                  <li>React</li>
+                  <li>Angular</li>
+                  <li>Vue.js</li>
+                  <li>SASS</li>
+                  <li>Webpack</li>
+                  <li>Next.js</li>
+                  <li>Gatsby</li>
+                  <li>Redux</li>
+                  <li>Styled Components</li>
+                </ul>
+              </div>
+              <div class="flex-fill">
+                <ul>
+                  <li class="active">Back-End</li>
+                  <li>Java</li>
+                  <li>Maven</li>
+                  <li>ASP.NET</li>
+                  <li>PHP</li>
+                  <li>Laravel</li>
+                  <li>JUnit</li>
+                  <li>JSON</li>
+                  <li>Postman</li>
+                  <li>Node.js</li>
+                  <li>Express.js</li>
+                  <li>Spring Boot</li>
+                  <li>Ruby on Rails</li>
+                  <li>GraphQL</li>
+                  <li>SQL</li>
+                  <li>REST API</li>
+                  <li>Microservices</li>
+                </ul>
+              </div>
+              <div class="flex-fill">
+                <ul>
+                  <li class="active">Server</li>
+                  <li>Ubuntu Linux</li>
+                  <li>Nginx</li>
+                  <li>Docker</li>
+                  <li>PostgreSQL</li>
+                  <li>MongoDB</li>
+                  <li>Google Cloud</li>
+                  <li>DigitalOcean</li>
+                  <li>Azure</li>
+                  <li>AWS</li>
+                  <li>Heroku</li>
+                  <li>Vagrant</li>
+                  <li>Apache</li>
+                  <li>Linux Server Management</li>
+                  <li>Firebase</li>
+                  <li>CI/CD</li>
+                  <li>Jenkins</li>
+                </ul>
+              </div>
+            </div> -->
+
+            <div class="d-flex flex-row">
+              <div class="flex-fill">
+                <ul>
+                  <li class="active"><i class="fas fa-laptop-code"></i> Front-End</li>
+                  <li><i class="fab fa-html5"></i> HTML5</li>
+                  <li><i class="fab fa-css3-alt"></i> CSS3</li>
+                  <li><i class="fab fa-bootstrap"></i> Bootstrap</li>
+                  <li><i class="fab fa-js-square"></i> JavaScript</li>
+                  <li><i class="fab fa-js"></i> jQuery</li>
+                  <li><i class="fab fa-js-square"></i> TypeScript</li>
+                  <li><i class="fab fa-react"></i> React</li>
+                  <li><i class="fab fa-angular"></i> Angular</li>
+                  <li><i class="fab fa-vuejs"></i> Vue.js</li>
+                  <li><i class="fab fa-sass"></i> SASS</li>
+                  <li><i class="fas fa-cogs"></i> Webpack</li>
+                  <li><i class="fas fa-file-alt"></i> Next.js</li>
+                  <!-- <li><i class="fas fa-file-alt"></i> Gatsby</li> -->
+                  <li><i class="fas fa-cogs"></i> Redux</li>
+                  <li><i class="fas fa-paint-brush"></i> Styled Components</li>
+                </ul>
+              </div>
+              <div class="flex-fill">
+                <ul>
+                  <li class="active"><i class="fas fa-server"></i> Back-End</li>
+                  <li><i class="fab fa-java"></i> Java</li>
+                  <li><i class="fas fa-tools"></i> Maven</li>
+                  <li><i class="fas fa-windows"></i> ASP.NET</li>
+                  <li><i class="fab fa-php"></i> PHP</li>
+                  <li><i class="fab fa-laravel"></i> Laravel</li>
+                  <li><i class="fas fa-cogs"></i> JUnit</li>
+                  <li><i class="fas fa-code"></i> JSON</li>
+                  <li><i class="fas fa-cogs"></i> Postman</li>
+                  <li><i class="fab fa-node"></i> Node.js</li>
+                  <li><i class="fab fa-node-js"></i> Express.js</li>
+                  <li><i class="fas fa-cogs"></i> Spring Boot</li>
+                  <!-- <li><i class="fas fa-ruby"></i> Ruby on Rails</li> -->
+                  <li><i class="fas fa-code-branch"></i> GraphQL</li>
+                  <li><i class="fas fa-database"></i> SQL</li>
+                  <li><i class="fas fa-plug"></i> REST API</li>
+                  <li><i class="fas fa-cogs"></i> Microservices</li>
+                </ul>
+              </div>
+              <div class="flex-fill">
+                <ul>
+                  <li class="active"><i class="fas fa-server"></i> Server</li>
+                  <li><i class="fab fa-linux"></i> Ubuntu Linux</li>
+                  <li><i class="fas fa-server"></i> Nginx</li>
+                  <li><i class="fab fa-docker"></i> Docker</li>
+                  <li><i class="fas fa-database"></i> PostgreSQL</li>
+                  <li><i class="fas fa-database"></i> MongoDB</li>
+                  <li><i class="fab fa-google"></i> Google Cloud</li>
+                  <li><i class="fab fa-digitalocean"></i> DigitalOcean</li>
+                  <li><i class="fab fa-microsoft"></i> Azure</li>
+                  <li><i class="fab fa-aws"></i> AWS</li>
+                  <li><i class="fas fa-cloud"></i> Heroku</li>
+                  <!-- <li><i class="fas fa-cogs"></i> Vagrant</li> -->
+                  <li><i class="fas fa-server"></i> Apache</li>
+                  <li><i class="fab fa-linux"></i> Linux Server Management</li>
+                  <li><i class="fab fa-google"></i> Firebase</li>
+                  <li><i class="fas fa-tools"></i> CI/CD</li>
+                  <!-- <li><i class="fas fa-cogs"></i> Jenkins</li> -->
+                </ul>
+              </div>
+            </div>
+
+          </div>
+          <div class="col-sm-12 col-md-6">
+            <div class="content-img">
+              <img src="https://avatars.githubusercontent.com/u/61075383?v=4" alt="sdsd" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="experience" class="section-experience clearfix">
+      <div class="contenido">
+        <div class="d-flex justify-content-center">
+          <div class="col-sm-11 col-md-12 col-lg-9 col-xl-7 row">
+            <h1 class="linea">02.<span class="animated">Experiencia</span></h1>
+            <div id="exp_menu" class="col-sm-12 col-md-3 col-lg-3 col-xl-3 menu"></div>
+            <div id="exp_detalle" class="col-sm-12 col-md-9 col-lg-9 col-xl-9 detalle"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- <section id="certification" class="section-experience clearfix">
 				<div class="contenido">
 					<div class="d-flex justify-content-center">
 						<div class="col-11 col-md-12 col-lg-9 col-xl-7 row">
@@ -171,341 +324,353 @@
 				</div>
 			</section> -->
 
-			<section id="project" class="section-projects">
-				<div class="contenido">
-					<div id="test" class="row">
-						<h1 class="linea">03.<span>Proyectos</span></h1>
-					</div>
-				</div>
-			</section>
+    <section id="project" class="section-projects">
+      <div class="contenido">
+        <div id="test" class="row">
+          <h1 class="linea">03.<span>Proyectos</span></h1>
+        </div>
+      </div>
+    </section>
 
-			<section class="section-projects">
-				<div class="contenido">
-					<div class="row">
-						<h1 class="linea">03.<span>Mas Proyectos</span></h1>
-						<div id="othersProject"></div>
-					</div>
-				</div>
-			</section>
+    <section class="section-projects">
+      <div class="contenido">
+        <div class="row">
+          <h1 class="linea">03.<span>Mas Proyectos</span></h1>
+          <div id="othersProject"></div>
+        </div>
+      </div>
+    </section>
 
-			<section id="contact" class="section-contact">
-				<div class="contenido">
-					<h1>05. Y... ¿Ahora?</h1>
-					<h2>¡Saludame!</h2>
-					<p>Estaré encantado de recibir tu contacto si quieres conversar acerca de nuevas oportunidades. Escríbeme, y te responderé tan pronto como vea tu mensaje.</p>
-				</div>
-			</section>
+    <section id="contact" class="section-contact">
+      <div class="contenido">
+        <h1>05. Y... ¿Ahora?</h1>
+        <h2>¡Saludame!</h2>
 
-			<footer>
-				<h5>Built with React by Alvaro Siles</h5>
-			</footer>
-		</div>
+        <p>Si deseas conversar sobre nuevas oportunidades o simplemente hacerme alguna pregunta, no dudes en escribirme. Estaré encantado de responder a tu mensaje tan pronto como lo vea. ¡Espero tu contacto!</p>
 
-		<div class="uno"></div>
-		<div class="dos"></div>
+        <!-- <p>Estaré encantado de recibir tu contacto si quieres conversar acerca de nuevas oportunidades. Escríbeme, y te responderé tan pronto como vea tu mensaje.</p> -->
+      </div>
+    </section>
 
-		<!-- javascript -->
+    <footer>
+      <h5>Built with React by Alvaro Siles</h5>
+    </footer>
+  </div>
 
-		<script src="asset/js/scroll.js"></script>
-		<script src="asset/js/jquery-3.4.1.min.js"></script>
-		<script type="text/javascript" src="asset/js/bootstrap.js"></script>
-		<script type="text/javascript" src="asset/js/popper.min.js"></script>
+  <div class="uno"></div>
+  <div class="dos"></div>
 
-		<script>
-			// SideNav Initialization
-			$('.button-collapse').sideNav()
+  <!-- javascript -->
 
-			var container = document.querySelector('.custom-scrollbar')
-			var ps = new PerfectScrollbar(container, {
-				wheelSpeed: 2,
-				wheelPropagation: true,
-				minScrollbarLength: 20,
-			})
-		</script>
+  <script src="asset/js/scroll.js"></script>
+  <script src="asset/js/jquery-3.4.1.min.js"></script>
+  <script type="text/javascript" src="asset/js/bootstrap.js"></script>
+  <script type="text/javascript" src="asset/js/popper.min.js"></script>
 
-		<script>
-			// Treeview Initialization
-			$(document).ready(function () {
-				$('.treeview-animated').mdbTreeview()
-			})
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
 
-			const data_experiencia = [
-				{
-					empresa: 'SERVISOFTS SRL',
-					cargo: 'Fullstack developer',
-					time: 'Junio 2021 –  Actualmente trabajando',
-					tareas: ['Creación de diseño UX/UI Web y Mobile (FIGMA).', 'Elaborar un prototipo para confirmar los requisitos acordados.', 'Desarrollo móvil en plataforma Híbrida como React Native.', 'Desarrollo Full-stack Java, Node, React.', 'Testing de aplicaciones web y móvil.', 'Administración y respaldo de servidores físicos de la empresa.', 'Instalación y configuración de SO Linux Ubuntu.', 'Instalación y configuración de redes LAN-WAN.', 'Soporte y mantenimiento a la infraestructura de la empresa.', 'Reportes de toda índole.'],
-				},
-				{
-					empresa: 'SYSLINK BOLIVIA',
-					cargo: 'Fullstack developer',
-					time: ' Octubre 2021 – Mayo 2022',
-					tareas: ['Creación de diseño UX/UI Web y Mobile (FIGMA).', 'Desarrollo móvil en plataforma Híbrida como React Native.', 'Desarrollo Full-stack Java, Node, React.', 'Testing de aplicaciones web y móvil.', 'Administración y respaldo de servidores de Google Cloud.', 'Diseño e implementación de un sistema de cámaras.', 'Instalación y configuración de SO Windows y Linux Ubuntu.', 'Instalación y configuración de redes LAN-WAN.', 'Creaciones de manuales de usuario.', 'Soporte y mantenimiento a la infraestructura de la empresa.', 'Reportes de toda índole.'],
-				},
-				{
-					empresa: 'EL MORDISCO',
-					cargo: 'IT – Sistemas / Encargado',
-					time: 'Mayo 2021 – Agosto 2021',
-					tareas: ['Manejo del software que tiene el restaurante.', 'Manejo del software de restaurante PEDIDOS YA.', 'Manejo del software de restaurante PEDIDOS ONLINE.', 'Proceso de cobro y facturación del servicio.', 'Manejo de facturación electrónica y físico.', 'Ejecutar formas de pagos tarjeta, efectivo Y transferencias.', 'Proceso y manejo de LINKSER (cobro, anulación, reporte).', 'Manejo de efectivo.', 'Apertura y cierre de caja.', 'Control de caja, contabilidad básica y arqueo.', 'Imprimir reportes de caja y ventas.', 'Reportes de toda índole.'],
-				},
-				{
-					empresa: 'MALL FACILITO',
-					cargo: 'Desarrollador Front End',
-					time: 'Junio 2021 – Septiembre 2021',
-					tareas: ['Creación de diseño Web (FIGMA).', 'Desarrollado de sitio web (html, css, javascript y jquery).', 'Venta de software.', 'Asistencia telefónica a los clientes.', 'Elaboración de informes.'],
-				},
-				{
-					empresa: 'CHINREPUESTOS',
-					cargo: 'Desarrollador Front End',
-					time: 'Marzo 2020 – mayo 2020',
-					tareas: ['Desarrollado de sitio web (html, css, javascript y jquery).', 'Configuración y mantenimiento de equipos de computación.', 'Comunicaciones redes y sistemas internos.', 'Soporte de impresoras térmicas Epson.', 'Soporte de impresora de etiquetas Zebra.', 'Elaboración de informes.'],
-				},
-				{
-					empresa: 'MEGASYSTEM SRL',
-					cargo: 'Encargado de proyecto',
-					time: 'Febrero 2017 – Febrero 2020',
-					tareas: ['Creaciones de manuales de usuario y videos tutoriales.', 'Testing de aplicaciones web, móvil y escritorio.', 'Mantenimiento y respaldo de servidores físicos.', 'Instalación y mantenimiento de SO.', 'Instalación y configuración de redes LAN-WAN.', 'Capacitación y seguimiento de los interesados.', 'Soporte de impresoras multifuncional, térmicas Epson', 'Soporte de impresora móviles y de etiquetas Zebra.', 'Soporte de control de asistencias.', 'Instalación de cajas registradora para punto de ventas.', 'Instalación de lector de código barras, lector QR.', 'Diseño e implementación de un sistema de cámaras.', 'Administración y respaldo de Servidores Cloud.', 'Desarrollador de aplicación web (Angular).', 'Soporte y mantenimiento a la infraestructura de la empresa.', 'Elaboración de informes.'],
-				},
-				{
-					empresa: 'TRANSPORTADORA ROART',
-					cargo: 'Asistente de logística y operaciones de contenedores',
-					time: 'Enero 2017 – Julio 2017',
-					tareas: ['Asistente de logística y operaciones de contenedores.', 'Administrar los sistemas que tiene la transportadora.', 'Asistencia telefónica a los clientes.', 'Entregar y recoger documentación de empresa.', 'Manejo de volúmenes de dinero.', 'Atención y coordinación de solicitudes de piso.', 'Reportes de toda índole.'],
-				},
-				{
-					empresa: 'UNIVERSIDAD NUR',
-					cargo: 'IT – Sistemas / Supervisor',
-					time: 'Febrero 2012 – Diciembre 2014',
-					tareas: ['Responsable de mantener, organizar, solucionar y supervisar los laboratorios de centros de cómputo de la Universidad Nur.', 'Atención y coordinación de reserva de aulas.', 'Solicitud de instalación de software en aulas.', 'Solicitud de configuración de aulas para exámenes.', 'Soporte técnico a salas y aulas de docencias.', 'Instalación y mantenimiento de sistemas operativos.', 'Instalación y configuración de redes LAN-WAN.', 'Administración de servidor proxy.', 'Reportes de toda índole.'],
-				},
-			]
+    gtag('config', 'G-2RD6D0Q91C');
+  </script>
 
-			const data_proyecto_destacado = [
-				{
-					nombre: 'DARMOTOS',
-					image: 'asset/img/proyecto/darmotos/home.PNG',
-					decripcion: 'El sistema integrado DarMotos cuenta con innumerables opciones para facilitar la gestión de la empresa. Realizada desde cero con módulo de auth, sucursales, clientes, bancos, inventario, compras, ventas, cobranza y cajas.',
-					tecnologia: ['HTML5', 'CSS 3', 'React', 'Java', 'Postgres'],
-					github: 'https://github.com/servisofts/darmotos',
-					webpage: 'https://darmotos.servisofts.com/login',
-				},
-				{
-					nombre: 'CASAGRANDE',
-					image: 'asset/img/proyecto/casagrande/home.PNG',
-					decripcion: 'Aplicación de gestión en ventas de tickets y reservas de mesas. Cuenta con opciones de temas, autentificación por gmail, facebook, creación de usuario. Registro de compras de tickets para eventos, reservas de mesas, pagos online (tarjeta de crédito/ debito) y facturación.',
-					tecnologia: ['HTML5', 'CSS 3', 'React', 'Java', 'Postgres'],
-					github: 'https://github.com/servisofts/CasaGrande',
-					webpage: 'https://casagrande.servisofts.com/login',
-				},
-				{
-					nombre: 'TAPEKE',
-					image: 'asset/img/proyecto/tapeke/home.PNG',
-					decripcion: 'Sistema de gestión de pedidos de comida realizada desde cero con módulo de autentificación, notificaciones, gestión clientes , gestión restaurantes,  gestión delivery y monitoreo de conductores por geolocalización, compras, novedades, billetera móvil, tipos de pagos online (tarjeta de crédito/debito), facturación online.',
-					tecnologia: ['HTML5', 'CSS 3', 'React', 'Java', 'Postgres'],
-					github: 'https://github.com/AlejandroChileno/Tapeke',
-					webpage: 'https://tapeke.servisofts.com/login',
-				},
-				{
-					nombre: 'CENTRO MULTIFUNCIONAL ADOLFO KOLPING',
-					image: 'asset/img/proyecto/kolping/home.PNG',
-					decripcion: 'Aplicación de venta de servicios con integración es el acto de unir, incorporar o entrelazar partes para que formen un todo realizada desde cero módulos de punto de venta de farmacia, óptica, laboratorio y servicios de enfermería e imagenología y electromedicina. Cuenta con chat en línea, sistema de notificaciones por WhatsApp y correo, auth, y gestión de información internet a través del rol de administrador.',
-					tecnologia: ['HTML5', 'CSS 3', 'React', 'Java', 'Postgres'],
-					github: 'https://github.com/AlejandroChileno/kolping',
-					webpage: 'https://kolping.servisofts.com/login',
-				},
-				{
-					nombre: 'CALISTENIA BOLIVIA',
-					image: 'asset/img/proyecto/calistenia/home.PNG',
-					decripcion: 'Software de gestión de entrenamientos es una herramienta administrativa que abarca desde la gestión del cliente, hasta las altas gerencias de la empresa. Llevando módulo de sucursales, clientes, empresa, inventario, kardex editorial, venta, compras, cajas y gestión de información internet a través del rol de administrador.',
-					tecnologia: ['HTML5', 'CSS 3', 'React', 'Java', 'Postgres'],
-					github: 'https://github.com/servisofts/CalisteniaBolivia',
-					webpage: 'https://calistenia.servisofts.com/login',
-				},
-			]
-			const data_proyecto = [
-				{
-					nombre: 'Servisofts-server',
-					decripcion: 'Conjunto de librerías que se utilizan para crear y programar los diferentes servidores de servicios de servisofts pueden estar integrados tanto a un cluster de microservicios servisofts o ser simplemente controllers de api. Cuenta con la librería servisofts-java-service desarrollada para java 11',
-					tecnologia: ['Java', 'Docker'],
-					github: 'https://github.com/servisofts/servisofts-server',
-					webpage: '',
-				},
-				{
-					nombre: 'Glup',
-					decripcion: 'Aplicación de monitoreo servicios realizada desde cero con módulo de auth, gráficos configurables, alarmas configurables y gestión de usuarios. Cuenta también con lógica de formularios reactivos para la configuración de parámetros',
-					tecnologia: ['HTML5', 'CSS 3', 'React', 'Java', 'Postgres'],
-					github: 'https://github.com/servisofts/Glup',
-					webpage: '',
-				},
-				{
-					nombre: 'MotoNet',
-					decripcion: 'Sistema de gestión de servicios de moto por aplicativo realizada desde cero con módulo de autentificación, notificaciones, monitoreo de conductores por geolocalización',
-					tecnologia: ['HTML5', 'CSS 3', 'React', 'Java', 'Postgres'],
-					github: 'https://github.com/servisofts/motoNet',
-					webpage: '',
-				},
-				{
-					nombre: 'YoAlquilo',
-					decripcion: 'Gestión de alquileres y servicios de inmueble. Un proyecto personal desarrollado en ReactNative en el que puedes registrar inmuebles y servicios de expensas para llevar control de alquileres de departamento/habitación por cliente.',
-					tecnologia: ['HTML5', 'CSS 3', 'React', 'Java', 'Postgres'],
-					github: 'https://github.com/alvarosiles11/YoAlquilo',
-					webpage: '',
-				},
-				{
-					nombre: 'YoCobro',
-					decripcion: 'Gestión de cobros de servicios. Un proyecto personal desarrollado en react en el que puedes registrar cobros/pagos de clientes, monitoreo del personal por geolocalización y todo tipo de reportes.',
-					tecnologia: ['HTML5', 'CSS 3', 'React', 'Java', 'Postgres'],
-					github: 'https://github.com/alvarosiles11/YoCobro',
-					webpage: '',
-				},
-				{
-					nombre: 'MiQR',
-					decripcion: 'Aplicación para generar QR con logo . Un proyecto personal desarrollado en react en el que generar, escanear y guardar QR con logo personal.',
-					tecnologia: ['HTML5', 'CSS 3', 'React', 'Java', 'Postgres'],
-					github: 'https://github.com/alvarosiles11/MiQR',
-					webpage: '',
-				},
-				{
-					nombre: 'MiReloj',
-					decripcion: 'Aplicación de Reloj. Un proyecto personal desarrollado en HTML, CSS3 y JavaScript en el que puedes ver y crear horarios.',
-					tecnologia: ['HTML5', 'CSS 3', 'React', 'Java', 'Postgres'],
-					github: 'https://github.com/alvarosiles11/MiReloj',
-					webpage: '',
-				},
-				{
-					nombre: 'MiMapa',
-					decripcion: 'Interfaz que consume una API de países con el que se pueden visualizar lista de países, ver detalles de cada país, filtrar por nombre y región. Además, cuenta con un dark mode para alternar entre el tema oscuro y el claro.',
-					tecnologia: ['HTML5', 'CSS 3', 'React', 'Java', 'Postgres'],
-					github: 'https://github.com/alvarosiles11/MiMapa',
-					webpage: '',
-				},
-				{
-					nombre: 'MiGatewayOCelot ',
-					decripcion: 'Interfaz que consume una API de libros/escritores con el que se pueden visualizar lista de países, ver detalles de cada país, filtrar por nombre y región. Además, cuenta con un dark mode para alternar entre el tema oscuro y el claro.',
-					tecnologia: ['HTML5', 'CSS 3', 'React', 'Java', 'Postgres'],
-					github: 'https://github.com/alvarosiles11/MiGatewayOCelot',
-					webpage: '',
-				},
-			]
+  <script>
+    // SideNav Initialization
+    $('.button-collapse').sideNav()
 
-			function activar(value) {
-				if (value == '0') {
-					return 'active'
-				} else {
-					return ' '
-				}
-			}
-			function activar1(value) {
-				if (value == '0') {
-					return 'in show  active'
-				} else {
-					return ' '
-				}
-			}
+    var container = document.querySelector('.custom-scrollbar')
+    var ps = new PerfectScrollbar(container, {
+      wheelSpeed: 2,
+      wheelPropagation: true,
+      minScrollbarLength: 20,
+    })
+  </script>
 
-			let html0 = ``
-			html0 += `<ul class="nav flex-column nav-pills" role="tablist" aria-orientation="vertical">`
-			html0 += `<li class="nav-item waves-effect waves-light">`
-			data_experiencia.map((obj, keys) => {
-				html0 += `<a class="nav-link ` + activar(keys) + `" data-toggle="tab" href="#panel` + keys + `" role="tab"><i class="fas fa-user"></i>${obj.empresa}</a>`
-			})
-			html0 += `</li>`
-			html0 += `</ul>`
-			document.getElementById('exp_menu').innerHTML += html0
+  <script>
+    // Treeview Initialization
+    $(document).ready(function () {
+      $('.treeview-animated').mdbTreeview()
+    })
 
-			let html = ``
-			html += `<div class="tab-content col-sm-12">`
-			data_experiencia.map((obj, keys) => {
-				html += `<div class="tab-pane fade ` + activar1(keys) + `" id="panel` + keys + `" role="tabpanel">`
-				html += `<h4 styl class="cargo"> ${obj.cargo} | <span>  ${obj.empresa} </span> </h4>`
-				html += `<h5 class="tiempo"> ${obj.time} </h5>`
-				for (let clave in obj.tareas) {
-					html += `<li>${obj.tareas[clave]}</li>`
-				}
-				html += `</div>`
-			})
-			html += `</div>`
-			document.getElementById('exp_detalle').innerHTML += html
+    const data_experiencia = [
+      {
+        empresa: 'SERVISOFTS SRL',
+        cargo: 'Fullstack developer',
+        time: 'Junio 2021 –  Actualmente trabajando',
+        tareas: ['Creación de diseño UX/UI Web y Mobile (FIGMA).', 'Elaborar un prototipo para confirmar los requisitos acordados.', 'Desarrollo móvil en plataforma Híbrida como React Native.', 'Desarrollo Full-stack Java, Node, React.', 'Testing de aplicaciones web y móvil.', 'Administración y respaldo de servidores físicos de la empresa.', 'Instalación y configuración de SO Linux Ubuntu.', 'Instalación y configuración de redes LAN-WAN.', 'Soporte y mantenimiento a la infraestructura de la empresa.', 'Reportes de toda índole.'],
+      },
+      {
+        empresa: 'SYSLINK BOLIVIA',
+        cargo: 'Fullstack developer',
+        time: ' Octubre 2021 – Mayo 2022',
+        tareas: ['Creación de diseño UX/UI Web y Mobile (FIGMA).', 'Desarrollo móvil en plataforma Híbrida como React Native.', 'Desarrollo Full-stack Java, Node, React.', 'Testing de aplicaciones web y móvil.', 'Administración y respaldo de servidores de Google Cloud.', 'Diseño e implementación de un sistema de cámaras.', 'Instalación y configuración de SO Windows y Linux Ubuntu.', 'Instalación y configuración de redes LAN-WAN.', 'Creaciones de manuales de usuario.', 'Soporte y mantenimiento a la infraestructura de la empresa.', 'Reportes de toda índole.'],
+      },
+      {
+        empresa: 'EL MORDISCO',
+        cargo: 'IT – Sistemas / Encargado',
+        time: 'Mayo 2021 – Agosto 2021',
+        tareas: ['Manejo del software que tiene el restaurante.', 'Manejo del software de restaurante PEDIDOS YA.', 'Manejo del software de restaurante PEDIDOS ONLINE.', 'Proceso de cobro y facturación del servicio.', 'Manejo de facturación electrónica y físico.', 'Ejecutar formas de pagos tarjeta, efectivo Y transferencias.', 'Proceso y manejo de LINKSER (cobro, anulación, reporte).', 'Manejo de efectivo.', 'Apertura y cierre de caja.', 'Control de caja, contabilidad básica y arqueo.', 'Imprimir reportes de caja y ventas.', 'Reportes de toda índole.'],
+      },
+      {
+        empresa: 'MALL FACILITO',
+        cargo: 'Desarrollador Front End',
+        time: 'Junio 2021 – Septiembre 2021',
+        tareas: ['Creación de diseño Web (FIGMA).', 'Desarrollado de sitio web (html, css, javascript y jquery).', 'Venta de software.', 'Asistencia telefónica a los clientes.', 'Elaboración de informes.'],
+      },
+      {
+        empresa: 'CHINREPUESTOS',
+        cargo: 'Desarrollador Front End',
+        time: 'Marzo 2020 – mayo 2020',
+        tareas: ['Desarrollado de sitio web (html, css, javascript y jquery).', 'Configuración y mantenimiento de equipos de computación.', 'Comunicaciones redes y sistemas internos.', 'Soporte de impresoras térmicas Epson.', 'Soporte de impresora de etiquetas Zebra.', 'Elaboración de informes.'],
+      },
+      {
+        empresa: 'MEGASYSTEM SRL',
+        cargo: 'Encargado de proyecto',
+        time: 'Febrero 2017 – Febrero 2020',
+        tareas: ['Creaciones de manuales de usuario y videos tutoriales.', 'Testing de aplicaciones web, móvil y escritorio.', 'Mantenimiento y respaldo de servidores físicos.', 'Instalación y mantenimiento de SO.', 'Instalación y configuración de redes LAN-WAN.', 'Capacitación y seguimiento de los interesados.', 'Soporte de impresoras multifuncional, térmicas Epson', 'Soporte de impresora móviles y de etiquetas Zebra.', 'Soporte de control de asistencias.', 'Instalación de cajas registradora para punto de ventas.', 'Instalación de lector de código barras, lector QR.', 'Diseño e implementación de un sistema de cámaras.', 'Administración y respaldo de Servidores Cloud.', 'Desarrollador de aplicación web (Angular).', 'Soporte y mantenimiento a la infraestructura de la empresa.', 'Elaboración de informes.'],
+      },
+      {
+        empresa: 'TRANSPORTADORA ROART',
+        cargo: 'Asistente de logística y operaciones de contenedores',
+        time: 'Enero 2017 – Julio 2017',
+        tareas: ['Asistente de logística y operaciones de contenedores.', 'Administrar los sistemas que tiene la transportadora.', 'Asistencia telefónica a los clientes.', 'Entregar y recoger documentación de empresa.', 'Manejo de volúmenes de dinero.', 'Atención y coordinación de solicitudes de piso.', 'Reportes de toda índole.'],
+      },
+      {
+        empresa: 'UNIVERSIDAD NUR',
+        cargo: 'IT – Sistemas / Supervisor',
+        time: 'Febrero 2012 – Diciembre 2014',
+        tareas: ['Responsable de mantener, organizar, solucionar y supervisar los laboratorios de centros de cómputo de la Universidad Nur.', 'Atención y coordinación de reserva de aulas.', 'Solicitud de instalación de software en aulas.', 'Solicitud de configuración de aulas para exámenes.', 'Soporte técnico a salas y aulas de docencias.', 'Instalación y mantenimiento de sistemas operativos.', 'Instalación y configuración de redes LAN-WAN.', 'Administración de servidor proxy.', 'Reportes de toda índole.'],
+      },
+    ]
 
-			let htmlProject = ``
-			let estado = 0
+    const data_proyecto_destacado = [
+      {
+        nombre: 'DARMOTOS',
+        image: 'asset/img/proyecto/darmotos/home.PNG',
+        decripcion: 'El sistema integrado DarMotos cuenta con innumerables opciones para facilitar la gestión de la empresa. Realizada desde cero con módulo de auth, sucursales, clientes, bancos, inventario, compras, ventas, cobranza y cajas.',
+        tecnologia: ['HTML5', 'CSS 3', 'React', 'Java', 'Postgres'],
+        github: 'https://github.com/servisofts/darmotos',
+        webpage: 'https://darmotos.servisofts.com/login',
+      },
+      {
+        nombre: 'CASAGRANDE',
+        image: 'asset/img/proyecto/casagrande/home.PNG',
+        decripcion: 'Aplicación de gestión en ventas de tickets y reservas de mesas. Cuenta con opciones de temas, autentificación por gmail, facebook, creación de usuario. Registro de compras de tickets para eventos, reservas de mesas, pagos online (tarjeta de crédito/ debito) y facturación.',
+        tecnologia: ['HTML5', 'CSS 3', 'React', 'Java', 'Postgres'],
+        github: 'https://github.com/servisofts/CasaGrande',
+        webpage: 'https://casagrande.servisofts.com/login',
+      },
+      {
+        nombre: 'TAPEKE',
+        image: 'asset/img/proyecto/tapeke/home.PNG',
+        decripcion: 'Sistema de gestión de pedidos de comida realizada desde cero con módulo de autentificación, notificaciones, gestión clientes , gestión restaurantes,  gestión delivery y monitoreo de conductores por geolocalización, compras, novedades, billetera móvil, tipos de pagos online (tarjeta de crédito/debito), facturación online.',
+        tecnologia: ['HTML5', 'CSS 3', 'React', 'Java', 'Postgres'],
+        github: 'https://github.com/AlejandroChileno/Tapeke',
+        webpage: 'https://tapeke.servisofts.com/login',
+      },
+      {
+        nombre: 'CENTRO MULTIFUNCIONAL ADOLFO KOLPING',
+        image: 'asset/img/proyecto/kolping/home.PNG',
+        decripcion: 'Aplicación de venta de servicios con integración es el acto de unir, incorporar o entrelazar partes para que formen un todo realizada desde cero módulos de punto de venta de farmacia, óptica, laboratorio y servicios de enfermería e imagenología y electromedicina. Cuenta con chat en línea, sistema de notificaciones por WhatsApp y correo, auth, y gestión de información internet a través del rol de administrador.',
+        tecnologia: ['HTML5', 'CSS 3', 'React', 'Java', 'Postgres'],
+        github: 'https://github.com/AlejandroChileno/kolping',
+        webpage: 'https://kolping.servisofts.com/login',
+      },
+      {
+        nombre: 'CALISTENIA BOLIVIA',
+        image: 'asset/img/proyecto/calistenia/home.PNG',
+        decripcion: 'Software de gestión de entrenamientos es una herramienta administrativa que abarca desde la gestión del cliente, hasta las altas gerencias de la empresa. Llevando módulo de sucursales, clientes, empresa, inventario, kardex editorial, venta, compras, cajas y gestión de información internet a través del rol de administrador.',
+        tecnologia: ['HTML5', 'CSS 3', 'React', 'Java', 'Postgres'],
+        github: 'https://github.com/servisofts/CalisteniaBolivia',
+        webpage: 'https://calistenia.servisofts.com/login',
+      },
+    ]
+    const data_proyecto = [
+      {
+        nombre: 'Servisofts-server',
+        decripcion: 'Conjunto de librerías que se utilizan para crear y programar los diferentes servidores de servicios de servisofts pueden estar integrados tanto a un cluster de microservicios servisofts o ser simplemente controllers de api. Cuenta con la librería servisofts-java-service desarrollada para java 11',
+        tecnologia: ['Java', 'Docker'],
+        github: 'https://github.com/servisofts/servisofts-server',
+        webpage: '',
+      },
+      {
+        nombre: 'Glup',
+        decripcion: 'Aplicación de monitoreo servicios realizada desde cero con módulo de auth, gráficos configurables, alarmas configurables y gestión de usuarios. Cuenta también con lógica de formularios reactivos para la configuración de parámetros',
+        tecnologia: ['HTML5', 'CSS 3', 'React', 'Java', 'Postgres'],
+        github: 'https://github.com/servisofts/Glup',
+        webpage: '',
+      },
+      {
+        nombre: 'MotoNet',
+        decripcion: 'Sistema de gestión de servicios de moto por aplicativo realizada desde cero con módulo de autentificación, notificaciones, monitoreo de conductores por geolocalización',
+        tecnologia: ['HTML5', 'CSS 3', 'React', 'Java', 'Postgres'],
+        github: 'https://github.com/servisofts/motoNet',
+        webpage: '',
+      },
+      {
+        nombre: 'YoAlquilo',
+        decripcion: 'Gestión de alquileres y servicios de inmueble. Un proyecto personal desarrollado en ReactNative en el que puedes registrar inmuebles y servicios de expensas para llevar control de alquileres de departamento/habitación por cliente.',
+        tecnologia: ['HTML5', 'CSS 3', 'React', 'Java', 'Postgres'],
+        github: 'https://github.com/alvarosiles11/YoAlquilo',
+        webpage: '',
+      },
+      {
+        nombre: 'YoCobro',
+        decripcion: 'Gestión de cobros de servicios. Un proyecto personal desarrollado en react en el que puedes registrar cobros/pagos de clientes, monitoreo del personal por geolocalización y todo tipo de reportes.',
+        tecnologia: ['HTML5', 'CSS 3', 'React', 'Java', 'Postgres'],
+        github: 'https://github.com/alvarosiles11/YoCobro',
+        webpage: '',
+      },
+      {
+        nombre: 'MiQR',
+        decripcion: 'Aplicación para generar QR con logo . Un proyecto personal desarrollado en react en el que generar, escanear y guardar QR con logo personal.',
+        tecnologia: ['HTML5', 'CSS 3', 'React', 'Java', 'Postgres'],
+        github: 'https://github.com/alvarosiles11/MiQR',
+        webpage: '',
+      },
+      {
+        nombre: 'MiReloj',
+        decripcion: 'Aplicación de Reloj. Un proyecto personal desarrollado en HTML, CSS3 y JavaScript en el que puedes ver y crear horarios.',
+        tecnologia: ['HTML5', 'CSS 3', 'React', 'Java', 'Postgres'],
+        github: 'https://github.com/alvarosiles11/MiReloj',
+        webpage: '',
+      },
+      {
+        nombre: 'MiMapa',
+        decripcion: 'Interfaz que consume una API de países con el que se pueden visualizar lista de países, ver detalles de cada país, filtrar por nombre y región. Además, cuenta con un dark mode para alternar entre el tema oscuro y el claro.',
+        tecnologia: ['HTML5', 'CSS 3', 'React', 'Java', 'Postgres'],
+        github: 'https://github.com/alvarosiles11/MiMapa',
+        webpage: '',
+      },
+      {
+        nombre: 'MiGatewayOCelot ',
+        decripcion: 'Interfaz que consume una API de libros/escritores con el que se pueden visualizar lista de países, ver detalles de cada país, filtrar por nombre y región. Además, cuenta con un dark mode para alternar entre el tema oscuro y el claro.',
+        tecnologia: ['HTML5', 'CSS 3', 'React', 'Java', 'Postgres'],
+        github: 'https://github.com/alvarosiles11/MiGatewayOCelot',
+        webpage: '',
+      },
+    ]
 
-			data_proyecto_destacado.map((obj, keys) => {
-				if (estado === 0) {
-					htmlProject += `<div class="izquierda">`
-					htmlProject += `<div class="proyecto-foto col-lg-7 col-md-4 col-sm-12">`
-					htmlProject += `<img src="` + obj.image + `" alt="dss" />`
-					// htmlProject += `<img src="https://i.ytimg.com/vi/KVMn06NGFdg/maxresdefault.jpg" alt="dss" />`
-					htmlProject += `</div>`
-					htmlProject += `<div class="proyecto-descripcion col-lg-5 col-md-8 col-sm-12">`
-					htmlProject += `<div class="proyecto-float">`
-					htmlProject += `<h4>Proyecto destacado</h4>`
-					htmlProject += `<h5>` + obj.nombre + `</h5>`
-					htmlProject += ` <div class="mensaje"> <p>` + obj.decripcion + `</p></div>`
-					htmlProject += `<ul>`
-					for (let clave in obj.tecnologia) {
-						htmlProject += `<li>${obj.tecnologia[clave]}</li>`
-					}
-					htmlProject += `<ul>`
-					htmlProject += `</div>`
-					htmlProject += `</div>`
-					htmlProject += `</div>`
-					estado = 1
-				} else {
-					htmlProject += `<div class="derecha">`
-					htmlProject += `<div class="proyecto-foto col-lg-7 col-md-4 col-sm-12">`
-					htmlProject += `<img src="` + obj.image + `" alt="dss" />`
-					htmlProject += `</div>`
-					htmlProject += `<div class="proyecto-descripcion col-lg-5 col-md-8 col-sm-12">`
-					htmlProject += `<div class="proyecto-float">`
-					htmlProject += `<h4>Proyecto destacado</h4>`
-					htmlProject += `<h5>` + obj.nombre + `</h5>`
-					htmlProject += ` <div class="mensaje"> <p>` + obj.decripcion + `</p></div>`
-					htmlProject += `<ul>`
-					for (let clave in obj.tecnologia) {
-						htmlProject += `<li>${obj.tecnologia[clave]}</li>`
-					}
-					htmlProject += `<ul>`
-					htmlProject += `</div>`
-					htmlProject += `</div>`
-					htmlProject += `</div>`
-					estado = 0
-				}
-			})
-			document.getElementById('test').innerHTML += htmlProject
+    function activar(value) {
+      if (value == '0') {
+        return 'active'
+      } else {
+        return ' '
+      }
+    }
+    function activar1(value) {
+      if (value == '0') {
+        return 'in show  active'
+      } else {
+        return ' '
+      }
+    }
 
-			let htmlProyectos = ``
-			htmlProyectos += `<div class="container">`
-			htmlProyectos += `<div class="parent">`
-			data_proyecto.map((obj, keys) => {
-				htmlProyectos += `<div class='box'>`
-				htmlProyectos += `<div class="cardHeader">`
-				htmlProyectos += `<div class="container">`
-				htmlProyectos += `<div class="row">`
-				htmlProyectos += `<div class="col-6 justify-content-end"> <img class="folder" src="asset/svg/folder.svg" alt="logo" /> </div>`
-				htmlProyectos += `<div class="col-6 d-flex justify-content-end">`
-				htmlProyectos += `<a href="` + obj.webpage + `" target="_blank"> <i class="links fas fa-external-link-alt"></i> </a>`
-				htmlProyectos += `<a href="` + obj.github + `" target="_blank"> <i class="links fa-brands fa-github"></i> </a>`
-				htmlProyectos += `</div>`
-				htmlProyectos += `</div>`
-				htmlProyectos += `</div>`
-				htmlProyectos += `<div class="cardBody">`
-				htmlProyectos += `<h1>` + obj.nombre + `</h1>`
-				htmlProyectos += `<p>` + obj.decripcion + `</p>`
-				htmlProyectos += `</div>`
-				htmlProyectos += `<div class="cardFooter">`
-				htmlProyectos += `<ul>`
-				for (let clave in obj.tecnologia) {
-					htmlProyectos += `<li>${obj.tecnologia[clave]}</li>`
-				}
-				htmlProyectos += `</ul>`
-				htmlProyectos += `</div>`
-				htmlProyectos += `</div>`
-				htmlProyectos += `</div>`
-			})
-			htmlProyectos += `</div>`
-			htmlProyectos += `</div>`
-			document.getElementById('othersProject').innerHTML += htmlProyectos
-		</script>
-	</body>
+    let html0 = ``
+    html0 += `<ul class="nav flex-column nav-pills" role="tablist" aria-orientation="vertical">`
+    html0 += `<li class="nav-item waves-effect waves-light">`
+    data_experiencia.map((obj, keys) => {
+      html0 += `<a class="nav-link ` + activar(keys) + `" data-toggle="tab" href="#panel` + keys + `" role="tab"><i class="fas fa-user"></i>${obj.empresa}</a>`
+    })
+    html0 += `</li>`
+    html0 += `</ul>`
+    document.getElementById('exp_menu').innerHTML += html0
+
+    let html = ``
+    html += `<div class="tab-content col-sm-12">`
+    data_experiencia.map((obj, keys) => {
+      html += `<div class="tab-pane fade ` + activar1(keys) + `" id="panel` + keys + `" role="tabpanel">`
+      html += `<h4 styl class="cargo"> ${obj.cargo} | <span>  ${obj.empresa} </span> </h4>`
+      html += `<h5 class="tiempo"> ${obj.time} </h5>`
+      for (let clave in obj.tareas) {
+        html += `<li>${obj.tareas[clave]}</li>`
+      }
+      html += `</div>`
+    })
+    html += `</div>`
+    document.getElementById('exp_detalle').innerHTML += html
+
+    let htmlProject = ``
+    let estado = 0
+
+    data_proyecto_destacado.map((obj, keys) => {
+      if (estado === 0) {
+        htmlProject += `<div class="izquierda">`
+        htmlProject += `<div class="proyecto-foto col-lg-7 col-md-4 col-sm-12">`
+        htmlProject += `<img src="` + obj.image + `" alt="dss" />`
+        // htmlProject += `<img src="https://i.ytimg.com/vi/KVMn06NGFdg/maxresdefault.jpg" alt="dss" />`
+        htmlProject += `</div>`
+        htmlProject += `<div class="proyecto-descripcion col-lg-5 col-md-8 col-sm-12">`
+        htmlProject += `<div class="proyecto-float">`
+        htmlProject += `<h4>Proyecto destacado</h4>`
+        htmlProject += `<h5>` + obj.nombre + `</h5>`
+        htmlProject += ` <div class="mensaje"> <p>` + obj.decripcion + `</p></div>`
+        htmlProject += `<ul>`
+        for (let clave in obj.tecnologia) {
+          htmlProject += `<li>${obj.tecnologia[clave]}</li>`
+        }
+        htmlProject += `<ul>`
+        htmlProject += `</div>`
+        htmlProject += `</div>`
+        htmlProject += `</div>`
+        estado = 1
+      } else {
+        htmlProject += `<div class="derecha">`
+        htmlProject += `<div class="proyecto-foto col-lg-7 col-md-4 col-sm-12">`
+        htmlProject += `<img src="` + obj.image + `" alt="dss" />`
+        htmlProject += `</div>`
+        htmlProject += `<div class="proyecto-descripcion col-lg-5 col-md-8 col-sm-12">`
+        htmlProject += `<div class="proyecto-float">`
+        htmlProject += `<h4>Proyecto destacado</h4>`
+        htmlProject += `<h5>` + obj.nombre + `</h5>`
+        htmlProject += ` <div class="mensaje"> <p>` + obj.decripcion + `</p></div>`
+        htmlProject += `<ul>`
+        for (let clave in obj.tecnologia) {
+          htmlProject += `<li>${obj.tecnologia[clave]}</li>`
+        }
+        htmlProject += `<ul>`
+        htmlProject += `</div>`
+        htmlProject += `</div>`
+        htmlProject += `</div>`
+        estado = 0
+      }
+    })
+    document.getElementById('test').innerHTML += htmlProject
+
+    let htmlProyectos = ``
+    htmlProyectos += `<div class="container">`
+    htmlProyectos += `<div class="parent">`
+    data_proyecto.map((obj, keys) => {
+      htmlProyectos += `<div class='box'>`
+      htmlProyectos += `<div class="cardHeader">`
+      htmlProyectos += `<div class="container">`
+      htmlProyectos += `<div class="row">`
+      htmlProyectos += `<div class="col-6 justify-content-end"> <img class="folder" src="asset/svg/folder.svg" alt="logo" /> </div>`
+      htmlProyectos += `<div class="col-6 d-flex justify-content-end">`
+      htmlProyectos += `<a href="` + obj.webpage + `" target="_blank"> <i class="links fas fa-external-link-alt"></i> </a>`
+      htmlProyectos += `<a href="` + obj.github + `" target="_blank"> <i class="links fa-brands fa-github"></i> </a>`
+      htmlProyectos += `</div>`
+      htmlProyectos += `</div>`
+      htmlProyectos += `</div>`
+      htmlProyectos += `<div class="cardBody">`
+      htmlProyectos += `<h1>` + obj.nombre + `</h1>`
+      htmlProyectos += `<p>` + obj.decripcion + `</p>`
+      htmlProyectos += `</div>`
+      htmlProyectos += `<div class="cardFooter">`
+      htmlProyectos += `<ul>`
+      for (let clave in obj.tecnologia) {
+        htmlProyectos += `<li>${obj.tecnologia[clave]}</li>`
+      }
+      htmlProyectos += `</ul>`
+      htmlProyectos += `</div>`
+      htmlProyectos += `</div>`
+      htmlProyectos += `</div>`
+    })
+    htmlProyectos += `</div>`
+    htmlProyectos += `</div>`
+    document.getElementById('othersProject').innerHTML += htmlProyectos
+  </script>
+</body>
+
 </html>
