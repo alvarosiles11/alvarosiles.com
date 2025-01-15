@@ -2,41 +2,159 @@
 <html lang="es">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Contador de Visitas</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Resumen de Eventos en Tiempo Real con Mapa</title>
+
+  <!-- Bootstrap CSS para estilo -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      background-color: #f4f7fb;
+      margin: 0;
+      padding: 0;
+      color: #333;
+    }
+
+    .container {
+      margin: 50px auto;
+      max-width: 800px;
+      padding: 0 20px;
+    }
+
+    .card {
+      background: #fff;
+      border-radius: 8px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      margin-bottom: 20px;
+      padding: 20px;
+    }
+
+    .card-header {
+      font-size: 1.5rem;
+      font-weight: 600;
+      color: #1976d2;
+    }
+
+    .card-body {
+      font-size: 1.2rem;
+    }
+
+    .event-count {
+      font-weight: bold;
+      color: #555;
+    }
+
+    /* Estilo del mapa */
+    #map {
+      height: 400px;
+      width: 100%;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+  </style>
+
+  <!-- Aquí se incluye el script de HERE Maps -->
+  <script src="https://js.api.here.com/v3/3.1/mapsjs-core.js" type="text/javascript"></script>
+  <script src="https://js.api.here.com/v3/3.1/mapsjs-service.js" type="text/javascript"></script>
+  <script src="https://js.api.here.com/v3/3.1/mapsjs-ui.js" type="text/javascript"></script>
 </head>
 
 <body>
+  <div class="container">
+    <h1 class="text-center">Resumen de Eventos en Tiempo Real con Mapa</h1>
 
-  <section id="counter-section">
-    <h1>Bienvenido a mi página</h1>
-    <p>Esta es la visita número: <span id="visit-count">0</span></p>
-  </section>
+    <!-- Contador de eventos -->
+    <div class="card">
+      <div class="card-header">
+        Eventos de la Página
+      </div>
+      <div class="card-body">
+        <p>Visitas de página (page_view): <span id="page-view-count" class="event-count">0</span></p>
+        <p>Desplazamientos (scroll): <span id="scroll-count" class="event-count">0</span></p>
+        <p>Interacción de usuario (user_engagement): <span id="user-engagement-count" class="event-count">0</span></p>
+        <p>Inicio de sesión (session_start): <span id="session-start-count" class="event-count">0</span></p>
+        <p>Primera visita (first_visit): <span id="first-visit-count" class="event-count">0</span></p>
+      </div>
+    </div>
 
-  <footer>
-    <h5>Desarrollado con React por Álvaro Siles</h5>
-  </footer>
+    <!-- Aquí se incluirá el mapa -->
+    <div id="map"></div>
+  </div>
 
   <script>
-    // Verificar si ya existe un contador en el localStorage
-    let visitCount = localStorage.getItem('visitCount');
+    // Variables para contar los eventos
+    let pageViewCount = 0;
+    let scrollCount = 0;
+    let userEngagementCount = 0;
+    let sessionStartCount = 0;
+    let firstVisitCount = 0;
 
-    // Si no existe, inicializarlo en 0
-    if (!visitCount) {
-      visitCount = 0;
+    // Función para actualizar los contadores en la página
+    function updateEventCounts() {
+      document.getElementById('page-view-count').textContent = pageViewCount;
+      document.getElementById('scroll-count').textContent = scrollCount;
+      document.getElementById('user-engagement-count').textContent = userEngagementCount;
+      document.getElementById('session-start-count').textContent = sessionStartCount;
+      document.getElementById('first-visit-count').textContent = firstVisitCount;
     }
 
-    // Incrementar el contador
-    visitCount++;
+    // Simulación de los eventos de Google Analytics (puedes sustituir esto por la integración real)
+    function simulateAnalyticsEvents() {
+      // Simulamos un evento de "page_view"
+      pageViewCount++;
+      updateEventCounts();
 
-    // Guardar el contador actualizado en el localStorage
-    localStorage.setItem('visitCount', visitCount);
+      // Simulamos un evento de "scroll"
+      scrollCount++;
+      updateEventCounts();
 
-    // Mostrar el contador en la página
-    document.getElementById('visit-count').textContent = visitCount;
+      // Simulamos un evento de "user_engagement"
+      userEngagementCount++;
+      updateEventCounts();
+
+      // Simulamos un evento de "session_start"
+      sessionStartCount++;
+      updateEventCounts();
+
+      // Simulamos un evento de "first_visit"
+      firstVisitCount++;
+      updateEventCounts();
+    }
+
+    // Llamar a la función de simulación cada 5 segundos (esto es solo para simular los eventos)
+    setInterval(simulateAnalyticsEvents, 5000); // Llamada cada 5 segundos
+
+    // Inicializar el mapa de HERE
+    function initMap() {
+      var platform = new H.service.Platform({
+        apikey: 'Nh0PUb66q0-7CFKTjyRGYLK8OYr5-2PMB28RcnMlZkc' // Tu API Key de Here
+      });
+
+      var defaultLayers = platform.createDefaultLayers();
+
+      var map = new H.Map(
+        document.getElementById('map'),
+        defaultLayers.vector.normal.map,
+        {
+          zoom: 10,
+          center: { lat: 52.5, lng: 13.4 } // Coordenadas de ejemplo (ajusta según tu ubicación)
+        }
+      );
+
+      var marker = new H.map.Marker({ lat: 52.5, lng: 13.4 });
+      map.addObject(marker);
+    }
+
+    // Ejecutar funciones cuando se carga la página
+    window.onload = function () {
+      updateEventCounts(); // Asegurarse de que los contadores se muestren correctamente al principio
+      initMap(); // Inicializar el mapa de Here
+    }
   </script>
-
 </body>
 
 </html>
