@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Borrar Historial de Navegadores</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin: 20px;
+    }
+
+    h1 {
+      color: #333;
+    }
+
+    select,
+    button {
+      margin: 10px;
+      padding: 10px 20px;
+      font-size: 1em;
+    }
+
+    #result {
+      margin: 20px 0;
+      font-size: 1.1em;
+      color: green;
+    }
+
+    .error {
+      color: red;
+    }
+
+  </style>
+</head>
+
+<body>
+  <h1>Borrar Historial de Google Chrome</h1>
+  <p>Haga clic en el botón para borrar datos de navegación desde siempre en Google Chrome.</p>
+
+  <button id="clearHistory">Borrar Historial</button>
+
+  <div id="result"></div>
+
+  <script>
+    document.getElementById('clearHistory').addEventListener('click', () => {
+      fetch('http://localhost:3000/clear-chrome-history', {
+        method: 'POST'
+      })
+        .then(response => response.json())
+        .then(data => {
+          const resultDiv = document.getElementById('result');
+          if (data.error) {
+            resultDiv.textContent = `Error: ${data.error}`;
+            resultDiv.className = 'error';
+          } else {
+            resultDiv.textContent = data.message;
+            resultDiv.className = '';
+          }
+        })
+        .catch(error => {
+          const resultDiv = document.getElementById('result');
+          resultDiv.textContent = `Error al borrar historial: ${error.message}`;
+          resultDiv.className = 'error';
+        });
+    });
+  </script>
+</body>
+
+</html>
