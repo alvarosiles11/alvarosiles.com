@@ -61,6 +61,17 @@ a.small {
   color: inherit;
 }
 
+a {
+  /* color: #2457F5 !important; */
+  text-decoration: none !important;
+}
+
+a:hover {
+  text-decoration: none !important;
+  color: inherit;
+  filter: brightness(90%);
+}
+
 footer {
   text-align: center;
   padding: 3px;
