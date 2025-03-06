@@ -1,940 +1,671 @@
-.button {
-  display: inline-block;
-  text-decoration: none;
-  height: 48px;
-  padding: 0 16px;
-  text-align: center;
-  vertical-align: middle;
-  font-size: 18px;
-  width: 300px;
-  font-weight: 600;
-  line-height: 48px;
-  letter-spacing: 0.5px;
-  white-space: nowrap;
-  background-color: transparent;
-  border-radius: 8px;
-  cursor: pointer;
-  box-sizing: border-box;
-}
-
-/* Efecto de movimiento */
-.button:hover {
-  filter: brightness(80%);
-  transition: 0.4s;
-  padding-right: 24px;
-  padding-left: 8px;
-}
-
-/* Efecto para description */
+.button,
 .button:hover:before {
-  border: none;
-  color: white;
-  position: absolute;
-  padding: 0px 35px;
-  width: 400px;
-  height: auto;
-  word-spacing: 3px;
-  text-align: left;
-  text-decoration: none;
-  line-height: 1.3;
-  display: block;
-  font-size: 18px;
-  margin: 0px 280px;
-  cursor: pointer;
-  vertical-align: middle;
+ text-decoration: none;
+ font-size: 18px;
+ cursor: pointer
 }
 
-/* Brand Icons
-–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.button,
+.button:hover:before,
+.icon {
+ vertical-align: middle
+}
+
+.button {
+ display: inline-block;
+ height: 48px;
+ padding: 0 16px;
+ text-align: center;
+ width: 300px;
+ font-weight: 600;
+ line-height: 48px;
+ letter-spacing: .5px;
+ white-space: nowrap;
+ background-color: transparent;
+ border-radius: 8px;
+ box-sizing: border-box
+}
+
+.button:hover {
+ filter: brightness(80%);
+ transition: .4s;
+ padding-right: 24px;
+ padding-left: 8px
+}
+
+.button:hover:before {
+ border: none;
+ color: #fff;
+ position: absolute;
+ padding: 0 35px;
+ width: 400px;
+ height: auto;
+ word-spacing: 3px;
+ text-align: left;
+ line-height: 1.3;
+ display: block;
+ margin: 0 280px
+}
 
 .icon {
-  padding: 0px 8px 3.5px 0px;
-  vertical-align: middle;
-  width: 20px;
-  height: 20px;
+ padding: 0 8px 3.5px 0;
+ width: 20px;
+ height: 20px
 }
 
 .button.button-twitter {
-  color: #FFFFFF;
-  background-color: #1da1f2;
+ color: #fff;
+ background-color: #1da1f2
 }
 
-.button.button-twitter:hover,
-.button.button-twitter:hover:before {
-  content: 'En esta comunidad, vas a poder conectarte para charlar con otros Pelades sobre temas de tecnologías como las que hablo en el canal, y consultar dudas y ayudar a los demás!';
-  white-space: initial;
-}
-
+.button-instagram,
 .button.button-instagram {
-  color: #FFFFFF;
-  background-image: linear-gradient(-135deg, #1400c8, #b900b4, #f50000);
+ color: #fff;
+ background-image: linear-gradient(-135deg, #1400c8, #b900b4, #f50000)
 }
 
-.button.button-instagram:hover,
-.button.button-instagram:hover:before {
-  content: 'En esta comunidad, vas a poder conectarte para charlar con otros Pelades sobre temas de tecnologías como las que hablo en el canal, y consultar dudas y ayudar a los demás!';
-  white-space: initial;
-}
-
+.button-linked,
 .button.button-linkedin {
-  color: #FFFFFF;
-  background-color: #2867b2;
+ color: #fff;
+ background-color: #2867b2
 }
 
-.button.button-linkedin:hover,
-.button.button-linkedin:hover:before {
-  content: 'En esta comunidad, vas a poder conectarte para charlar con otros Pelades sobre temas de tecnologías como las que hablo en el canal, y consultar dudas y ayudar a los demás!';
-  white-space: initial;
+.button-apple-music,
+.button-apple-podcasts,
+.button-appstore,
+.button-discogs-alt,
+.button-figma,
+.button-flickr,
+.button-github,
+.button-google-black,
+.button-invites,
+.button-kick,
+.button-kit,
+.button-ko-fi,
+.button-medium,
+.button-microsoft,
+.button-patreon,
+.button-playstore,
+.button-read-cv,
+.button-threads,
+.button-tiktok,
+.button-vsco,
+.button-x,
+.button.button-figma,
+.button.button-github,
+.button.button-tiktok {
+ color: #fff;
+ background-color: #000;
+ border: 1px solid #fff
 }
 
-.button.button-github {
-  color: #FFFFFF;
-  background-color: #000000;
-  border: 1px solid #ffffff;
-}
-
-.button.button-github:hover,
-.button.button-github:hover:before {
-  content: 'En esta comunidad, vas a poder conectarte para charlar con otros Pelades sobre temas de tecnologías como las que hablo en el canal, y consultar dudas y ayudar a los demás!';
-  white-space: initial;
-}
-
+.button-twitch,
 .button.button-twitch {
-  color: #FFFFFF;
-  background-color: #9146ff;
+ color: #fff;
+ background-color: #9146ff
 }
 
-.button.button-twitch:hover,
-.button.button-twitch:hover:before {
-  content: 'En esta comunidad, vas a poder conectarte para charlar con otros Pelades sobre temas de tecnologías como las que hablo en el canal, y consultar dudas y ayudar a los demás!';
-  white-space: initial;
-}
-
+.button-discord,
 .button.button-discord {
-  color: #FFFFFF;
-  background-color: #5865f2;
-}
-
-.button.button-discord:hover,
-.button.button-discord:hover:before {
-  content: 'En esta comunidad, vas a poder conectarte para charlar con otros Pelades sobre temas de tecnologías como las que hablo en el canal, y consultar dudas y ayudar a los demás!';
-  white-space: initial;
+ color: #fff;
+ background-color: #5865f2
 }
 
 .button.button-snapchat {
-  color: #000;
-  background-color: #fffc00;
-  font-weight: bold;
-}
-
-.button.button-snapchat:hover,
-.button.button-snapchat:hover:before {
-  content: 'En esta comunidad, vas a poder conectarte para charlar con otros Pelades sobre temas de tecnologías como las que hablo en el canal, y consultar dudas y ayudar a los demás!';
-  white-space: initial;
+ color: #000;
+ background-color: #fffc00;
+ font-weight: 700
 }
 
 .button.button-spotify {
-  color: #000;
-  font-weight: bold;
-  background-color: #1db954;
+ color: #000;
+ font-weight: 700;
+ background-color: #1db954
 }
 
-.button.button-spotify:hover,
-.button.button-spotify:hover:before {
-  content: 'En esta comunidad, vas a poder conectarte para charlar con otros Pelades sobre temas de tecnologías como las que hablo en el canal, y consultar dudas y ayudar a los demás!';
-  white-space: initial;
-}
-
+.button-telegram,
 .button.button-telegram {
-  color: #FFFFFF;
-  background-color: #3faee8;
+ color: #fff;
+ background-color: #3faee8
 }
 
-.button.button-telegram:hover,
-.button.button-telegram:hover:before {
-  content: 'En esta comunidad, vas a poder conectarte para charlar con otros Pelades sobre temas de tecnologías como las que hablo en el canal, y consultar dudas y ayudar a los demás!';
-  white-space: initial;
-}
-
+.button-whatsapp,
 .button.button-whatsapp {
-  color: #FFFFFF;
-  background-color: #455a64;
-}
-
-.button.button-whatsapp:hover,
-.button.button-whatsapp:hover:before {
-  content: 'En esta comunidad, vas a poder conectarte para charlar con otros Pelades sobre temas de tecnologías como las que hablo en el canal, y consultar dudas y ayudar a los demás!';
-  white-space: initial;
+ color: #fff;
+ background-color: #455a64
 }
 
 .button.button-steam {
-  color: #FFFFFF;
-  background-color: #171a21;
+ color: #fff;
+ background-color: #171a21
 }
 
-.button.button-steam:hover,
-.button.button-steam:hover:before {
-  content: 'En esta comunidad, vas a poder conectarte para charlar con otros Pelades sobre temas de tecnologías como las que hablo en el canal, y consultar dudas y ayudar a los demás!';
-  white-space: initial;
-}
-
-.button.button-tiktok {
-  color: #FFFFFF;
-  background-color: #000000;
-  border: 1px solid white;
-}
-
-.button.button-tiktok:hover,
-.button.button-tiktok:hover:before {
-  content: 'En esta comunidad, vas a poder conectarte para charlar con otros Pelades sobre temas de tecnologías como las que hablo en el canal, y consultar dudas y ayudar a los demás!';
-  white-space: initial;
-}
-
+.button-soundcloud,
+.button.button-kofi,
 .button.button-soundcloud {
-  color: #FFFFFF;
-  background-color: #f50;
-}
-
-.button.button-soundcloud:hover,
-.button.button-soundcloud:hover:before {
-  content: 'En esta comunidad, vas a poder conectarte para charlar con otros Pelades sobre temas de tecnologías como las que hablo en el canal, y consultar dudas y ayudar a los demás!';
-  white-space: initial;
+ color: #fff;
+ background-color: #f50
 }
 
 .button.button-miro {
-  color: black;
-  background-color: #FFD02E;
+ color: #000;
+ background-color: #ffd02e
 }
 
-.button.button-miro:hover,
-.button.button-miro:hover:before {
-  content: 'En esta comunidad, vas a poder conectarte para charlar con otros Pelades sobre temas de tecnologías como las que hablo en el canal, y consultar dudas y ayudar a los demás!';
-  white-space: initial;
-}
-
-.button.button-figma {
-  color: #FFFFFF;
-  background-color: #000000;
-  border: 1px solid white;
-}
-
-.button.button-figma:hover,
-.button.button-figma:hover:before {
-  content: 'En esta comunidad, vas a poder conectarte para charlar con otros Pelades sobre temas de tecnologías como las que hablo en el canal, y consultar dudas y ayudar a los demás!';
-  white-space: initial;
-}
-
-/* Brand Styles
-–––––––––––––––––––––––––––––––––––––––––––––––––– */
-/* Slack */
 .button.button-slack {
-  color: #FFFFFF;
-  background-color: #7b16ff
-}
-
-.button.button-slack:hover,
-.button.button-slack:hover:before {
-  content: 'En esta comunidad, vas a poder conectarte para charlar con otros Pelades sobre temas de tecnologías como las que hablo en el canal, y consultar dudas y ayudar a los demás!';
-  white-space: initial;
+ color: #fff;
+ background-color: #7b16ff
 }
 
 .button.button-facebook {
-  color: #FFFFFF;
-  background-color: #1877f2;
+ color: #fff;
+ background-color: #1877f2
 }
 
-.button.button-facebook:hover,
-.button.button-facebook:hover:before {
-  content: 'En esta comunidad, vas a poder conectarte para charlar con otros Pelades sobre temas de tecnologías como las que hablo en el canal, y consultar dudas y ayudar a los demás!';
-  white-space: initial;
-}
-
-/* Kit */
 .button.button-kit {
-  color: #FFFFFF;
-  background-color: #10c694
+ color: #fff;
+ background-color: #10c694
 }
 
 .button.button-kit:hover,
 .button.button-kit:hover:before {
-  content: 'Aquí vas a encontrar la lista completa y actualizada de todo el hardware que uso para trabajar y hacer mis videos de YouTube.';
-  white-space: initial;
+ content: 'Aquí vas a encontrar la lista completa y actualizada de todo el hardware que uso para trabajar y hacer mis videos de YouTube.';
+ white-space: initial
 }
 
-/* YouTube */
+.button-yt-alt,
 .button.button-youtube {
-  color: #FFFFFF;
-  background-color: #FF0000
+ color: #fff;
+ background-color: red
 }
 
 .button.button-youtube:hover,
 .button.button-youtube:hover:before {
-  content: 'Este es mi segundo canal de YouTube, donde subo vlogs y contenido más personal :) No, no ese tipo de contenido.';
-  white-space: initial;
+ content: 'Este es mi segundo canal de YouTube, donde subo vlogs y contenido más personal :) No, no ese tipo de contenido.';
+ white-space: initial
 }
 
-/* Slides */
 .button.button-slides {
-  color: #FFFFFF;
-  background-color: #212c3d
+ color: #fff;
+ background-color: #212c3d
 }
 
 .button.button-slides:hover,
 .button.button-slides:hover:before {
-  content: 'Mis slides de cuando doy charlas en conferencias.';
-  white-space: initial;
+ content: 'Mis slides de cuando doy charlas en conferencias.';
+ white-space: initial
 }
 
-/* Mercha */
-.button.button-mercha {
-  color: #000000;
-  background-color: #fffc00
+.button-snapchat,
+.button.button-mercha,
+.button.button-sponsors {
+ color: #000;
+ background-color: #fffc00
 }
 
 .button.button-mercha:hover,
 .button.button-mercha:hover:before {
-  content: 'Esta es mi tienda de merchandising, puedes encontrar remeras/camisetas/poleras y otro tipo de cosas :)';
-  white-space: initial;
+ content: 'Esta es mi tienda de merchandising, puedes encontrar remeras/camisetas/poleras y otro tipo de cosas :)';
+ white-space: initial
 }
 
-/* Reddit */
+.button-reddit,
 .button.button-reddit {
-  color: #FFFFFF;
-  background-color: #FF4500
+ color: #fff;
+ background-color: #ff4500
 }
 
 .button.button-reddit:hover,
 .button.button-reddit:hover:before {
-  content: 'Mi subreddit, como un pequeño foro para hacer preguntas sobre mis videos o cualquier tema relacionado con el contenido de mi canal.';
-  white-space: initial;
+ content: 'Mi subreddit, como un pequeño foro para hacer preguntas sobre mis videos o cualquier tema relacionado con el contenido de mi canal.';
+ white-space: initial
 }
 
-/* Mail */
 .button.button-mail {
-  color: #000000;
-  background-color: #E8F3EC
+ color: #000;
+ background-color: #e8f3ec
 }
 
 .button.button-mail:hover,
 .button.button-mail:hover:before {
-  content: 'Haciendo click aquí, puedes enviarme un mail, puedo tardar en responder!';
-  white-space: initial;
-}
-
-/* Ko-Fi */
-.button.button-kofi {
-  color: #FFFFFF;
-  background-color: #ff5500
+ content: 'Haciendo click aquí, puedes enviarme un mail, puedo tardar en responder!';
+ white-space: initial
 }
 
 .button.button-kofi:hover,
 .button.button-kofi:hover:before {
-  content: 'Si quieres, puedes comprarme un cafecito usando este link.';
-  white-space: initial;
-}
-
-/* Mercha */
-.button.button-sponsors {
-  color: #000000;
-  background-color: #fffc00
+ content: 'Si quieres, puedes comprarme un cafecito usando este link.';
+ white-space: initial
 }
 
 .button.button-sponsors:hover,
 .button.button-sponsors:hover:before {
-  content: 'Si quieres trabajar conmigo, patrocinando algún video en mi canal, te recomiendo que leas esta página primero.';
-  white-space: initial;
+ content: 'Si quieres trabajar conmigo, patrocinando algún video en mi canal, te recomiendo que leas esta página primero.';
+ white-space: initial
 }
 
-/* Default */
 .button.button-default {
-  color: #ffffff;
-  background-color: #2457F5;
-  border: 1px solid #ffffff;
-}
-
-/* Amazon */
-.button-amazon {
-  color: #000000;
-  background-color: #FFFFFF;
-  border: 1px solid #212121;
-}
-
-.button-amazon.button:hover {
-  color: #000000;
-  background-color: #FFFFFF;
-  border: 1px solid #212121;
-}
-
-/* Amazon Music */
-.button-amazon-music {
-  color: #000000;
-  background-color: #25D1DA;
-}
-
-/* Apple App Store */
-.button-appstore {
-  color: #FFFFFF;
-  background-color: #000000;
-  border: 1px solid #FFFFFF;
-}
-
-/* Apple Invites */
-.button-invites {
-  color: #FFFFFF;
-  background-color: #000000;
-  border: 1px solid #FFFFFF;
-}
-
-/* Apple Music */
-.button-apple-music {
-  color: #ffffff;
-  background-color: #000000;
-  border: 1px solid #FFFFFF;
-}
-
-/* Apple Music Alt */
-.button-apple-music-alt {
-  color: #ffffff;
-  background-image: linear-gradient(to bottom, #FB5C74, #FA233B);
-}
-
-/* Apple Podcasts */
-.button-apple-podcasts {
-  color: #ffffff;
-  background-color: #000000;
-  border: 1px solid #FFFFFF;
-}
-
-/* Apple Podcasts Alt */
-.button-apple-podcasts-alt {
-  color: #ffffff;
-  background-image: linear-gradient(to bottom, #F452FF, #832BC1);
-}
-
-/* Bandcamp */
-.button-bandcamp {
-  color: #ffffff;
-  background-color: #1d9fc3;
-}
-
-/* Behance */
-.button-behance {
-  color: #ffffff;
-  background-color: #0057FF;
-  border: 1px solid #FFFFFF;
-}
-
-/* Bluesky */
-.button-bluesky {
-  color: #FFFFFF;
-  background-color: #1185FE;
-}
-
-/* Bluesky Alt */
-.button-bluesky-alt {
-  color: #000000;
-  background-color: #FFFFFF;
-  border: 1px solid #000000;
-}
-
-/* Buy Me a Coffee */
-.button-coffee {
-  color: #000000;
-  background-color: #ffdd00;
-}
-
-/* Cal.com */
-.button-cal {
-  color: #FFFFFF;
-  background-color: #292929;
-  border: 1px solid #FFFFFF;
-}
-
-/* Calendly */
-.button-calendly {
-  color: #FFFFFF;
-  background-color: #006BFF;
-}
-
-/* Cash App */
-.button-cash-app {
-  color: #ffffff;
-  background-image: linear-gradient(to bottom, #00d64b, #00c244);
-}
-
-/* dev.to */
-.button-dev-to {
-  color: #000000;
-  background-color: #f5f5f5;
-  border: 1px solid #212121;
-}
-
-/* Discogs */
-.button-discogs {
-  color: #000000;
-  background-color: #FFFFFF;
-  border: 1px solid #000000;
-}
-
-/* Discogs Alt */
-.button-discogs-alt {
-  color: #FFFFFF;
-  background-color: #000000;
-  border: 1px solid #FFFFFF;
-}
-
-/* Discord */
-.button-discord {
-  color: #ffffff;
-  background-color: #5865F2;
-}
-
-/* Dribbble */
-.button-dribbble {
-  color: #000000;
-  background-color: #FFFFFF;
-  border: 1px solid #212121;
-}
-
-/* Etsy */
-.button-etsy {
-  color: #ffffff;
-  background-color: #F45800;
-}
-
-/* Facebook */
-.button-faceb {
-  color: #ffffff;
-  background-color: #0866FF;
-}
-
-/* Facebook Messenger */
-.button-messenger {
-  color: #ffffff;
-  background-color: #0866FF;
-}
-
-/* Figma */
-.button-figma {
-  color: #ffffff;
-  background-color: #000000;
-  border: 1px solid #FFFFFF;
-}
-
-/* Fiverr */
-.button-fiverr {
-  color: #ffffff;
-  background-color: #1DBF73;
-}
-
-/* Flickr */
-.button-flickr {
-  color: #ffffff;
-  background-color: #000000;
-  border: 1px solid #FFFFFF;
-}
-
-/* GitHub */
-.button-github {
-  color: #ffffff;
-  background-color: #000000;
-  border: 1px solid #FFFFFF;
-}
-
-/* GitLab */
-.button-gitlab {
-  color: #ffffff;
-  background-color: #6151b2;
-}
-
-/* GoFundMe */
-.button-gofundme {
-  color: #ffffff;
-  background-color: #02A95C;
-}
-
-/* Goodreads */
-.button-goodreads {
-  color: #333333;
-  background-color: #f3f1e6;
-  border: 1px solid #212121;
-}
-
-/* Google Black */
-.button-google-black {
-  color: #FFFFFF;
-  background-color: #000000;
-  border: 1px solid #FFFFFF;
-}
-
-/* Google Play Store */
-.button-playstore {
-  color: #FFFFFF;
-  background-color: #000000;
-  border: 1px solid #FFFFFF;
-}
-
-/* Google Scholar */
-.button-google-scholar {
-  color: #000000;
-  background-color: #FFFFFF;
-  border: 1px solid #212121;
-}
-
-/* Hashnode */
-.button-hashnode {
-  color: #000000;
-  background-color: #ffffff;
-  border: 1px solid #212121;
-}
-
-/* Instagram */
-.button-instagram {
-  color: #ffffff;
-  background-image: linear-gradient(-135deg, #1400c8, #b900b4, #f50000);
-}
-
-/* Kick */
-.button-kick {
-  color: #ffffff;
-  background-color: #000000;
-  border: 1px solid #ffffff;
-}
-
-/* Kick Alt */
-.button-kick-alt {
-  color: #000000;
-  background-color: #01e701;
-}
-
-/* Kickstarter */
-.button-kickstarter {
-  color: #ffffff;
-  background-color: #05ce78;
-}
-
-/* Kit */
-.button-kit {
-  color: #ffffff;
-  background-color: #000000;
-  border: 1px solid #FFFFFF;
-}
-
-/* Ko-fi */
-.button-ko-fi {
-  color: #ffffff;
-  background-color: #000000;
-  border: 1px solid #FFFFFF;
-}
-
-/* Last.fm */
-.button-last-fm {
-  color: #ffffff;
-  background-color: #D51007;
-}
-
-/* Letterboxd */
-.button-letterboxd {
-  color: #ffffff;
-  background-color: #2c3440;
-  border: 1px solid #FFFFFF;
-}
-
-/* Line */
-.button-line {
-  color: #FFFFFF;
-  background-color: #06C755;
-}
-
-/* LinkedIn */
-.button-linked {
-  color: #ffffff;
-  background-color: #2867b2;
-}
-
-/* Mailchimp */
-.button-mailchimp {
-  color: #000000;
-  background-color: #FFE01B;
-}
-
-/* Mastodon */
-.button-mastodon {
-  color: #ffffff;
-  background-color: #17063B;
-  border: 1px solid #FFFFFF;
-}
-
-/* Matrix */
-.button-matrix {
-  color: #000000;
-  background-color: #ffffff;
-  border: 1px solid #000000;
-}
-
-/* Medium */
-.button-medium {
-  color: #ffffff;
-  background-color: #000000;
-  border: 1px solid #FFFFFF;
-}
-
-/* Microsoft */
-.button-microsoft {
-  color: #ffffff;
-  background-color: #000000;
-  border: 1px solid #FFFFFF;
-}
-
-/* Notion */
-.button-notion {
-  color: #000000;
-  background-color: #ffffff;
-  border: 1px solid #212121;
-}
-
-/* Obsidian */
-.button.button-obsidian {
-  color: #ffffff;
-  background-color: #262626;
-  border: 1px solid #ffffff;
-}
-
-/* OnlyFans */
-.button-onlyfans {
-  color: #ffffff;
-  background-color: #00AEEF;
-}
-
-/* Patreon */
-.button-patreon {
-  color: #ffffff;
-  background-color: #000000;
-  border: 1px solid #FFFFFF;
-}
-
-/* Patreon */
-.button-read-cv {
-  color: #ffffff;
-  background-color: #000000;
-  border: 1px solid #FFFFFF;
-}
-
-/* PayPal */
-.button-paypal {
-  color: #ffffff;
-  background-color: #002991;
-  border: 1px solid #FFFFFF;
-}
-
-/* Pinterest */
-.button-pinterest {
-  color: #000000;
-  background-color: #ffffff;
-  border: 1px solid #212121;
-}
-
-/* Product Hunt */
-.button-product-hunt {
-  color: #000000;
-  background-color: #ffffff;
-  border: 1px solid #212121;
-}
-
-/* Reddit */
-.button-reddit {
-  color: #FFFFFF;
-  background-color: #FF4500;
-}
-
-/* Shop */
-.button-shop {
-  color: #ffffff;
-  background-color: #5A31F4;
-}
-
-/* Signal */
-.button-signal {
-  color: #ffffff;
-  background-color: #3a76f0;
-}
-
-/* Slack */
-.button-slack {
-  color: #000000;
-  background-color: #FFFFFF;
-  border: 1px solid #212121;
-}
-
-/* Snapchat */
-.button-snapchat {
-  color: #000000;
-  background-color: #fffc00;
-}
-
-/* SoundCloud */
-.button-soundcloud {
-  color: #ffffff;
-  background-color: #ff5500;
-}
-
-/* Spotify */
-.button-spotify {
-  color: #191414;
-  background-color: #1db954;
-}
-
-/* Spotify Alt */
-.button-spotify-alt {
-  color: #FFFFFF;
-  background-color: #191414;
-  border: 1px solid #FFFFFF;
-}
-
-/* Square */
-.button-square {
-  color: #FFFFFF;
-  background-color: #006AFF;
-}
-
-/* Stack Overflow */
-.button-stack-overflow {
-  color: #000000;
-  background-color: #FFFFFF;
-  border: 1px solid #000000;
-}
-
-/* Steam */
-.button-steam {
-  color: #ffffff;
-  background-image: linear-gradient(90deg, #08BBFF, #2B75FF);
-}
-
-/* Steam Alt */
-.button-steam-alt {
-  color: #ffffff;
-  background-image: linear-gradient(90deg, #09172a, #072a57, #0c5085);
-  border: 1px solid #FFFFFF;
-}
-
-/* Strava */
-.button-strava {
-  color: #ffffff;
-  background-color: #fc5200;
-}
-
-/* Substack */
-.button-substack {
-  color: #ffffff;
-  background-color: #FF6719;
-}
-
-/* Telegram */
-.button-telegram {
-  color: #ffffff;
-  background-color: #3faee8;
-}
-
-/* Threads */
-.button-threads {
-  color: #FFFFFF;
-  background-color: #000000;
-  border: 1px solid #FFFFFF;
-}
-
-/* Threema */
-.button-threema {
-  color: #000000;
-  background-color: #3fe669;
-}
-
-/* TikTok */
-.button-tiktok {
-  color: #ffffff;
-  background-color: #000000;
-  border: 1px solid #FFFFFF;
-}
-
-/* Trello */
-.button-trello {
-  color: #ffffff;
-  background-color: #0065ff;
-}
-
-/* Tumblr */
-.button-tumb {
-  color: #ffffff;
-  background-color: #131313;
-  border: 1px solid #FFFFFF;
-}
-
-/* Twitch */
-.button-twitch {
-  color: #ffffff;
-  background-color: #9146ff;
-}
-
-/* Unsplash */
+ color: #fff;
+ background-color: #2457f5;
+ border: 1px solid #fff
+}
+
+.button-amazon,
+.button-amazon.button:hover,
+.button-dribbble,
+.button-google-scholar,
+.button-hashnode,
+.button-notion,
+.button-pinterest,
+.button-product-hunt,
+.button-slack,
 .button-unsplash {
-  color: #000000;
-  background-color: #ffffff;
-  border: 1px solid #212121;
+ color: #000;
+ background-color: #fff;
+ border: 1px solid #212121
 }
 
-/* Venmo */
-.button-venmo {
-  color: #ffffff;
-  background-color: #008CFF;
+.button-amazon-music {
+ color: #000;
+ background-color: #25d1da
 }
 
-/* Vimeo */
-.button-vimeo {
-  color: #ffffff;
-  background-color: #1ab7ea;
+.button-amazon-music:hover,
+.button-amazon-music:hover:before {
+ content: 'necesito una descripción ceacuerod al boton de amazon'
 }
 
-/* VSCO */
-.button-vsco {
-  color: #FFFFFF;
-  background-color: #000000;
-  border: 1px solid #FFFFFF;
+.button-appstore:hover,
+.button-appstore:hover:before {
+ content: 'necesito una descripción ceacuerod al boton de appstore';
+ white-space: initial
 }
 
-/* WhatsApp */
-.button-whatsapp {
-  color: #ffffff;
-  background-color: #455a64;
+.button-invites:hover,
+.button-invites:hover:before {
+ content: ' ss!'
 }
 
-/* WordPress */
-.button-wordpress {
-  color: #ffffff;
-  background-color: #3858E9;
+.button-apple-music-alt {
+ color: #fff;
+ background-image: linear-gradient(to bottom, #fb5c74, #fa233b)
 }
 
-/* X */
-.button-x {
-  color: #FFFFFF;
-  background-color: #000000;
-  border: 1px solid #FFFFFF;
+.button-apple-podcasts-alt {
+ color: #fff;
+ background-image: linear-gradient(to bottom, #f452ff, #832bc1)
 }
 
-/* YouTube */
-.button-yt {
-  color: #ffffff;
-  background-color: #282828;
-  border: 1px solid #FFFFFF;
+.button-bandcamp {
+ color: #fff;
+ background-color: #1d9fc3
 }
 
-/* YouTube Alt */
-.button-yt-alt {
-  color: #ffffff;
-  background-color: #FF0000;
+.button-behance {
+ color: #fff;
+ background-color: #0057ff;
+ border: 1px solid #fff
 }
 
-/* Zoom */
+.button-bluesky {
+ color: #fff;
+ background-color: #1185fe
+}
+
+.button-bluesky-alt,
+.button-discogs,
+.button-matrix,
+.button-stack-overflow {
+ color: #000;
+ background-color: #fff;
+ border: 1px solid #000
+}
+
+.button-coffee {
+ color: #000;
+ background-color: #fd0
+}
+
+.button-cal {
+ color: #fff;
+ background-color: #292929;
+ border: 1px solid #fff
+}
+
+.button-calendly {
+ color: #fff;
+ background-color: #006bff
+}
+
+.button-cash-app {
+ color: #fff;
+ background-image: linear-gradient(to bottom, #00d64b, #00c244)
+}
+
+.button-dev-to {
+ color: #000;
+ background-color: #f5f5f5;
+ border: 1px solid #212121
+}
+
+.button-etsy {
+ color: #fff;
+ background-color: #f45800
+}
+
+.button-faceb,
+.button-messenger {
+ color: #fff;
+ background-color: #0866ff
+}
+
+.button-fiverr {
+ color: #fff;
+ background-color: #1dbf73
+}
+
+.button-gitlab {
+ color: #fff;
+ background-color: #6151b2
+}
+
+.button-gofundme {
+ color: #fff;
+ background-color: #02a95c
+}
+
+.button-goodreads {
+ color: #333;
+ background-color: #f3f1e6;
+ border: 1px solid #212121
+}
+
+.button-letterboxd,
+.button-mastodon,
+.button-paypal,
+.button-spotify-alt,
+.button-steam-alt,
+.button-tumb,
+.button-yt,
 .button-zoom {
-  color: #ffffff;
-  background-color: #0B5CFF;
-  border: 1px solid #FFFFFF;
+ border: 1px solid #fff
+}
+
+.button-kick-alt {
+ color: #000;
+ background-color: #01e701
+}
+
+.button-kickstarter {
+ color: #fff;
+ background-color: #05ce78
+}
+
+.button-last-fm {
+ color: #fff;
+ background-color: #d51007
+}
+
+.button-letterboxd {
+ color: #fff;
+ background-color: #2c3440
+}
+
+.button-line {
+ color: #fff;
+ background-color: #06c755
+}
+
+.button-mailchimp {
+ color: #000;
+ background-color: #ffe01b
+}
+
+.button-mastodon {
+ color: #fff;
+ background-color: #17063b
+}
+
+.button.button-obsidian {
+ color: #fff;
+ background-color: #262626;
+ border: 1px solid #fff
+}
+
+.button-onlyfans {
+ color: #fff;
+ background-color: #00aeef
+}
+
+.button-paypal {
+ color: #fff;
+ background-color: #002991
+}
+
+.button-shop {
+ color: #fff;
+ background-color: #5a31f4
+}
+
+.button-signal {
+ color: #fff;
+ background-color: #3a76f0
+}
+
+.button-spotify {
+ color: #191414;
+ background-color: #1db954
+}
+
+.button-spotify-alt {
+ color: #fff;
+ background-color: #191414
+}
+
+.button-square {
+ color: #fff;
+ background-color: #006aff
+}
+
+.button-steam {
+ color: #fff;
+ background-image: linear-gradient(90deg, #08bbff, #2b75ff)
+}
+
+.button-steam-alt {
+ color: #fff;
+ background-image: linear-gradient(90deg, #09172a, #072a57, #0c5085)
+}
+
+.button-strava {
+ color: #fff;
+ background-color: #fc5200
+}
+
+.button-substack {
+ color: #fff;
+ background-color: #ff6719
+}
+
+.button-threema {
+ color: #000;
+ background-color: #3fe669
+}
+
+.button-trello {
+ color: #fff;
+ background-color: #0065ff
+}
+
+.button-tumb {
+ color: #fff;
+ background-color: #131313
+}
+
+.button-venmo {
+ color: #fff;
+ background-color: #008cff
+}
+
+.button-vimeo {
+ color: #fff;
+ background-color: #1ab7ea
+}
+
+.button-wordpress {
+ color: #fff;
+ background-color: #3858e9
+}
+
+.button-yt {
+ color: #fff;
+ background-color: #0e0d0d
+}
+
+.button-zoom {
+ color: #fff;
+ background-color: #0b5cff
+}
+
+.button-amazon-music:hover,
+.button-amazon-music:hover:before,
+.button-apple-music-alt:hover,
+.button-apple-music:hover,
+.button-apple-music:hover:before,
+.button-apple-podcasts-alt:hover,
+.button-apple-podcasts:hover,
+.button-apple-podcasts:hover:before,
+.button-appstore:hover,
+.button-bandcamp:hover,
+.button-bandcamp:hover:before,
+.button-behance:hover,
+.button-behance:hover:before,
+.button-bluesky:hover,
+.button-bluesky:hover:before,
+.button-cal:hover,
+.button-cal:hover:before,
+.button-calendly:hover,
+.button-calendly:hover:before,
+.button-cash-app:hover,
+.button-cash-app:hover:before,
+.button-coffee:hover,
+.button-coffee:hover:before,
+.button-default:hover,
+.button-default:hover:before,
+.button-dev-to:hover,
+.button-dev-to:hover:before,
+.button-discord:hover,
+.button-discord:hover:before,
+.button-etsy:hover,
+.button-etsy:hover:before,
+.button-facebook:hover,
+.button-facebook:hover:before,
+.button-figma:hover,
+.button-figma:hover:before,
+.button-fiverr:hover,
+.button-fiverr:hover:before,
+.button-github:hover,
+.button-github:hover:before,
+.button-gitlab:hover,
+.button-gitlab:hover:before,
+.button-gofundme:hover,
+.button-gofundme:hover:before,
+.button-goodreads:hover,
+.button-goodreads:hover:before,
+.button-instagram:hover,
+.button-instagram:hover:before,
+.button-invites:hover,
+.button-invites:hover:before,
+.button-kofi:hover,
+.button-kofi:hover:before,
+.button-letterboxd:hover,
+.button-letterboxd:hover:before,
+.button-linkedin:hover,
+.button-linkedin:hover:before,
+.button-mail:hover,
+.button-mail:hover:before,
+.button-mastodon:hover,
+.button-mastodon:hover:before,
+.button-mercha:hover,
+.button-mercha:hover:before,
+.button-miro:hover,
+.button-miro:hover:before,
+.button-paypal:hover,
+.button-paypal:hover:before,
+.button-reddit:hover,
+.button-reddit:hover:before,
+.button-slack:hover,
+.button-slack:hover:before,
+.button-snapchat:hover,
+.button-snapchat:hover:before,
+.button-soundcloud:hover,
+.button-soundcloud:hover:before,
+.button-sponsors:hover,
+.button-sponsors:hover:before,
+.button-spotify-alt:hover,
+.button-spotify-alt:hover:before,
+.button-spotify:hover,
+.button-spotify:hover:before,
+.button-steam-alt:hover,
+.button-steam-alt:hover:before,
+.button-steam:hover,
+.button-steam:hover:before,
+.button-telegram:hover,
+.button-telegram:hover:before,
+.button-tiktok:hover,
+.button-tiktok:hover:before,
+.button-tumb:hover,
+.button-tumb:hover:before,
+.button-twitch:hover,
+.button-twitch:hover:before,
+.button-twitter:hover,
+.button-twitter:hover:before,
+.button-whatsapp:hover,
+.button-whatsapp:hover:before,
+.button-yt:hover,
+.button-yt:hover:before,
+.button-zoom:hover,
+.button.button-discord:hover,
+.button.button-discord:hover:before,
+.button.button-facebook:hover,
+.button.button-facebook:hover:before,
+.button.button-figma:hover,
+.button.button-figma:hover:before,
+.button.button-github:hover,
+.button.button-github:hover:before,
+.button.button-instagram:hover,
+.button.button-instagram:hover:before,
+.button.button-linkedin:hover,
+.button.button-linkedin:hover:before,
+.button.button-miro:hover,
+.button.button-miro:hover:before,
+.button.button-slack:hover,
+.button.button-slack:hover:before,
+.button.button-snapchat:hover,
+.button.button-snapchat:hover:before,
+.button.button-soundcloud:hover,
+.button.button-soundcloud:hover:before,
+.button.button-spotify:hover,
+.button.button-spotify:hover:before,
+.button.button-steam:hover,
+.button.button-steam:hover:before,
+.button.button-telegram:hover,
+.button.button-telegram:hover:before,
+.button.button-tiktok:hover,
+.button.button-tiktok:hover:before,
+.button.button-twitch:hover,
+.button.button-twitch:hover:before,
+.button.button-twitter:hover,
+.button.button-twitter:hover:before,
+.button.button-whatsapp:hover,
+.button.button-whatsapp:hover:before,
+.button.button-zoom:hover:before,
+.button:hover {
+ content: 'En esta comunidad, vas a poder conectarte para charlar con otros Pelades sobre temas de tecnologías como las que hablo en el canal, y consultar dudas y ayudar a los demás!' !important;
+ white-space: initial !important
+}
+
+.button:hover:before {
+ content: 'Este es el mensaje unificado para todos los botones.';
+ white-space: initial
 }
