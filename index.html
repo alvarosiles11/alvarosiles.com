@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="es">
 
 <head>
@@ -224,8 +224,9 @@
   <div class="invitation-container">
     <div class="decorative-border"></div>
     <div class="invitation-content">
-      <audio id="background-music" autoplay loop muted volume="0.1">
+      <audio id="background-music" autoplay loop aria-label="Background music for invitation">
         <source src="/asset/music/Love for the Moon.mp3" type="audio/mp3">
+        <source src="/asset/music/Love for the Moon.ogg" type="audio/ogg">
         Your browser does not support the audio element.
       </audio>
       <div class="invitation-header">
@@ -237,7 +238,7 @@
 
       <p class="invitation-message">
         Es un honor para mí extenderle esta cordial invitación para acompañarme en una tarde muy especial que he
-        preparado en su honor.
+        preparado en su honor. Para esta ocasión, te invito a que llevemos outfit color camel👕, para compartir este momento con un toque especial.
       </p>
 
       <div class="event-details">
@@ -252,7 +253,7 @@
         </div>
         <div class="detail-item">
           <span class="detail-label">Lugar:</span>
-          <span class="detail-value">Patio Design</span>
+          <span class="detail-value">de encuentro Patio Design</span>
         </div>
         <div class="detail-item">
           <span class="detail-label">Motivo:</span>
@@ -274,19 +275,28 @@
       <div class="signature">
         <div class="decorative-flourish"></div>
         <p class="signature-line">Con todo mi amor y respeto</p>
-        <p class="signature-name">Álvaro Siles Estrada</p>
+        <p class="signature-name">Alvaro Siles Estrada</p>
       </div>
     </div>
   </div>
 
   <script>
-    // Enable sound on user interaction
-    document.body.addEventListener('click', function enableAudio() {
+    document.addEventListener('DOMContentLoaded', function() {
       var music = document.getElementById('background-music');
-      music.muted = false;
-      music.play();
-      // Remove the event listener after the first interaction
-      document.body.removeEventListener('click', enableAudio);
+      music.volume = 0.9; // Set volume to 10%
+      music.currentTime = 3; // Start at 1:03 (63 seconds)
+
+      // Attempt to play immediately
+      music.play().catch(function(error) {
+        console.error('Autoplay failed:', error);
+        // Fallback: Play on first user interaction
+        document.body.addEventListener('click', function enableAudio() {
+          music.play().catch(function(err) {
+            console.error('Playback failed on click:', err);
+          });
+          document.body.removeEventListener('click', enableAudio);
+        });
+      });
     });
   </script>
 </body>
