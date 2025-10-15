@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portafolio - Certificados por Categoría</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    }
+    
+    .cert-card {
+      transition: all 0.3s ease;
+    }
+    
+    .cert-card:hover {
+      transform: translateY(-8px);
+    }
+    
+    .tab-content {
+      display: none;
+    }
+    
+    .tab-content.active {
+      display: grid;
+      animation: fadeIn 0.3s ease;
+    }
+    
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    
+    .tab-button {
+      transition: all 0.2s ease;
+    }
+    
+    .tab-button.active {
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      color: white;
+    }
+  </style>
+</head>
+<body class="bg-gray-50">
+   Header 
+  <header class="bg-white shadow-sm fixed w-full top-0 z-50">
+    <nav class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+      <h1 class="text-2xl font-bold text-gray-900">Juan Pérez</h1>
+      <div class="hidden md:flex gap-8">
+        <a href="#inicio" class="text-gray-600 hover:text-blue-600 transition">Inicio</a>
+        <a href="#certificados" class="text-gray-600 hover:text-blue-600 transition">Certificados</a>
+        <a href="#contacto" class="text-gray-600 hover:text-blue-600 transition">Contacto</a>
+      </div>
+    </nav>
+  </header>
+
+   Hero Section 
+  <section id="inicio" class="pt-32 pb-20 px-6">
+    <div class="max-w-6xl mx-auto text-center">
+      <h2 class="text-5xl font-bold text-gray-900 mb-6">Ingeniero de Sistemas</h2>
+      <p class="text-xl text-gray-600 mb-8 max-w-2xl mx-auto leading-relaxed">
+        Especializado en arquitectura cloud, desarrollo full-stack y transformación digital
+      </p>
+    </div>
+  </section>
+
+   Certificados con Pestañas 
+  <section id="certificados" class="py-20 px-6 bg-white">
+    <div class="max-w-6xl mx-auto">
+      <h3 class="text-3xl font-bold text-gray-900 mb-4 text-center">Certificaciones Profesionales</h3>
+      <p class="text-gray-600 text-center mb-12">Organizadas por área de especialización</p>
+      
+       Tabs 
+      <div class="flex flex-wrap justify-center gap-3 mb-12">
+        <button onclick="showTab('cloud')" class="tab-button active px-6 py-3 rounded-lg font-semibold bg-gray-100 text-gray-700">
+          ☁️ Cloud Computing
+        </button>
+        <button onclick="showTab('desarrollo')" class="tab-button px-6 py-3 rounded-lg font-semibold bg-gray-100 text-gray-700">
+          💻 Desarrollo
+        </button>
+        <button onclick="showTab('metodologias')" class="tab-button px-6 py-3 rounded-lg font-semibold bg-gray-100 text-gray-700">
+          🎯 Metodologías
+        </button>
+        <button onclick="showTab('seguridad')" class="tab-button px-6 py-3 rounded-lg font-semibold bg-gray-100 text-gray-700">
+          🔒 Seguridad
+        </button>
+        <button onclick="showTab('datos')" class="tab-button px-6 py-3 rounded-lg font-semibold bg-gray-100 text-gray-700">
+          📊 Datos & BI
+        </button>
+      </div>
+
+       Cloud Computing 
+      <div id="cloud" class="tab-content active grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div class="cert-card bg-gradient-to-br from-orange-50 to-orange-100 rounded-xl p-6 border border-orange-200">
+          <div class="w-12 h-12 bg-orange-500 rounded-lg flex items-center justify-center mb-4">
+            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z"></path>
+            </svg>
+          </div>
+          <h4 class="text-xl font-bold text-gray-900 mb-2">AWS Solutions Architect</h4>
+          <p class="text-sm text-gray-600 mb-3">Amazon Web Services</p>
+          <p class="text-sm text-gray-700 mb-4 leading-relaxed">Diseño y despliegue de sistemas escalables en AWS</p>
+          <div class="flex justify-between items-center">
+            <span class="text-xs text-gray-500">2024</span>
+            <span class="text-xs font-mono text-gray-500">AWS-SA-2024</span>
+          </div>
+        </div>
+
+        <div class="cert-card bg-gradient-to-br from-green-50 to-green-100 rounded-xl p-6 border border-green-200">
+          <div class="w-12 h-12 bg-green-500 rounded-lg flex items-center justify-center mb-4">
+            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
+            </svg>
+          </div>
+          <h4 class="text-xl font-bold text-gray-900 mb-2">Google Cloud Professional</h4>
+          <p class="text-sm text-gray-600 mb-3">Google Cloud</p>
+          <p class="text-sm text-gray-700 mb-4 leading-relaxed">Arquitectura de soluciones en GCP</p>
+          <div class="flex justify-between items-center">
+            <span class="text-xs text-gray-500">2023</span>
+            <span class="text-xs font-mono text-gray-500">GCP-PRO-2023</span>
+          </div>
+        </div>
+
+        <div class="cert-card bg-gradient-to-br from-indigo-50 to-indigo-100 rounded-xl p-6 border border-indigo-200">
+          <div class="w-12 h-12 bg-indigo-500 rounded-lg flex items-center justify-center mb-4">
+            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path>
+            </svg>
+          </div>
+          <h4 class="text-xl font-bold text-gray-900 mb-2">Azure DevOps Engineer</h4>
+          <p class="text-sm text-gray-600 mb-3">Microsoft</p>
+          <p class="text-sm text-gray-700 mb-4 leading-relaxed">CI/CD y automatización en Azure</p>
+          <div class="flex justify-between items-center">
+            <span class="text-xs text-gray-500">2024</span>
+            <span class="text-xs font-mono text-gray-500">AZ-400-2024</span>
+          </div>
+        </div>
+
+        <div class="cert-card bg-gradient-to-br from-blue-50 to-blue-100 rounded-xl p-6 border border-blue-200">
+          <div class="w-12 h-12 bg-blue-500 rounded-lg flex items-center justify-center mb-4">
+            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"></path>
+            </svg>
+          </div>
+          <h4 class="text-xl font-bold text-gray-900 mb-2">Kubernetes Administrator</h4>
+          <p class="text-sm text-gray-600 mb-3">CNCF</p>
+          <p class="text-sm text-gray-700 mb-4 leading-relaxed">Administración de clusters K8s</p>
+          <div class="flex justify-between items-center">
+            <span class="text-xs text-gray-500">2024</span>
+            <span class="text-xs font-mono text-gray-500">CKA-2024</span>
+          </div>
+        </div>
+
+        <div class="cert-card bg-gradient-to-br from-cyan-50 to-cyan-100 rounded-xl p-6 border border-cyan-200">
+          <div class="w-12 h-12 bg-cyan-500 rounded-lg flex items-center justify-center mb-4">
+            <span class="text-white text-xl">☁️</span>
+          </div>
+          <h4 class="text-xl font-bold text-gray-900 mb-2">Terraform Associate</h4>
+          <p class="text-sm text-gray-600 mb-3">HashiCorp</p>
+          <p class="text-sm text-gray-700 mb-4 leading-relaxed">Infrastructure as Code con Terraform</p>
+          <div class="flex justify-between items-center">
+            <span class="text-xs text-gray-500">2024</span>
+            <span class="text-xs font-mono text-gray-500">TF-ASSOC-2024</span>
+          </div>
+        </div>
+      </div>
+
+       Desarrollo 
+      <div id="desarrollo" class="tab-content grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div class="cert-card bg-gradient-to-br from-blue-50 to-blue-100 rounded-xl p-6 border border-blue-200">
+          <div class="w-12 h-12 bg-blue-500 rounded-lg flex items-center justify-center mb-4">
+            <span class="text-white text-xl">⚛️</span>
+          </div>
+          <h4 class="text-xl font-bold text-gray-900 mb-2">React Developer</h4>
+          <p class="text-sm text-gray-600 mb-3">Meta</p>
+          <p class="text-sm text-gray-700 mb-4 leading-relaxed">Desarrollo avanzado con React y hooks</p>
+          <div class="flex justify-between items-center">
+            <span class="text-xs text-gray-500">2023</span>
+            <span class="text-xs font-mono text-gray-500">REACT-2023</span>
+          </div>
+        </div>
+
+        <div class="cert-card bg-gradient-to-br from-yellow-50 to-yellow-100 rounded-xl p-6 border border-yellow-200">
+          <div class="w-12 h-12 bg-yellow-500 rounded-lg flex items-center justify-center mb-4">
+            <span class="text-white text-xl">🐍</span>
+          </div>
+          <h4 class="text-xl font-bold text-gray-900 mb-2">Python Professional</h4>
+          <p class="text-sm text-gray-600 mb-3">Python Institute</p>
+          <p class="text-sm text-gray-700 mb-4 leading-relaxed">Desarrollo profesional con Python</p>
+          <div class="flex justify-between items-center">
+            <span class="text-xs text-gray-500">2022</span>
+            <span class="text-xs font-mono text-gray-500">PCPP-2022</span>
+          </div>
+        </div>
+
+        <div class="cert-card bg-gradient-to-br from-green-50 to-green-100 rounded-xl p-6 border border-green-200">
+          <div class="w-12 h-12 bg-green-500 rounded-lg flex items-center justify-center mb-4">
+            <span class="text-white text-xl">🌐</span>
+          </div>
+          <h4 class="text-xl font-bold text-gray-900 mb-2">Node.js Certified</h4>
+          <p class="text-sm text-gray-600 mb-3">OpenJS Foundation</p>
+          <p class="text-sm text-gray-700 mb-4 leading-relaxed">Desarrollo backend con Node.js</p>
+          <div class="flex justify-between items-center">
+            <span class="text-xs text-gray-500">2023</span>
+            <span class="text-xs font-mono text-gray-500">NODEJS-2023</span>
+          </div>
+        </div>
+
+        <div class="cert-card bg-gradient-to-br from-purple-50 to-purple-100 rounded-xl p-6 border border-purple-200">
+          <div class="w-12 h-12 bg-purple-500 rounded-lg flex items-center justify-center mb-4">
+            <span class="text-white text-xl">📱</span>
+          </div>
+          <h4 class="text-xl font-bold text-gray-900 mb-2">iOS Developer</h4>
+          <p class="text-sm text-gray-600 mb-3">Apple</p>
+          <p class="text-sm text-gray-700 mb-4 leading-relaxed">Desarrollo de apps iOS con Swift</p>
+          <div class="flex justify-between items-center">
+            <span class="text-xs text-gray-500">2022</span>
+            <span class="text-xs font-mono text-gray-500">IOS-DEV-2022</span>
+          </div>
+        </div>
+
+        <div class="cert-card bg-gradient-to-br from-gray-50 to-gray-100 rounded-xl p-6 border border-gray-200">
+          <div class="w-12 h-12 bg-gray-500 rounded-lg flex items-center justify-center mb-4">
+            <span class="text-white text-xl">🐳</span>
+          </div>
+          <h4 class="text-xl font-bold text-gray-900 mb-2">Docker Certified</h4>
+          <p class="text-sm text-gray-600 mb-3">Docker Inc</p>
+          <p class="text-sm text-gray-700 mb-4 leading-relaxed">Containerización con Docker</p>
+          <div class="flex justify-between items-center">
+            <span class="text-xs text-gray-500">2023</span>
+            <span class="text-xs font-mono text-gray-500">DCA-2023</span>
+          </div>
+        </div>
+      </div>
+
+       Metodologías 
+      <div id="metodologias" class="tab-content grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div class="cert-card bg-gradient-to-br from-purple-50 to-purple-100 rounded-xl p-6 border border-purple-200">
+          <div class="w-12 h-12 bg-purple-500 rounded-lg flex items-center justify-center mb-4">
+            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+            </svg>
+          </div>
+          <h4 class="text-xl font-bold text-gray-900 mb-2">Certified Scrum Master</h4>
+          <p class="text-sm text-gray-600 mb-3">Scrum Alliance</p>
+          <p class="text-sm text-gray-700 mb-4 leading-relaxed">Gestión ágil de proyectos</p>
+          <div class="flex justify-between items-center">
+            <span class="text-xs text-gray-500">2023</span>
+            <span class="text-xs font-mono text-gray-500">CSM-2023</span>
+          </div>
+        </div>
+
+        <div class="cert-card bg-gradient-to-br from-indigo-50 to-indigo-100 rounded-xl p-6 border border-indigo-200">
+          <div class="w-12 h-12 bg-indigo-500 rounded-lg flex items-center justify-center mb-4">
+            <span class="text-white text-xl">🎯</span>
+          </div>
+          <h4 class="text-xl font-bold text-gray-900 mb-2">SAFe Agilist</h4>
+          <p class="text-sm text-gray-600 mb-3">Scaled Agile</p>
+          <p class="text-sm text-gray-700 mb-4 leading-relaxed">Scaled Agile Framework</p>
+          <div class="flex justify-between items-center">
+            <span class="text-xs text-gray-500">2023</span>
+            <span class="text-xs font-mono text-gray-500">SA-2023</span>
+          </div>
+        </div>
+
+        <div class="cert-card bg-gradient-to-br from-pink-50 to-pink-100 rounded-xl p-6 border border-pink-200">
+          <div class="w-12 h-12 bg-pink-500 rounded-lg flex items-center justify-center mb-4">
+            <span class="text-white text-xl">📋</span>
+          </div>
+          <h4 class="text-xl font-bold text-gray-900 mb-2">Product Owner</h4>
+          <p class="text-sm text-gray-600 mb-3">Scrum.org</p>
+          <p class="text-sm text-gray-700 mb-4 leading-relaxed">Gestión de producto ágil</p>
+          <div class="flex justify-between items-center">
+            <span class="text-xs text-gray-500">2022</span>
+            <span class="text-xs font-mono text-gray-500">PSPO-2022</span>
+          </div>
+        </div>
+
+        <div class="cert-card bg-gradient-to-br from-teal-50 to-teal-100 rounded-xl p-6 border border-teal-200">
+          <div class="w-12 h-12 bg-teal-500 rounded-lg flex items-center justify-center mb-4">
+            <span class="text-white text-xl">🔧</span>
+          </div>
+          <h4 class="text-xl font-bold text-gray-900 mb-2">Jenkins Engineer</h4>
+          <p class="text-sm text-gray-600 mb-3">CloudBees</p>
+          <p class="text-sm text-gray-700 mb-4 leading-relaxed">CI/CD con Jenkins</p>
+          <div class="flex justify-between items-center">
+            <span class="text-xs text-gray-500">2023</span>
+            <span class="text-xs font-mono text-gray-500">CJE-2023</span>
+          </div>
+        </div>
+      </div>
+
+       Seguridad 
+      <div id="seguridad" class="tab-content grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div class="cert-card bg-gradient-to-br from-red-50 to-red-100 rounded-xl p-6 border border-red-200">
+          <div class="w-12 h-12 bg-red-500 rounded-lg flex items-center justify-center mb-4">
+            <span class="text-white text-xl">🔒</span>
+          </div>
+          <h4 class="text-xl font-bold text-gray-900 mb-2">CompTIA Security+</h4>
+          <p class="text-sm text-gray-600 mb-3">CompTIA</p>
+          <p class="text-sm text-gray-700 mb-4 leading-relaxed">Fundamentos de ciberseguridad</p>
+          <div class="flex justify-between items-center">
+            <span class="text-xs text-gray-500">2023</span>
+            <span class="text-xs font-mono text-gray-500">SEC+-2023</span>
+          </div>
+        </div>
+
+        <div class="cert-card bg-gradient-to-br from-gray-50 to-gray-100 rounded-xl p-6 border border-gray-200">
+          <div class="w-12 h-12 bg-gray-700 rounded-lg flex items-center justify-center mb-4">
+            <span class="text-white text-xl">🔐</span>
+          </div>
+          <h4 class="text-xl font-bold text-gray-900 mb-2">CISSP</h4>
+          <p class="text-sm text-gray-600 mb-3">ISC²</p>
+          <p class="text-sm text-gray-700 mb-4 leading-relaxed">Profesional en seguridad de sistemas</p>
+          <div class="flex justify-between items-center">
+            <span class="text-xs text-gray-500">2022</span>
+            <span class="text-xs font-mono text-gray-500">CISSP-2022</span>
+          </div>
+        </div>
+
+        <div class="cert-card bg-gradient-to-br from-orange-50 to-orange-100 rounded-xl p-6 border border-orange-200">
+          <div class="w-12 h-12 bg-orange-500 rounded-lg flex items-center justify-center mb-4">
+            <span class="text-white text-xl">🛡️</span>
+          </div>
+          <h4 class="text-xl font-bold text-gray-900 mb-2">CEH</h4>
+          <p class="text-sm text-gray-600 mb-3">EC-Council</p>
+          <p class="text-sm text-gray-700 mb-4 leading-relaxed">Certified Ethical Hacker</p>
+          <div class="flex justify-between items-center">
+            <span class="text-xs text-gray-500">2023</span>
+            <span class="text-xs font-mono text-gray-500">CEH-2023</span>
+          </div>
+        </div>
+      </div>
+
+       Datos & BI 
+      <div id="datos" class="tab-content grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div class="cert-card bg-gradient-to-br from-red-50 to-red-100 rounded-xl p-6 border border-red-200">
+          <div class="w-12 h-12 bg-red-500 rounded-lg flex items-center justify-center mb-4">
+            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4"></path>
+            </svg>
+          </div>
+          <h4 class="text-xl font-bold text-gray-900 mb-2">MongoDB Developer</h4>
+          <p class="text-sm text-gray-600 mb-3">MongoDB University</p>
+          <p class="text-sm text-gray-700 mb-4 leading-relaxed">Desarrollo con bases NoSQL</p>
+          <div class="flex justify-between items-center">
+            <span class="text-xs text-gray-500">2023</span>
+            <span class="text-xs font-mono text-gray-500">MDB-2023</span>
+          </div>
+        </div>
+
+        <div class="cert-card bg-gradient-to-br from-blue-50 to-blue-100 rounded-xl p-6 border border-blue-200">
+          <div class="w-12 h-12 bg-blue-500 rounded-lg flex items-center justify-center mb-4">
+            <span class="text-white text-xl">📊</span>
+          </div>
+          <h4 class="text-xl font-bold text-gray-900 mb-2">Tableau Desktop</h4>
+          <p class="text-sm text-gray-600 mb-3">Tableau</p>
+          <p class="text-sm text-gray-700 mb-4 leading-relaxed">Visualización de datos</p>
+          <div class="flex justify-between items-center">
+            <span class="text-xs text-gray-500">2022</span>
+            <span class="text-xs font-mono text-gray-500">TDS-2022</span>
+          </div>
+        </div>
+
+        <div class="cert-card bg-gradient-to-br from-yellow-50 to-yellow-100 rounded-xl p-6 border border-yellow-200">
+          <div class="w-12 h-12 bg-yellow-500 rounded-lg flex items-center justify-center mb-4">
+            <span class="text-white text-xl">📈</span>
+          </div>
+          <h4 class="text-xl font-bold text-gray-900 mb-2">Power BI</h4>
+          <p class="text-sm text-gray-600 mb-3">Microsoft</p>
+          <p class="text-sm text-gray-700 mb-4 leading-relaxed">Business Intelligence con Power BI</p>
+          <div class="flex justify-between items-center">
+            <span class="text-xs text-gray-500">2022</span>
+            <span class="text-xs font-mono text-gray-500">PBI-2022</span>
+          </div>
+        </div>
+
+        <div class="cert-card bg-gradient-to-br from-purple-50 to-purple-100 rounded-xl p-6 border border-purple-200">
+          <div class="w-12 h-12 bg-purple-500 rounded-lg flex items-center justify-center mb-4">
+            <span class="text-white text-xl">🤖</span>
+          </div>
+          <h4 class="text-xl font-bold text-gray-900 mb-2">Machine Learning</h4>
+          <p class="text-sm text-gray-600 mb-3">Stanford Online</p>
+          <p class="text-sm text-gray-700 mb-4 leading-relaxed">Fundamentos de ML e IA</p>
+          <div class="flex justify-between items-center">
+            <span class="text-xs text-gray-500">2023</span>
+            <span class="text-xs font-mono text-gray-500">ML-2023</span>
+          </div>
+        </div>
+
+        <div class="cert-card bg-gradient-to-br from-pink-50 to-pink-100 rounded-xl p-6 border border-pink-200">
+          <div class="w-12 h-12 bg-pink-500 rounded-lg flex items-center justify-center mb-4">
+            <span class="text-white text-xl">💾</span>
+          </div>
+          <h4 class="text-xl font-bold text-gray-900 mb-2">Redis Certified</h4>
+          <p class="text-sm text-gray-600 mb-3">Redis University</p>
+          <p class="text-sm text-gray-700 mb-4 leading-relaxed">Bases de datos en memoria</p>
+          <div class="flex justify-between items-center">
+            <span class="text-xs text-gray-500">2022</span>
+            <span class="text-xs font-mono text-gray-500">RU-2022</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+   Footer 
+  <footer class="bg-gray-900 text-white py-12 px-6">
+    <div class="max-w-6xl mx-auto text-center">
+      <p class="text-gray-400">© 2025 Juan Pérez - Ingeniero de Sistemas</p>
+    </div>
+  </footer>
+
+  <script>
+    function showTab(tabName) {
+      // Ocultar todos los contenidos
+      const contents = document.querySelectorAll('.tab-content');
+      contents.forEach(content => content.classList.remove('active'));
+      
+      // Remover active de todos los botones
+      const buttons = document.querySelectorAll('.tab-button');
+      buttons.forEach(button => button.classList.remove('active'));
+      
+      // Mostrar el contenido seleccionado
+      document.getElementById(tabName).classList.add('active');
+      
+      // Activar el botón seleccionado
+      event.target.classList.add('active');
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portafolio - Carrusel de Certificados</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    }
+    
+    .carousel-container {
+      overflow: hidden;
+      position: relative;
+    }
+    
+    .carousel-track {
+      display: flex;
+      transition: transform 0.5s ease;
+    }
+    
+    .carousel-item {
+      min-width: 100%;
+      padding: 0 1rem;
+    }
+    
+    @media (min-width: 768px) {
+      .carousel-item {
+        min-width: 50%;
+      }
+    }
+    
+    @media (min-width: 1024px) {
+      .carousel-item {
+        min-width: 33.333%;
+      }
+    }
+    
+    .cert-card {
+      transition: all 0.3s ease;
+    }
+    
+    .cert-card:hover {
+      transform: translateY(-8px);
+    }
+    
+    .carousel-button {
+      transition: all 0.2s ease;
+    }
+    
+    .carousel-button:hover {
+      background: rgba(0, 0, 0, 0.8);
+    }
+    
+    .carousel-button:disabled {
+      opacity: 0.3;
+      cursor: not-allowed;
+    }
+  </style>
+</head>
+<body class="bg-gray-50">
+   Header 
+  <header class="bg-white shadow-sm fixed w-full top-0 z-50">
+    <nav class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+      <h1 class="text-2xl font-bold text-gray-900">Juan Pérez</h1>
+      <div class="hidden md:flex gap-8">
+        <a href="#inicio" class="text-gray-600 hover:text-blue-600 transition">Inicio</a>
+        <a href="#certificados" class="text-gray-600 hover:text-blue-600 transition">Certificados</a>
+        <a href="#contacto" class="text-gray-600 hover:text-blue-600 transition">Contacto</a>
+      </div>
+    </nav>
+  </header>
+
+   Hero Section 
+  <section id="inicio" class="pt-32 pb-20 px-6">
+    <div class="max-w-6xl mx-auto text-center">
+      <h2 class="text-5xl font-bold text-gray-900 mb-6">Ingeniero de Sistemas</h2>
+      <p class="text-xl text-gray-600 mb-8 max-w-2xl mx-auto leading-relaxed">
+        Especializado en arquitectura cloud, desarrollo full-stack y transformación digital
+      </p>
+    </div>
+  </section>
+
+   Certificados Carrusel 
+  <section id="certificados" class="py-20 px-6 bg-white">
+    <div class="max-w-6xl mx-auto">
+      <h3 class="text-3xl font-bold text-gray-900 mb-4 text-center">Certificaciones Profesionales</h3>
+      <p class="text-gray-600 text-center mb-8">Navega por mis 20 certificaciones</p>
+      
+       Contador 
+      <div class="text-center mb-8">
+        <span class="text-sm text-gray-600">
+          <span id="current-slide">1</span> / <span id="total-slides">20</span>
+        </span>
+      </div>
+
+       Carrusel 
+      <div class="relative">
+        <div class="carousel-container">
+          <div class="carousel-track" id="carousel-track">
+             Certificado 1 
+            <div class="carousel-item">
+              <div class="cert-card bg-gradient-to-br from-orange-50 to-orange-100 rounded-xl p-6 border border-orange-200 h-full">
+                <div class="w-12 h-12 bg-orange-500 rounded-lg flex items-center justify-center mb-4">
+                  <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z"></path>
+                  </svg>
+                </div>
+                <h4 class="text-xl font-bold text-gray-900 mb-2">AWS Solutions Architect</h4>
+                <p class="text-sm text-gray-600 mb-3">Amazon Web Services</p>
+                <p class="text-sm text-gray-700 mb-4 leading-relaxed">Diseño y despliegue de sistemas escalables en AWS</p>
+                <div class="flex justify-between items-center">
+                  <span class="text-xs text-gray-500">2024</span>
+                  <span class="text-xs font-mono text-gray-500">AWS-SA-2024</span>
+                </div>
+              </div>
+            </div>
+
+             Certificado 2 
+            <div class="carousel-item">
+              <div class="cert-card bg-gradient-to-br from-blue-50 to-blue-100 rounded-xl p-6 border border-blue-200 h-full">
+                <div class="w-12 h-12 bg-blue-500 rounded-lg flex items-center justify-center mb-4">
+                  <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"></path>
+                  </svg>
+                </div>
+                <h4 class="text-xl font-bold text-gray-900 mb-2">Kubernetes Administrator</h4>
+                <p class="text-sm text-gray-600 mb-3">CNCF</p>
+                <p class="text-sm text-gray-700 mb-4 leading-relaxed">Administración de clusters Kubernetes en producción</p>
+                <div class="flex justify-between items-center">
+                  <span class="text-xs text-gray-500">2024</span>
+                  <span class="text-xs font-mono text-gray-500">CKA-2024</span>
+                </div>
+              </div>
+            </div>
+
+             Certificado 3 
+            <div class="carousel-item">
+              <div class="cert-card bg-gradient-to-br from-green-50 to-green-100 rounded-xl p-6 border border-green-200 h-full">
+                <div class="w-12 h-12 bg-green-500 rounded-lg flex items-center justify-center mb-4">
+                  <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
+                  </svg>
+                </div>
+                <h4 class="text-xl font-bold text-gray-900 mb-2">Google Cloud Professional</h4>
+                <p class="text-sm text-gray-600 mb-3">Google Cloud</p>
+                <p class="text-sm text-gray-700 mb-4 leading-relaxed">Arquitectura de soluciones en GCP</p>
+                <div class="flex justify-between items-center">
+                  <span class="text-xs text-gray-500">2023</span>
+                  <span class="text-xs font-mono text-gray-500">GCP-PRO-2023</span>
+                </div>
+              </div>
+            </div>
+
+             Certificado 4 
+            <div class="carousel-item">
+              <div class="cert-card bg-gradient-to-br from-purple-50 to-purple-100 rounded-xl p-6 border border-purple-200 h-full">
+                <div class="w-12 h-12 bg-purple-500 rounded-lg flex items-center justify-center mb-4">
+                  <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                  </svg>
+                </div>
+                <h4 class="text-xl font-bold text-gray-900 mb-2">Certified Scrum Master</h4>
+                <p class="text-sm text-gray-600 mb-3">Scrum Alliance</p>
+                <p class="text-sm text-gray-700 mb-4 leading-relaxed">Gestión ágil de proyectos y equipos</p>
+                <div class="flex justify-between items-center">
+                  <span class="text-xs text-gray-500">2023</span>
+                  <span class="text-xs font-mono text-gray-500">CSM-2023</span>
+                </div>
+              </div>
+            </div>
+
+             Certificado 5 
+            <div class="carousel-item">
+              <div class="cert-card bg-gradient-to-br from-red-50 to-red-100 rounded-xl p-6 border border-red-200 h-full">
+                <div class="w-12 h-12 bg-red-500 rounded-lg flex items-center justify-center mb-4">
+                  <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4"></path>
+                  </svg>
+                </div>
+                <h4 class="text-xl font-bold text-gray-900 mb-2">MongoDB Developer</h4>
+                <p class="text-sm text-gray-600 mb-3">MongoDB University</p>
+                <p class="text-sm text-gray-700 mb-4 leading-relaxed">Desarrollo con bases de datos NoSQL</p>
+                <div class="flex justify-between items-center">
+                  <span class="text-xs text-gray-500">2023</span>
+                  <span class="text-xs font-mono text-gray-500">MDB-2023</span>
+                </div>
+              </div>
+            </div>
+
+             Certificado 6 
+            <div class="carousel-item">
+              <div class="cert-card bg-gradient-to-br from-indigo-50 to-indigo-100 rounded-xl p-6 border border-indigo-200 h-full">
+                <div class="w-12 h-12 bg-indigo-500 rounded-lg flex items-center justify-center mb-4">
+                  <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path>
+                  </svg>
+                </div>
+                <h4 class="text-xl font-bold text-gray-900 mb-2">Azure DevOps Engineer</h4>
+                <p class="text-sm text-gray-600 mb-3">Microsoft</p>
+                <p class="text-sm text-gray-700 mb-4 leading-relaxed">CI/CD y automatización en Azure</p>
+                <div class="flex justify-between items-center">
+                  <span class="text-xs text-gray-500">2024</span>
+                  <span class="text-xs font-mono text-gray-500">AZ-400-2024</span>
+                </div>
+              </div>
+            </div>
+
+             Certificado 7 
+            <div class="carousel-item">
+              <div class="cert-card bg-gradient-to-br from-yellow-50 to-yellow-100 rounded-xl p-6 border border-yellow-200 h-full">
+                <div class="w-12 h-12 bg-yellow-500 rounded-lg flex items-center justify-center mb-4">
+                  <span class="text-white text-xl">🔒</span>
+                </div>
+                <h4 class="text-xl font-bold text-gray-900 mb-2">CompTIA Security+</h4>
+                <p class="text-sm text-gray-600 mb-3">CompTIA</p>
+                <p class="text-sm text-gray-700 mb-4 leading-relaxed">Fundamentos de ciberseguridad</p>
+                <div class="flex justify-between items-center">
+                  <span class="text-xs text-gray-500">2023</span>
+                  <span class="text-xs font-mono text-gray-500">SEC+-2023</span>
+                </div>
+              </div>
+            </div>
+
+             Certificado 8 
+            <div class="carousel-item">
+              <div class="cert-card bg-gradient-to-br from-pink-50 to-pink-100 rounded-xl p-6 border border-pink-200 h-full">
+                <div class="w-12 h-12 bg-pink-500 rounded-lg flex items-center justify-center mb-4">
+                  <span class="text-white text-xl">⚛️</span>
+                </div>
+                <h4 class="text-xl font-bold text-gray-900 mb-2">React Developer</h4>
+                <p class="text-sm text-gray-600 mb-3">Meta</p>
+                <p class="text-sm text-gray-700 mb-4 leading-relaxed">Desarrollo avanzado con React</p>
+                <div class="flex justify-between items-center">
+                  <span class="text-xs text-gray-500">2023</span>
+                  <span class="text-xs font-mono text-gray-500">REACT-2023</span>
+                </div>
+              </div>
+            </div>
+
+             Certificado 9 
+            <div class="carousel-item">
+              <div class="cert-card bg-gradient-to-br from-teal-50 to-teal-100 rounded-xl p-6 border border-teal-200 h-full">
+                <div class="w-12 h-12 bg-teal-500 rounded-lg flex items-center justify-center mb-4">
+                  <span class="text-white text-xl">🐍</span>
+                </div>
+                <h4 class="text-xl font-bold text-gray-900 mb-2">Python Professional</h4>
+                <p class="text-sm text-gray-600 mb-3">Python Institute</p>
+                <p class="text-sm text-gray-700 mb-4 leading-relaxed">Desarrollo profesional con Python</p>
+                <div class="flex justify-between items-center">
+                  <span class="text-xs text-gray-500">2022</span>
+                  <span class="text-xs font-mono text-gray-500">PCPP-2022</span>
+                </div>
+              </div>
+            </div>
+
+             Certificado 10 
+            <div class="carousel-item">
+              <div class="cert-card bg-gradient-to-br from-cyan-50 to-cyan-100 rounded-xl p-6 border border-cyan-200 h-full">
+                <div class="w-12 h-12 bg-cyan-500 rounded-lg flex items-center justify-center mb-4">
+                  <span class="text-white text-xl">🐳</span>
+                </div>
+                <h4 class="text-xl font-bold text-gray-900 mb-2">Docker Certified</h4>
+                <p class="text-sm text-gray-600 mb-3">Docker Inc</p>
+                <p class="text-sm text-gray-700 mb-4 leading-relaxed">Containerización con Docker</p>
+                <div class="flex justify-between items-center">
+                  <span class="text-xs text-gray-500">2023</span>
+                  <span class="text-xs font-mono text-gray-500">DCA-2023</span>
+                </div>
+              </div>
+            </div>
+
+             Certificado 11 
+            <div class="carousel-item">
+              <div class="cert-card bg-gradient-to-br from-lime-50 to-lime-100 rounded-xl p-6 border border-lime-200 h-full">
+                <div class="w-12 h-12 bg-lime-500 rounded-lg flex items-center justify-center mb-4">
+                  <span class="text-white text-xl">📊</span>
+                </div>
+                <h4 class="text-xl font-bold text-gray-900 mb-2">Tableau Desktop</h4>
+                <p class="text-sm text-gray-600 mb-3">Tableau</p>
+                <p class="text-sm text-gray-700 mb-4 leading-relaxed">Visualización de datos</p>
+                <div class="flex justify-between items-center">
+                  <span class="text-xs text-gray-500">2022</span>
+                  <span class="text-xs font-mono text-gray-500">TDS-2022</span>
+                </div>
+              </div>
+            </div>
+
+             Certificado 12 
+            <div class="carousel-item">
+              <div class="cert-card bg-gradient-to-br from-amber-50 to-amber-100 rounded-xl p-6 border border-amber-200 h-full">
+                <div class="w-12 h-12 bg-amber-500 rounded-lg flex items-center justify-center mb-4">
+                  <span class="text-white text-xl">🤖</span>
+                </div>
+                <h4 class="text-xl font-bold text-gray-900 mb-2">Machine Learning</h4>
+                <p class="text-sm text-gray-600 mb-3">Stanford Online</p>
+                <p class="text-sm text-gray-700 mb-4 leading-relaxed">Fundamentos de ML e IA</p>
+                <div class="flex justify-between items-center">
+                  <span class="text-xs text-gray-500">2023</span>
+                  <span class="text-xs font-mono text-gray-500">ML-2023</span>
+                </div>
+              </div>
+            </div>
+
+             Certificado 13 
+            <div class="carousel-item">
+              <div class="cert-card bg-gradient-to-br from-rose-50 to-rose-100 rounded-xl p-6 border border-rose-200 h-full">
+                <div class="w-12 h-12 bg-rose-500 rounded-lg flex items-center justify-center mb-4">
+                  <span class="text-white text-xl">☁️</span>
+                </div>
+                <h4 class="text-xl font-bold text-gray-900 mb-2">Terraform Associate</h4>
+                <p class="text-sm text-gray-600 mb-3">HashiCorp</p>
+                <p class="text-sm text-gray-700 mb-4 leading-relaxed">Infrastructure as Code</p>
+                <div class="flex justify-between items-center">
+                  <span class="text-xs text-gray-500">2024</span>
+                  <span class="text-xs font-mono text-gray-500">TF-2024</span>
+                </div>
+              </div>
+            </div>
+
+             Certificado 14 
+            <div class="carousel-item">
+              <div class="cert-card bg-gradient-to-br from-violet-50 to-violet-100 rounded-xl p-6 border border-violet-200 h-full">
+                <div class="w-12 h-12 bg-violet-500 rounded-lg flex items-center justify-center mb-4">
+                  <span class="text-white text-xl">🔐</span>
+                </div>
+                <h4 class="text-xl font-bold text-gray-900 mb-2">CISSP</h4>
+                <p class="text-sm text-gray-600 mb-3">ISC²</p>
+                <p class="text-sm text-gray-700 mb-4 leading-relaxed">Profesional en seguridad</p>
+                <div class="flex justify-between items-center">
+                  <span class="text-xs text-gray-500">2022</span>
+                  <span class="text-xs font-mono text-gray-500">CISSP-2022</span>
+                </div>
+              </div>
+            </div>
+
+             Certificado 15 
+            <div class="carousel-item">
+              <div class="cert-card bg-gradient-to-br from-fuchsia-50 to-fuchsia-100 rounded-xl p-6 border border-fuchsia-200 h-full">
+                <div class="w-12 h-12 bg-fuchsia-500 rounded-lg flex items-center justify-center mb-4">
+                  <span class="text-white text-xl">📱</span>
+                </div>
+                <h4 class="text-xl font-bold text-gray-900 mb-2">iOS Developer</h4>
+                <p class="text-sm text-gray-600 mb-3">Apple</p>
+                <p class="text-sm text-gray-700 mb-4 leading-relaxed">Desarrollo de apps iOS</p>
+                <div class="flex justify-between items-center">
+                  <span class="text-xs text-gray-500">2022</span>
+                  <span class="text-xs font-mono text-gray-500">IOS-2022</span>
+                </div>
+              </div>
+            </div>
+
+             Certificado 16 
+            <div class="carousel-item">
+              <div class="cert-card bg-gradient-to-br from-sky-50 to-sky-100 rounded-xl p-6 border border-sky-200 h-full">
+                <div class="w-12 h-12 bg-sky-500 rounded-lg flex items-center justify-center mb-4">
+                  <span class="text-white text-xl">🌐</span>
+                </div>
+                <h4 class="text-xl font-bold text-gray-900 mb-2">Node.js Certified</h4>
+                <p class="text-sm text-gray-600 mb-3">OpenJS Foundation</p>
+                <p class="text-sm text-gray-700 mb-4 leading-relaxed">Desarrollo backend con Node</p>
+                <div class="flex justify-between items-center">
+                  <span class="text-xs text-gray-500">2023</span>
+                  <span class="text-xs font-mono text-gray-500">NODE-2023</span>
+                </div>
+              </div>
+            </div>
+
+             Certificado 17 
+            <div class="carousel-item">
+              <div class="cert-card bg-gradient-to-br from-emerald-50 to-emerald-100 rounded-xl p-6 border border-emerald-200 h-full">
+                <div class="w-12 h-12 bg-emerald-500 rounded-lg flex items-center justify-center mb-4">
+                  <span class="text-white text-xl">🎯</span>
+                </div>
+                <h4 class="text-xl font-bold text-gray-900 mb-2">SAFe Agilist</h4>
+                <p class="text-sm text-gray-600 mb-3">Scaled Agile</p>
+                <p class="text-sm text-gray-700 mb-4 leading-relaxed">Scaled Agile Framework</p>
+                <div class="flex justify-between items-center">
+                  <span class="text-xs text-gray-500">2023</span>
+                  <span class="text-xs font-mono text-gray-500">SA-2023</span>
+                </div>
+              </div>
+            </div>
+
+             Certificado 18 
+            <div class="carousel-item">
+              <div class="cert-card bg-gradient-to-br from-slate-50 to-slate-100 rounded-xl p-6 border border-slate-200 h-full">
+                <div class="w-12 h-12 bg-slate-500 rounded-lg flex items-center justify-center mb-4">
+                  <span class="text-white text-xl">💾</span>
+                </div>
+                <h4 class="text-xl font-bold text-gray-900 mb-2">Redis Certified</h4>
+                <p class="text-sm text-gray-600 mb-3">Redis University</p>
+                <p class="text-sm text-gray-700 mb-4 leading-relaxed">Bases de datos en memoria</p>
+                <div class="flex justify-between items-center">
+                  <span class="text-xs text-gray-500">2022</span>
+                  <span class="text-xs font-mono text-gray-500">RU-2022</span>
+                </div>
+              </div>
+            </div>
+
+             Certificado 19 
+            <div class="carousel-item">
+              <div class="cert-card bg-gradient-to-br from-orange-50 to-orange-100 rounded-xl p-6 border border-orange-200 h-full">
+                <div class="w-12 h-12 bg-orange-500 rounded-lg flex items-center justify-center mb-4">
+                  <span class="text-white text-xl">🔧</span>
+                </div>
+                <h4 class="text-xl font-bold text-gray-900 mb-2">Jenkins Engineer</h4>
+                <p class="text-sm text-gray-600 mb-3">CloudBees</p>
+                <p class="text-sm text-gray-700 mb-4 leading-relaxed">CI/CD con Jenkins</p>
+                <div class="flex justify-between items-center">
+                  <span class="text-xs text-gray-500">2023</span>
+                  <span class="text-xs font-mono text-gray-500">CJE-2023</span>
+                </div>
+              </div>
+            </div>
+
+             Certificado 20 
+            <div class="carousel-item">
+              <div class="cert-card bg-gradient-to-br from-yellow-50 to-yellow-100 rounded-xl p-6 border border-yellow-200 h-full">
+                <div class="w-12 h-12 bg-yellow-500 rounded-lg flex items-center justify-center mb-4">
+                  <span class="text-white text-xl">📈</span>
+                </div>
+                <h4 class="text-xl font-bold text-gray-900 mb-2">Power BI</h4>
+                <p class="text-sm text-gray-600 mb-3">Microsoft</p>
+                <p class="text-sm text-gray-700 mb-4 leading-relaxed">Business Intelligence</p>
+                <div class="flex justify-between items-center">
+                  <span class="text-xs text-gray-500">2022</span>
+                  <span class="text-xs font-mono text-gray-500">PBI-2022</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+         Botones de navegación 
+        <button 
+          id="prev-btn" 
+          class="carousel-button absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 bg-black bg-opacity-50 text-white w-12 h-12 rounded-full flex items-center justify-center z-10"
+          onclick="moveCarousel(-1)"
+        >
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+          </svg>
+        </button>
+        
+        <button 
+          id="next-btn" 
+          class="carousel-button absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 bg-black bg-opacity-50 text-white w-12 h-12 rounded-full flex items-center justify-center z-10"
+          onclick="moveCarousel(1)"
+        >
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+          </svg>
+        </button>
+      </div>
+
+       Indicadores 
+      <div class="flex justify-center gap-2 mt-8">
+        <div id="indicators" class="flex gap-2"></div>
+      </div>
+    </div>
+  </section>
+
+   Footer 
+  <footer class="bg-gray-900 text-white py-12 px-6">
+    <div class="max-w-6xl mx-auto text-center">
+      <p class="text-gray-400">© 2025 Juan Pérez - Ingeniero de Sistemas</p>
+    </div>
+  </footer>
+
+  <script>
+    let currentIndex = 0;
+    const totalSlides = 20;
+    let itemsPerView = 1;
+
+    function updateItemsPerView() {
+      if (window.innerWidth >= 1024) {
+        itemsPerView = 3;
+      } else if (window.innerWidth >= 768) {
+        itemsPerView = 2;
+      } else {
+        itemsPerView = 1;
+      }
+    }
+
+    function moveCarousel(direction) {
+      const track = document.getElementById('carousel-track');
+      const maxIndex = totalSlides - itemsPerView;
+      
+      currentIndex += direction;
+      
+      if (currentIndex < 0) currentIndex = 0;
+      if (currentIndex > maxIndex) currentIndex = maxIndex;
+      
+      const percentage = -(currentIndex * (100 / itemsPerView));
+      track.style.transform = `translateX(${percentage}%)`;
+      
+      updateCounter();
+      updateButtons();
+      updateIndicators();
+    }
+
+    function updateCounter() {
+      document.getElementById('current-slide').textContent = currentIndex + 1;
+      document.getElementById('total-slides').textContent = totalSlides;
+    }
+
+    function updateButtons() {
+      const prevBtn = document.getElementById('prev-btn');
+      const nextBtn = document.getElementById('next-btn');
+      const maxIndex = totalSlides - itemsPerView;
+      
+      prevBtn.disabled = currentIndex === 0;
+      nextBtn.disabled = currentIndex >= maxIndex;
+    }
+
+    function createIndicators() {
+      const indicatorsContainer = document.getElementById('indicators');
+      indicatorsContainer.innerHTML = '';
+      
+      const maxIndex = totalSlides - itemsPerView;
+      for (let i = 0; i <= maxIndex; i++) {
+        const dot = document.createElement('button');
+        dot.className = 'w-2 h-2 rounded-full transition-all';
+        dot.style.backgroundColor = i === currentIndex ? '#3b82f6' : '#d1d5db';
+        dot.onclick = () => goToSlide(i);
+        indicatorsContainer.appendChild(dot);
+      }
+    }
+
+    function updateIndicators() {
+      const dots = document.querySelectorAll('#indicators button');
+      dots.forEach((dot, index) => {
+        dot.style.backgroundColor = index === currentIndex ? '#3b82f6' : '#d1d5db';
+      });
+    }
+
+    function goToSlide(index) {
+      const track = document.getElementById('carousel-track');
+      currentIndex = index;
+      const percentage = -(currentIndex * (100 / itemsPerView));
+      track.style.transform = `translateX(${percentage}%)`;
+      updateCounter();
+      updateButtons();
+      updateIndicators();
+    }
+
+    // Inicializar
+    updateItemsPerView();
+    createIndicators();
+    updateButtons();
+
+    // Actualizar en resize
+    window.addEventListener('resize', () => {
+      updateItemsPerView();
+      currentIndex = 0;
+      moveCarousel(0);
+      createIndicators();
+    });
+  </script>
+</body>
+</html>
