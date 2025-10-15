@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Invitación Especial - Álvaro & Estefanía</title>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Crimson+Text:ital,wght@0,400;0,600;1,400&display=swap"
+    rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Crimson Text', serif;
+      background: linear-gradient(135deg, #f8f6f0 0%, #f1ede4 100%);
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 15px;
+      line-height: 1.6;
+    }
+
+    .invitation-container {
+      max-width: 600px;
+      width: 100%;
+      background: #ffffff;
+      border-radius: 2px;
+      box-shadow:
+        0 20px 40px rgba(139, 115, 85, 0.15),
+        0 8px 16px rgba(139, 115, 85, 0.1),
+        inset 0 1px 0 rgba(255, 255, 255, 0.8);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .invitation-container::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 4px;
+      background: linear-gradient(90deg, #8b7355 0%, #a68b5b 50%, #8b7355 100%);
+    }
+
+    .invitation-content {
+      padding: 50px 40px;
+      text-align: center;
+      position: relative;
+    }
+
+    .decorative-border {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      right: 20px;
+      bottom: 20px;
+      border: 1px solid #e8dcc6;
+      border-radius: 1px;
+      pointer-events: none;
+    }
+
+    .invitation-header {
+      margin-bottom: 30px;
+    }
+
+    .invitation-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 22px;
+      font-weight: 600;
+      color: #2c2c2c;
+      letter-spacing: 2.5px;
+      text-transform: uppercase;
+      margin-bottom: 15px;
+      position: relative;
+    }
+
+    .invitation-title::after {
+      content: '';
+      position: absolute;
+      bottom: -8px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 50px;
+      height: 1px;
+      background: #8b7355;
+    }
+
+    .recipient-name {
+      font-family: 'Playfair Display', serif;
+      font-size: 28px;
+      font-weight: 400;
+      font-style: italic;
+      color: #8b7355;
+      margin: 25px 0;
+      line-height: 1.2;
+    }
+
+    .invitation-message {
+      font-size: 16px;
+      color: #4a4a4a;
+      margin: 25px 0;
+      line-height: 1.6;
+      font-weight: 400;
+    }
+
+    .event-details {
+      background: #faf8f4;
+      border-left: 3px solid #8b7355;
+      padding: 30px 25px;
+      margin: 30px 0;
+      text-align: left;
+      border-radius: 0 2px 2px 0;
+    }
+
+    .details-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 18px;
+      font-weight: 600;
+      color: #2c2c2c;
+      margin-bottom: 20px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .detail-item {
+      display: flex;
+      margin-bottom: 12px;
+      align-items: flex-start;
+    }
+
+    .detail-label {
+      font-weight: 600;
+      color: #8b7355;
+      min-width: 70px;
+      font-size: 14px;
+    }
+
+    .detail-value {
+      color: #4a4a4a;
+      font-size: 14px;
+      flex: 1;
+    }
+
+    .closing-message {
+      font-size: 15px;
+      color: #4a4a4a;
+      margin: 30px 0;
+      line-height: 1.7;
+      font-style: italic;
+    }
+
+    .signature {
+      margin-top: 40px;
+      text-align: center;
+    }
+
+    .signature-line {
+      font-family: 'Playfair Display', serif;
+      font-size: 13px;
+      color: #8b7355;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      margin-bottom: 12px;
+      font-weight: 500;
+    }
+
+    .signature-name {
+      font-family: 'Playfair Display', serif;
+      font-size: 26px;
+      font-weight: 600;
+      color: #2c2c2c;
+      font-style: italic;
+    }
+
+    .decorative-flourish {
+      width: 80px;
+      height: 18px;
+      margin: 20px auto;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 20'%3E%3Cpath d='M10 10c10-5 20-5 30 0s20 5 30 0 20-5 30 0' stroke='%238b7355' stroke-width='1' fill='none'/%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: contain;
+    }
+
+    .play-button {
+      display: block;
+      margin: 20px auto;
+      padding: 10px 20px;
+      font-family: 'Playfair Display', serif;
+      font-size: 15px;
+      color: #ffffff;
+      background: #8b7355;
+      border: none;
+      border-radius: 2px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    .play-button:hover {
+      background: #a68b5b;
+    }
+
+    .audio-fallback {
+      font-size: 13px;
+      color: #4a4a4a;
+      text-align: center;
+      margin-top: 15px;
+    }
+
+    @media (max-width: 640px) {
+      body {
+        padding: 10px;
+      }
+
+      .invitation-content {
+        padding: 30px 20px;
+      }
+
+      .decorative-border {
+        top: 15px;
+        left: 15px;
+        right: 15px;
+        bottom: 15px;
+      }
+
+      .invitation-title {
+        font-size: 18px;
+        letter-spacing: 2px;
+      }
+
+      .recipient-name {
+        font-size: 24px;
+        margin: 20px 0;
+      }
+
+      .invitation-message {
+        font-size: 14px;
+        margin: 20px 0;
+      }
+
+      .event-details {
+        padding: 20px 15px;
+        margin: 25px 0;
+      }
+
+      .details-title {
+        font-size: 16px;
+        margin-bottom: 15px;
+      }
+
+      .detail-item {
+        flex-direction: column;
+        margin-bottom: 15px;
+      }
+
+      .detail-label {
+        margin-bottom: 5px;
+        min-width: auto;
+        font-size: 13px;
+      }
+
+      .detail-value {
+        font-size: 13px;
+      }
+
+      .closing-message {
+        font-size: 14px;
+        margin: 25px 0;
+      }
+
+      .signature {
+        margin-top: 30px;
+      }
+
+      .signature-line {
+        font-size: 12px;
+      }
+
+      .signature-name {
+        font-size: 22px;
+      }
+
+      .decorative-flourish {
+        width: 60px;
+        height: 15px;
+      }
+
+      .play-button {
+        font-size: 14px;
+        padding: 8px 16px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="invitation-container">
+    <div class="decorative-border"></div>
+    <div class="invitation-content">
+      <audio id="background-music" loop aria-label="Background music for invitation">
+        <source src="/asset/music/Love for the Moon.mp3" type="audio/mp3">
+        <source src="/asset/music/Love for the Moon.ogg" type="audio/ogg">
+        <p class="audio-fallback">Tu navegador no soporta el elemento de audio. Por favor, actualízalo o usa otro navegador.</p>
+      </audio>
+      <button id="play-music" class="play-button">Reproducir música</button>
+      <div class="invitation-header">
+        <h1 class="invitation-title">Invitación Especial</h1>
+        <div class="decorative-flourish"></div>
+      </div>
+
+      <h2 class="recipient-name">Amada Estefanía C. Q.</h2>
+
+      <p class="invitation-message">
+        Es un honor para mí extenderle esta cordial invitación para acompañarme en una tarde muy especial que he
+        preparado en su honor. Para esta ocasión, te invito a que llevemos outfit color camel👕, para compartir este momento con un toque especial.
+      </p>
+
+      <div class="event-details">
+        <h3 class="details-title">Detalles del Evento</h3>
+        <div class="detail-item">
+          <span class="detail-label">Fecha:</span>
+          <span class="detail-value">Domingo, 28 de septiembre de 2025</span>
+        </div>
+        <div class="detail-item">
+          <span class="detail-label">Hora:</span>
+          <span class="detail-value">12:00 del mediodía</span>
+        </div>
+        <div class="detail-item">
+          <span class="detail-label">Lugar:</span>
+          <span class="detail-value">de encuentro Patio Design</span>
+        </div>
+        <div class="detail-item">
+          <span class="detail-label">Motivo:</span>
+          <span class="detail-value">Celebración de nuestros tres meses de amor</span>
+        </div>
+      </div>
+
+      <p class="closing-message">
+        Este encuentro es la oportunidad perfecta para celebrar los momentos extraordinarios que nos han unido y dar
+        realce a la magia de lo que compartimos. Cada detalle de esta ocasión ha sido pensado con especial cuidado,
+        deseando que refleje la admiración y el profundo cariño que siento por ti.
+      </p>
+
+      <p class="closing-message">
+        Y sé que, con su ternura y creatividad, me sorprenderá con algún gesto único — fotografía, detalle, carta,
+        cualquier expresión nacida de su corazón—, cada gesto se convierte en un recuerdo inolvidable.
+      </p>
+
+      <div class="signature">
+        <div class="decorative-flourish"></div>
+        <p class="signature-line">Con todo mi amor y respeto</p>
+        <p class="signature-name">Alvaro Siles Estrada</p>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      var music = document.getElementById('background-music');
+      var playButton = document.getElementById('play-music');
+      music.volume = 0.3; // Volumen suave
+      music.currentTime = 3; // Iniciar en 3 segundos
+
+      playButton.addEventListener('click', function() {
+        music.play().then(function() {
+          playButton.style.display = 'none'; // Oculta el botón tras reproducir
+        }).catch(function(error) {
+          console.error('Error al reproducir el audio:', error);
+        });
+      });
+    });
+  </script>
+</body>
+
+</html>

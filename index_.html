@@ -1,10 +1,5 @@
-<!-- https://analytics.google.com/analytics/web/?authuser=0#/p473269441/realtime/overview?params=_u..nav%3Dmaui&collectionId=business-objectives
-platform.here.com
-alvarosiles1@gmail.com
-alvaroSiles1990. -->
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
   <meta charset="UTF-8" />
   <link rel="icon" type="image/x-icon" href="/favicon.ico" />
@@ -17,7 +12,7 @@ alvaroSiles1990. -->
   <link rel="apple-touch-icon" href="https://alvarosiles.com/asset/img/perfil_180.png" />
   <meta name="theme-color" content="#1976d2" />
   <title>Alvaro Siles | Frontend Developer</title>
-
+  
   <!-- Open Graph / Facebook / Twitter -->
   <meta name="twitter:site" content="@alvarosiles11" />
   <meta name="twitter:creator" content="@alvarosiles11" />
@@ -40,12 +35,13 @@ alvaroSiles1990. -->
   <meta http-equiv="Pragma" content="no-cache" />
 
   <!-- External libraries -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" />
   <link rel="stylesheet" href="asset/css/style.css" />
   <link rel="stylesheet" href="asset/css/nav.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
 
-  <!-- Google tag (gtag.js) -->
+  
+  <!-- Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-2RD6D0Q91C"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -61,28 +57,25 @@ alvaroSiles1990. -->
       <a href="#home" class="navbar-brand active">
         <img src="asset/svg/leon.svg" alt="logo" />
       </a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#navbarOffcanvas"
-        aria-controls="navbarOffcanvas" aria-expanded="false" aria-label="Toggle navigation">
+      <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#navbarOffcanvas" aria-controls="navbarOffcanvas" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="offcanvas offcanvas-end" id="navbarOffcanvas" tabindex="-1" aria-labelledby="offcanvasNavbarLabel">
         <div class="offcanvas-header">
           <h5 class="offcanvas-title" id="offcanvasNavbarLabel"></h5>
-          <button type="button" class="btn-close btn-close-white text-reset" data-bs-dismiss="offcanvas"
-            aria-label="Close"></button>
+          <button type="button" class="btn-close btn-close-white text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
         </div>
         <div class="offcanvas-body justify-content-end">
           <div class="navbar-nav">
             <a class="nav-item nav-link text-nowrap" aria-current="page" href="#about">01. <span>Sobre mí</span></a>
-            <a class="nav-item nav-link text-nowrap" href="#experience">02.<span>Experiencia</span></a>
-            <a class="nav-item nav-link text-nowrap" href="#certification">03.<span>Certificados</span></a>
-            <a class="nav-item nav-link text-nowrap" href="#project">04.<span>Proyectos</span></a>
-            <a class="nav-item nav-link text-nowrap" href="#contact">05.<span>Contacto</span></a>
-            <a class="nav-item nav-link text-nowrap" href="https://alvarosiles.com/otros-proyectos"
-              target="_blank">06.<span>Otros</span></a>
-            <div class="btnCV mt-3">
-              <a class="btn-cv" href="asset/docs/CV_Alvaro_Siles_Estrada_Español.pdf"
-                download="CV_Alvaro"><span>Curriculum</span></a>
+            <a class="nav-item nav-link text-nowrap" href="#experience">02. <span>Experiencia</span></a>
+            <a class="nav-item nav-link text-nowrap" href="#certificates">03. <span>Certificados</span></a>
+            <a class="nav-item nav-link text-nowrap" href="#project">04. <span>Proyectos</span></a>
+            <a class="nav-item nav-link text-nowrap" href="#contact">05. <span>Contacto</span></a>
+            <div class="btnCV">
+              <a class="btn-cv" href="asset/docs/CV_Alvaro_Siles_Estrada_Español.pdf" download="CV_Alvaro">
+                <span>Curriculum</span>
+              </a>
             </div>
           </div>
         </div>
@@ -96,11 +89,14 @@ alvaroSiles1990. -->
         <h1>¡Hola! 👋, Soy</h1>
         <h2>Alvaro Siles.</h2>
         <h3>Frontend Developer</h3>
-        <p>Con <span>6 años de experiencia</span> en el diseño y desarrollo de sistemas, interfaces de usuario, bots y
-          soluciones tecnológicas innovadoras. A lo largo de mi trayectoria profesional, me he especializado en la
-          creación de aplicaciones utilizando <span>React</span> como tecnología principal y, en ocasiones,
-          <span>Angular,</span> aplicando siempre las mejores prácticas y estándares de la industria para garantizar
-          soluciones eficientes, escalables y de alta calidad.</p>
+        <p>
+          Con <span>6 años de experiencia</span> en el diseño y desarrollo de sistemas, 
+          interfaces de usuario, bots y soluciones tecnológicas innovadoras. A lo largo 
+          de mi trayectoria profesional, me he especializado en la creación de aplicaciones 
+          utilizando <span>React</span> como tecnología principal y, en ocasiones, 
+          <span>Angular</span>, aplicando siempre las mejores prácticas y estándares de 
+          la industria para garantizar soluciones eficientes, escalables y de alta calidad.
+        </p>
         <a class="btn-saludo" href="mailto:alvarosiles1@gmail.com">Salúdame</a>
       </div>
     </section>
@@ -110,18 +106,24 @@ alvaroSiles1990. -->
         <div class="row">
           <h1 class="linea">01. <span>Acerca de mí</span></h1>
           <div class="col-sm-12 col-md-6">
-            <p>Durante mis <span>6 años como desarrollador,</span> me he dedicado a <span>capacitarme
-                continuamente</span> para mantenerme actualizado y mejorar mis habilidades. He trabajado en
-              <span>pruebas unitarias</span>, <span>integración continua</span> y desempeñado roles tanto de
-              <span>frontend</span> como de <span>backend developer</span>. Además, he tenido la oportunidad de
-              <span>liderar equipos</span>, demostrando empatía, motivando a mis compañeros y aplicando la
-              <span>metodología Scrum</span>, junto con la gestión de versiones utilizando <span>GitHub y GitLab</span>.
+            <p>
+              Durante mis <span>6 años como desarrollador</span>, me he dedicado a 
+              <span>capacitarme continuamente</span> para mantenerme actualizado y mejorar 
+              mis habilidades. He trabajado en <span>pruebas unitarias</span>, 
+              <span>integración continua</span> y desempeñado roles tanto de 
+              <span>frontend</span> como de <span>backend developer</span>. Además, he 
+              tenido la oportunidad de <span>liderar equipos</span>, demostrando empatía, 
+              motivando a mis compañeros y aplicando la <span>metodología Scrum</span>, 
+              junto con la gestión de versiones utilizando <span>GitHub y GitLab</span>.
             </p>
-            <p>Entre mis principales capacidades se encuentran la <span>implementación de mejoras en sistemas,
-                optimización de sitios, estandarización de patrones</span> y la <span>propuesta y ejecución de
-                ideas</span> que añaden valor a cada proyecto en el que colaboro.</p>
+            <p>
+              Entre mis principales capacidades se encuentran la 
+              <span>implementación de mejoras en sistemas, optimización de sitios, 
+              estandarización de patrones</span> y la <span>propuesta y ejecución de ideas</span> 
+              que añaden valor a cada proyecto en el que colaboro.
+            </p>
             <p>He adquirido experiencia y trabajado con diversas tecnologías:</p>
-
+            
             <div class="d-flex flex-row">
               <div class="flex-fill">
                 <ul>
@@ -136,7 +138,10 @@ alvaroSiles1990. -->
                   <li><i class="fab fa-angular"></i> Angular</li>
                   <li><i class="fab fa-vuejs"></i> Vue.js</li>
                   <li><i class="fab fa-sass"></i> SASS</li>
+                  <li><i class="fas fa-cogs"></i> Webpack</li>
+                  <li><i class="fas fa-file-alt"></i> Next.js</li>
                   <li><i class="fas fa-cogs"></i> Redux</li>
+                  <li><i class="fas fa-paint-brush"></i> Styled Components</li>
                 </ul>
               </div>
               <div class="flex-fill">
@@ -147,11 +152,16 @@ alvaroSiles1990. -->
                   <li><i class="fas fa-windows"></i> ASP.NET</li>
                   <li><i class="fab fa-php"></i> PHP</li>
                   <li><i class="fab fa-laravel"></i> Laravel</li>
+                  <li><i class="fas fa-cogs"></i> JUnit</li>
+                  <li><i class="fas fa-code"></i> JSON</li>
+                  <li><i class="fas fa-cogs"></i> Postman</li>
                   <li><i class="fab fa-node"></i> Node.js</li>
                   <li><i class="fab fa-node-js"></i> Express.js</li>
+                  <li><i class="fas fa-cogs"></i> Spring Boot</li>
                   <li><i class="fas fa-code-branch"></i> GraphQL</li>
                   <li><i class="fas fa-database"></i> SQL</li>
                   <li><i class="fas fa-plug"></i> REST API</li>
+                  <li><i class="fas fa-cogs"></i> Microservices</li>
                 </ul>
               </div>
               <div class="flex-fill">
@@ -166,6 +176,11 @@ alvaroSiles1990. -->
                   <li><i class="fab fa-digitalocean"></i> DigitalOcean</li>
                   <li><i class="fab fa-microsoft"></i> Azure</li>
                   <li><i class="fab fa-aws"></i> AWS</li>
+                  <li><i class="fas fa-cloud"></i> Heroku</li>
+                  <li><i class="fas fa-server"></i> Apache</li>
+                  <li><i class="fab fa-linux"></i> Linux Server Management</li>
+                  <li><i class="fab fa-google"></i> Firebase</li>
+                  <li><i class="fas fa-tools"></i> CI/CD</li>
                 </ul>
               </div>
             </div>
@@ -224,34 +239,30 @@ alvaroSiles1990. -->
         <h1>05. Y... ¿Ahora?</h1>
         <h2>¡Salúdame!</h2>
         <p>
-          Si deseas conversar sobre nuevas oportunidades o simplemente hacerme alguna
-          pregunta, no dudes en escribirme. Estaré encantado de responder a tu mensaje
+          Si deseas conversar sobre nuevas oportunidades o simplemente hacerme alguna 
+          pregunta, no dudes en escribirme. Estaré encantado de responder a tu mensaje 
           tan pronto como lo vea. ¡Espero tu contacto!
         </p>
       </div>
     </section>
 
     <footer>
-      <h5>Built with ❤️ and React by Alvaro Siles | 2025</h5>
+      <h5>Built with React by Alvaro Siles</h5>
     </footer>
   </div>
 
   <div class="uno"></div>
   <div class="dos"></div>
 
-  <!-- JAVASCRIPT CORREGIDO -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-  <script src="asset/js/scroll.js"></script>
-
-  <!-- <script src="asset/js/jquery-3.4.1.min.js"></script>
+  <!-- Scripts -->
+  <script src="asset/js/jquery-3.4.1.min.js"></script>
   <script src="asset/js/bootstrap.js"></script>
   <script src="asset/js/popper.min.js"></script>
-  <script src="asset/js/scroll.js"></script> -->
+  <script src="asset/js/scroll.js"></script>
 
   <script>
-    // DATOS (sin cambios)
-    const data_experiencia = [ {
+    const data_experiencia = [
+      {
         empresa: 'SERVISOFTS SRL',
         cargo: 'Fullstack developer',
         time: 'Junio 2021 – Actualmente trabajando',
@@ -494,102 +505,108 @@ alvaroSiles1990. -->
       }
     ];
 
-    // FUNCIONES AUXILIARES (corregidas)
+    // Funciones auxiliares
     function activar(value) {
       return value == '0' ? 'active' : '';
     }
+
     function activar1(value) {
       return value == '0' ? 'in show active' : '';
     }
 
-    $(document).ready(function () {
-      // EXPERIENCIA - GENERAR MENÚ
-      let html0 = `<ul class="nav flex-column nav-pills" role="tablist" aria-orientation="vertical">`;
-      data_experiencia.forEach((obj, keys) => {
-        html0 += `<li class="nav-item waves-effect waves-light">
-                    <a class="nav-link ${activar(keys)}" data-bs-toggle="pill" href="#panel${keys}" role="tab">
-                      <i class="fas fa-user"></i> ${obj.empresa}
-                    </a>
-                  </li>`;
-      });
-      html0 += `</ul>`;
-      $('#exp_menu').html(html0);
-
-      // EXPERIENCIA - GENERAR DETALLES
-      let html = `<div class="tab-content">`;
-      data_experiencia.forEach((obj, keys) => {
-        html += `<div class="tab-pane fade ${activar1(keys)}" id="panel${keys}" role="tabpanel">`;
-        html += `<h4 class="cargo">${obj.cargo} | <span>${obj.empresa}</span></h4>`;
-        html += `<h5 class="tiempo">${obj.time}</h5>`;
-        html += `<ul class="tareas">`;
-        obj.tareas.forEach(tarea => html += `<li>${tarea}</li>`);
-        html += `</ul></div>`;
-      });
-      html += `</div>`;
-      $('#exp_detalle').html(html);
-
-      // PROYECTOS DESTACADOS
-      let htmlProject = '';
-      let estado = 0;
-      data_proyecto_destacado.forEach((obj, keys) => {
-        const clase = estado === 0 ? 'izquierda' : 'derecha';
-        htmlProject += `<div class="${clase}">
-          <div class="proyecto-foto col-lg-7 col-md-4 col-sm-12">
-            <img src="${obj.image}" alt="${obj.nombre}" />
-          </div>
-          <div class="proyecto-descripcion col-lg-5 col-md-8 col-sm-12">
-            <div class="proyecto-float">
-              <h4>Proyecto Destacado</h4>
-              <h5>${obj.nombre}</h5>
-              <p>${obj.decripcion}</p>
-              <ul>`;
-        obj.tecnologia.forEach(tech => htmlProject += `<li>${tech}</li>`);
-        htmlProject += `</ul>
-              <div class="project-links">
-                <a href="${obj.github}" target="_blank"><i class="fab fa-github"></i></a>
-                <a href="${obj.webpage}" target="_blank"><i class="fas fa-external-link-alt"></i></a>
-              </div>
-            </div>
-          </div>
-        </div>`;
-        estado = 1 - estado;
-      });
-      $('#test').append(htmlProject);
-
-      // MÁS PROYECTOS
-      let htmlProyectos = `<div class="container"><div class="parent">`;
-      data_proyecto.forEach(obj => {
-        htmlProyectos += `<div class='box'>
-          <div class="cardHeader">
-            <div class="container">
-              <div class="row">
-                <div class="col-6"><img class="folder" src="asset/svg/folder.svg" alt="logo" /></div>
-                <div class="col-6 d-flex justify-content-end">
-                  <a href="${obj.github}" target="_blank"><i class="links fa-brands fa-github"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="cardBody">
-            <h1>${obj.nombre}</h1>
-            <p>${obj.decripcion}</p>
-          </div>
-          <div class="cardFooter">
-            <ul>`;
-        obj.tecnologia.forEach(tech => htmlProyectos += `<li>${tech}</li>`);
-        htmlProyectos += `</ul></div></div>`;
-      });
-      htmlProyectos += `</div></div>`;
-      $('#othersProject').html(htmlProyectos);
-
-      // SMOOTH SCROLL
-      $('a[href^="#"]').on('click', function (e) {
-        e.preventDefault();
-        const target = $($(this).attr('href'));
-        $('html, body').animate({ scrollTop: target.offset().top - 70 }, 800);
-      });
+    // Generar menú de experiencia
+    let htmlMenu = `<ul class="nav flex-column nav-pills" role="tablist" aria-orientation="vertical">
+      <li class="nav-item waves-effect waves-light">`;
+    data_experiencia.forEach((obj, index) => {
+      htmlMenu += `<a class="nav-link ${activar(index)}" data-toggle="tab" href="#panel${index}" role="tab">
+        <i class="fas fa-user"></i>${obj.empresa}
+      </a>`;
     });
+    htmlMenu += `</li></ul>`;
+    document.getElementById('exp_menu').innerHTML = htmlMenu;
+
+    // Generar detalle de experiencia
+    let htmlDetail = `<div class="tab-content col-sm-12">`;
+    data_experiencia.forEach((obj, index) => {
+      htmlDetail += `<div class="tab-pane fade ${activar1(index)}" id="panel${index}" role="tabpanel">
+        <h4 class="cargo">${obj.cargo} | <span>${obj.empresa}</span></h4>
+        <h5 class="tiempo">${obj.time}</h5>
+        <ul>`;
+      obj.tareas.forEach(tarea => {
+        htmlDetail += `<li>${tarea}</li>`;
+      });
+      htmlDetail += `</ul></div>`;
+    });
+    htmlDetail += `</div>`;
+    document.getElementById('exp_detalle').innerHTML = htmlDetail;
+
+    // Generar proyectos destacados
+    let htmlProject = ``;
+    let estado = 0;
+
+    data_proyecto_destacado.forEach((obj) => {
+      if (estado === 0) {
+        htmlProject += `<div class="izquierda">`;
+      } else {
+        htmlProject += `<div class="derecha">`;
+      }
+      htmlProject += `<div class="proyecto-foto col-lg-7 col-md-4 col-sm-12">
+        <img src="${obj.image}" alt="${obj.nombre}" />
+      </div>
+      <div class="proyecto-descripcion col-lg-5 col-md-8 col-sm-12">
+        <div class="proyecto-float">
+          <h4>Proyecto destacado</h4>
+          <h5>${obj.nombre}</h5>
+          <div class="mensaje"><p>${obj.descripcion}</p></div>
+          <ul>`;
+      obj.tecnologia.forEach(tech => {
+        htmlProject += `<li>${tech}</li>`;
+      });
+      htmlProject += `</ul>
+          <div class="project-links">
+            <a href="${obj.github}" target="_blank"><i class="fab fa-github"></i></a>
+            ${obj.webpage ? `<a href="${obj.webpage}" target="_blank"><i class="fas fa-external-link-alt"></i></a>` : ''}
+          </div>
+        </div>
+      </div>
+      </div>`;
+      estado = estado === 0 ? 1 : 0;
+    });
+    document.getElementById('test').innerHTML += htmlProject;
+
+    // Generar más proyectos
+    let htmlProyectos = `<div class="container">
+      <div class="parent">`;
+    data_proyecto.forEach((obj) => {
+      htmlProyectos += `<div class='box'>
+        <div class="cardHeader">
+          <div class="container">
+            <div class="row">
+              <div class="col-6 justify-content-end">
+                <img class="folder" src="asset/svg/folder.svg" alt="logo" />
+              </div>
+              <div class="col-6 d-flex justify-content-end">
+                <a href="${obj.github}" target="_blank"><i class="links fa-brands fa-github"></i></a>
+                ${obj.webpage ? `<a href="${obj.webpage}" target="_blank"><i class="links fas fa-external-link-alt"></i></a>` : ''}
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="cardBody">
+          <h1>${obj.nombre}</h1>
+          <p>${obj.descripcion}</p>
+        </div>
+        <div class="cardFooter">
+          <ul>`;
+      obj.tecnologia.forEach(tech => {
+        htmlProyectos += `<li>${tech}</li>`;
+      });
+      htmlProyectos += `</ul>
+        </div>
+      </div>`;
+    });
+    htmlProyectos += `</div></div>`;
+    document.getElementById('othersProject').innerHTML = htmlProyectos;
   </script>
 </body>
-
 </html>
