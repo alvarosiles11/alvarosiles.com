@@ -1,0 +1,677 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portafolio - Vista Compacta con Modal</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    }
+    
+    .cert-badge {
+      transition: all 0.2s ease;
+      cursor: pointer;
+    }
+    
+    .cert-badge:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    }
+
+    /* <CHANGE> Agregando estilos para las tarjetas de blog */
+    .blog-card {
+      transition: all 0.3s ease;
+      cursor: pointer;
+    }
+    
+    .blog-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12);
+    }
+    
+    .modal {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.7);
+      z-index: 1000;
+      animation: fadeIn 0.2s ease;
+    }
+    
+    .modal.active {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    
+    .modal-content {
+      background: white;
+      border-radius: 1rem;
+      max-width: 600px;
+      width: 90%;
+      max-height: 90vh;
+      overflow-y: auto;
+      animation: slideUp 0.3s ease;
+    }
+    
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+    
+    @keyframes slideUp {
+      from { transform: translateY(50px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+  </style>
+</head>
+<body class="bg-gray-50">
+   Header 
+  <header class="bg-white shadow-sm fixed w-full top-0 z-50">
+    <nav class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+      <h1 class="text-2xl font-bold text-gray-900">Juan Pérez</h1>
+      <div class="hidden md:flex gap-8">
+        <a href="#inicio" class="text-gray-600 hover:text-blue-600 transition">Inicio</a>
+        <a href="#certificados" class="text-gray-600 hover:text-blue-600 transition">Certificados</a>
+         <CHANGE> Agregando enlace a la sección de blog 
+        <a href="#blog" class="text-gray-600 hover:text-blue-600 transition">Blog</a>
+        <a href="#contacto" class="text-gray-600 hover:text-blue-600 transition">Contacto</a>
+      </div>
+    </nav>
+  </header>
+
+   ... existing code ... 
+
+   Hero Section 
+  <section id="inicio" class="pt-32 pb-20 px-6">
+    <div class="max-w-6xl mx-auto text-center">
+      <h2 class="text-5xl font-bold text-gray-900 mb-6">Ingeniero de Sistemas</h2>
+      <p class="text-xl text-gray-600 mb-8 max-w-2xl mx-auto leading-relaxed">
+        Especializado en arquitectura cloud, desarrollo full-stack y transformación digital
+      </p>
+    </div>
+  </section>
+
+   ... existing code ... 
+
+   Certificados Vista Compacta 
+  <section id="certificados" class="py-20 px-6 bg-white">
+    <div class="max-w-6xl mx-auto">
+      <h3 class="text-3xl font-bold text-gray-900 mb-4 text-center">Certificaciones Profesionales</h3>
+      <p class="text-gray-600 text-center mb-12">Haz clic en cualquier certificado para ver los detalles completos</p>
+      
+      <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-4">
+         ... existing code ... 
+         Certificado 1 
+        <div class="cert-badge bg-white border-2 border-orange-200 rounded-xl p-4 text-center" onclick="openModal(0)">
+          <div class="w-16 h-16 bg-orange-100 rounded-full mx-auto mb-3 flex items-center justify-center">
+            <svg class="w-8 h-8 text-orange-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z"></path>
+            </svg>
+          </div>
+          <p class="text-sm font-bold text-gray-900 mb-1">AWS Solutions</p>
+          <p class="text-xs text-gray-500">2024</p>
+        </div>
+
+         ... existing code ... 
+         Resto de certificados (2-20) 
+        <div class="cert-badge bg-white border-2 border-blue-200 rounded-xl p-4 text-center" onclick="openModal(1)">
+          <div class="w-16 h-16 bg-blue-100 rounded-full mx-auto mb-3 flex items-center justify-center">
+            <svg class="w-8 h-8 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"></path>
+            </svg>
+          </div>
+          <p class="text-sm font-bold text-gray-900 mb-1">Kubernetes</p>
+          <p class="text-xs text-gray-500">2024</p>
+        </div>
+
+        <div class="cert-badge bg-white border-2 border-green-200 rounded-xl p-4 text-center" onclick="openModal(2)">
+          <div class="w-16 h-16 bg-green-100 rounded-full mx-auto mb-3 flex items-center justify-center">
+            <svg class="w-8 h-8 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
+            </svg>
+          </div>
+          <p class="text-sm font-bold text-gray-900 mb-1">Google Cloud</p>
+          <p class="text-xs text-gray-500">2023</p>
+        </div>
+
+        <div class="cert-badge bg-white border-2 border-purple-200 rounded-xl p-4 text-center" onclick="openModal(3)">
+          <div class="w-16 h-16 bg-purple-100 rounded-full mx-auto mb-3 flex items-center justify-center">
+            <svg class="w-8 h-8 text-purple-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+            </svg>
+          </div>
+          <p class="text-sm font-bold text-gray-900 mb-1">Scrum Master</p>
+          <p class="text-xs text-gray-500">2023</p>
+        </div>
+
+        <div class="cert-badge bg-white border-2 border-red-200 rounded-xl p-4 text-center" onclick="openModal(4)">
+          <div class="w-16 h-16 bg-red-100 rounded-full mx-auto mb-3 flex items-center justify-center">
+            <svg class="w-8 h-8 text-red-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4"></path>
+            </svg>
+          </div>
+          <p class="text-sm font-bold text-gray-900 mb-1">MongoDB</p>
+          <p class="text-xs text-gray-500">2023</p>
+        </div>
+
+        <div class="cert-badge bg-white border-2 border-indigo-200 rounded-xl p-4 text-center" onclick="openModal(5)">
+          <div class="w-16 h-16 bg-indigo-100 rounded-full mx-auto mb-3 flex items-center justify-center">
+            <span class="text-2xl">☁️</span>
+          </div>
+          <p class="text-sm font-bold text-gray-900 mb-1">Azure DevOps</p>
+          <p class="text-xs text-gray-500">2024</p>
+        </div>
+
+        <div class="cert-badge bg-white border-2 border-yellow-200 rounded-xl p-4 text-center" onclick="openModal(6)">
+          <div class="w-16 h-16 bg-yellow-100 rounded-full mx-auto mb-3 flex items-center justify-center">
+            <span class="text-2xl">🔒</span>
+          </div>
+          <p class="text-sm font-bold text-gray-900 mb-1">Security+</p>
+          <p class="text-xs text-gray-500">2023</p>
+        </div>
+
+        <div class="cert-badge bg-white border-2 border-pink-200 rounded-xl p-4 text-center" onclick="openModal(7)">
+          <div class="w-16 h-16 bg-pink-100 rounded-full mx-auto mb-3 flex items-center justify-center">
+            <span class="text-2xl">⚛️</span>
+          </div>
+          <p class="text-sm font-bold text-gray-900 mb-1">React</p>
+          <p class="text-xs text-gray-500">2023</p>
+        </div>
+
+        <div class="cert-badge bg-white border-2 border-teal-200 rounded-xl p-4 text-center" onclick="openModal(8)">
+          <div class="w-16 h-16 bg-teal-100 rounded-full mx-auto mb-3 flex items-center justify-center">
+            <span class="text-2xl">🐍</span>
+          </div>
+          <p class="text-sm font-bold text-gray-900 mb-1">Python</p>
+          <p class="text-xs text-gray-500">2022</p>
+        </div>
+
+        <div class="cert-badge bg-white border-2 border-cyan-200 rounded-xl p-4 text-center" onclick="openModal(9)">
+          <div class="w-16 h-16 bg-cyan-100 rounded-full mx-auto mb-3 flex items-center justify-center">
+            <span class="text-2xl">🐳</span>
+          </div>
+          <p class="text-sm font-bold text-gray-900 mb-1">Docker</p>
+          <p class="text-xs text-gray-500">2023</p>
+        </div>
+
+        <div class="cert-badge bg-white border-2 border-lime-200 rounded-xl p-4 text-center" onclick="openModal(10)">
+          <div class="w-16 h-16 bg-lime-100 rounded-full mx-auto mb-3 flex items-center justify-center">
+            <span class="text-2xl">📊</span>
+          </div>
+          <p class="text-sm font-bold text-gray-900 mb-1">Tableau</p>
+          <p class="text-xs text-gray-500">2022</p>
+        </div>
+
+        <div class="cert-badge bg-white border-2 border-amber-200 rounded-xl p-4 text-center" onclick="openModal(11)">
+          <div class="w-16 h-16 bg-amber-100 rounded-full mx-auto mb-3 flex items-center justify-center">
+            <span class="text-2xl">🤖</span>
+          </div>
+          <p class="text-sm font-bold text-gray-900 mb-1">Machine Learning</p>
+          <p class="text-xs text-gray-500">2023</p>
+        </div>
+
+        <div class="cert-badge bg-white border-2 border-rose-200 rounded-xl p-4 text-center" onclick="openModal(12)">
+          <div class="w-16 h-16 bg-rose-100 rounded-full mx-auto mb-3 flex items-center justify-center">
+            <span class="text-2xl">☁️</span>
+          </div>
+          <p class="text-sm font-bold text-gray-900 mb-1">Terraform</p>
+          <p class="text-xs text-gray-500">2024</p>
+        </div>
+
+        <div class="cert-badge bg-white border-2 border-violet-200 rounded-xl p-4 text-center" onclick="openModal(13)">
+          <div class="w-16 h-16 bg-violet-100 rounded-full mx-auto mb-3 flex items-center justify-center">
+            <span class="text-2xl">🔐</span>
+          </div>
+          <p class="text-sm font-bold text-gray-900 mb-1">CISSP</p>
+          <p class="text-xs text-gray-500">2022</p>
+        </div>
+
+        <div class="cert-badge bg-white border-2 border-fuchsia-200 rounded-xl p-4 text-center" onclick="openModal(14)">
+          <div class="w-16 h-16 bg-fuchsia-100 rounded-full mx-auto mb-3 flex items-center justify-center">
+            <span class="text-2xl">📱</span>
+          </div>
+          <p class="text-sm font-bold text-gray-900 mb-1">iOS Developer</p>
+          <p class="text-xs text-gray-500">2022</p>
+        </div>
+
+        <div class="cert-badge bg-white border-2 border-sky-200 rounded-xl p-4 text-center" onclick="openModal(15)">
+          <div class="w-16 h-16 bg-sky-100 rounded-full mx-auto mb-3 flex items-center justify-center">
+            <span class="text-2xl">🌐</span>
+          </div>
+          <p class="text-sm font-bold text-gray-900 mb-1">Node.js</p>
+          <p class="text-xs text-gray-500">2023</p>
+        </div>
+
+        <div class="cert-badge bg-white border-2 border-emerald-200 rounded-xl p-4 text-center" onclick="openModal(16)">
+          <div class="w-16 h-16 bg-emerald-100 rounded-full mx-auto mb-3 flex items-center justify-center">
+            <span class="text-2xl">🎯</span>
+          </div>
+          <p class="text-sm font-bold text-gray-900 mb-1">SAFe Agilist</p>
+          <p class="text-xs text-gray-500">2023</p>
+        </div>
+
+        <div class="cert-badge bg-white border-2 border-slate-200 rounded-xl p-4 text-center" onclick="openModal(17)">
+          <div class="w-16 h-16 bg-slate-100 rounded-full mx-auto mb-3 flex items-center justify-center">
+            <span class="text-2xl">💾</span>
+          </div>
+          <p class="text-sm font-bold text-gray-900 mb-1">Redis</p>
+          <p class="text-xs text-gray-500">2022</p>
+        </div>
+
+        <div class="cert-badge bg-white border-2 border-orange-200 rounded-xl p-4 text-center" onclick="openModal(18)">
+          <div class="w-16 h-16 bg-orange-100 rounded-full mx-auto mb-3 flex items-center justify-center">
+            <span class="text-2xl">🔧</span>
+          </div>
+          <p class="text-sm font-bold text-gray-900 mb-1">Jenkins</p>
+          <p class="text-xs text-gray-500">2023</p>
+        </div>
+
+        <div class="cert-badge bg-white border-2 border-yellow-200 rounded-xl p-4 text-center" onclick="openModal(19)">
+          <div class="w-16 h-16 bg-yellow-100 rounded-full mx-auto mb-3 flex items-center justify-center">
+            <span class="text-2xl">📈</span>
+          </div>
+          <p class="text-sm font-bold text-gray-900 mb-1">Power BI</p>
+          <p class="text-xs text-gray-500">2022</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+   <CHANGE> Nueva sección de Blog/Publicaciones 
+  <section id="blog" class="py-20 px-6 bg-gray-50">
+    <div class="max-w-6xl mx-auto">
+      <h3 class="text-3xl font-bold text-gray-900 mb-4 text-center">Blog & Publicaciones</h3>
+      <p class="text-gray-600 text-center mb-12">Artículos técnicos y reflexiones sobre tecnología</p>
+      
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+         Artículo 1 
+        <article class="blog-card bg-white rounded-xl overflow-hidden shadow-sm">
+          <div class="h-48 bg-gradient-to-br from-blue-500 to-blue-600 flex items-center justify-center">
+            <svg class="w-16 h-16 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z"></path>
+            </svg>
+          </div>
+          <div class="p-6">
+            <div class="flex items-center gap-2 mb-3">
+              <span class="px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-xs font-medium">Cloud</span>
+              <span class="text-sm text-gray-500">15 Ene 2025</span>
+            </div>
+            <h4 class="text-xl font-bold text-gray-900 mb-3">Arquitecturas Serverless en AWS</h4>
+            <p class="text-gray-600 mb-4 leading-relaxed">Explorando las mejores prácticas para diseñar aplicaciones escalables usando Lambda, API Gateway y DynamoDB.</p>
+            <a href="#" class="text-blue-600 font-medium hover:text-blue-700 transition">Leer más →</a>
+          </div>
+        </article>
+
+         Artículo 2 
+        <article class="blog-card bg-white rounded-xl overflow-hidden shadow-sm">
+          <div class="h-48 bg-gradient-to-br from-green-500 to-green-600 flex items-center justify-center">
+            <svg class="w-16 h-16 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"></path>
+            </svg>
+          </div>
+          <div class="p-6">
+            <div class="flex items-center gap-2 mb-3">
+              <span class="px-3 py-1 bg-green-100 text-green-700 rounded-full text-xs font-medium">DevOps</span>
+              <span class="text-sm text-gray-500">08 Ene 2025</span>
+            </div>
+            <h4 class="text-xl font-bold text-gray-900 mb-3">Kubernetes en Producción</h4>
+            <p class="text-gray-600 mb-4 leading-relaxed">Guía completa para desplegar y mantener clusters de Kubernetes en ambientes de producción con alta disponibilidad.</p>
+            <a href="#" class="text-green-600 font-medium hover:text-green-700 transition">Leer más →</a>
+          </div>
+        </article>
+
+         Artículo 3 
+        <article class="blog-card bg-white rounded-xl overflow-hidden shadow-sm">
+          <div class="h-48 bg-gradient-to-br from-purple-500 to-purple-600 flex items-center justify-center">
+            <svg class="w-16 h-16 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
+            </svg>
+          </div>
+          <div class="p-6">
+            <div class="flex items-center gap-2 mb-3">
+              <span class="px-3 py-1 bg-purple-100 text-purple-700 rounded-full text-xs font-medium">Seguridad</span>
+              <span class="text-sm text-gray-500">22 Dic 2024</span>
+            </div>
+            <h4 class="text-xl font-bold text-gray-900 mb-3">Zero Trust en la Nube</h4>
+            <p class="text-gray-600 mb-4 leading-relaxed">Implementando arquitecturas de seguridad Zero Trust en infraestructuras cloud modernas.</p>
+            <a href="#" class="text-purple-600 font-medium hover:text-purple-700 transition">Leer más →</a>
+          </div>
+        </article>
+
+         Artículo 4 
+        <article class="blog-card bg-white rounded-xl overflow-hidden shadow-sm">
+          <div class="h-48 bg-gradient-to-br from-orange-500 to-orange-600 flex items-center justify-center">
+            <svg class="w-16 h-16 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+            </svg>
+          </div>
+          <div class="p-6">
+            <div class="flex items-center gap-2 mb-3">
+              <span class="px-3 py-1 bg-orange-100 text-orange-700 rounded-full text-xs font-medium">Performance</span>
+              <span class="text-sm text-gray-500">10 Dic 2024</span>
+            </div>
+            <h4 class="text-xl font-bold text-gray-900 mb-3">Optimización de APIs REST</h4>
+            <p class="text-gray-600 mb-4 leading-relaxed">Técnicas avanzadas para mejorar el rendimiento y escalabilidad de APIs REST en aplicaciones empresariales.</p>
+            <a href="#" class="text-orange-600 font-medium hover:text-orange-700 transition">Leer más →</a>
+          </div>
+        </article>
+
+         Artículo 5 
+        <article class="blog-card bg-white rounded-xl overflow-hidden shadow-sm">
+          <div class="h-48 bg-gradient-to-br from-red-500 to-red-600 flex items-center justify-center">
+            <svg class="w-16 h-16 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4"></path>
+            </svg>
+          </div>
+          <div class="p-6">
+            <div class="flex items-center gap-2 mb-3">
+              <span class="px-3 py-1 bg-red-100 text-red-700 rounded-full text-xs font-medium">Bases de Datos</span>
+              <span class="text-sm text-gray-500">28 Nov 2024</span>
+            </div>
+            <h4 class="text-xl font-bold text-gray-900 mb-3">MongoDB vs PostgreSQL</h4>
+            <p class="text-gray-600 mb-4 leading-relaxed">Análisis comparativo de bases de datos NoSQL y SQL para diferentes casos de uso en aplicaciones modernas.</p>
+            <a href="#" class="text-red-600 font-medium hover:text-red-700 transition">Leer más →</a>
+          </div>
+        </article>
+
+         Artículo 6 
+        <article class="blog-card bg-white rounded-xl overflow-hidden shadow-sm">
+          <div class="h-48 bg-gradient-to-br from-teal-500 to-teal-600 flex items-center justify-center">
+            <svg class="w-16 h-16 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
+            </svg>
+          </div>
+          <div class="p-6">
+            <div class="flex items-center gap-2 mb-3">
+              <span class="px-3 py-1 bg-teal-100 text-teal-700 rounded-full text-xs font-medium">IA</span>
+              <span class="text-sm text-gray-500">15 Nov 2024</span>
+            </div>
+            <h4 class="text-xl font-bold text-gray-900 mb-3">Machine Learning en Producción</h4>
+            <p class="text-gray-600 mb-4 leading-relaxed">Estrategias para llevar modelos de ML desde el desarrollo hasta producción con MLOps y monitoreo continuo.</p>
+            <a href="#" class="text-teal-600 font-medium hover:text-teal-700 transition">Leer más →</a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+   Modal 
+  <div id="modal" class="modal" onclick="closeModal(event)">
+    <div class="modal-content" onclick="event.stopPropagation()">
+      <div id="modal-body"></div>
+    </div>
+  </div>
+
+   Footer 
+  <footer class="bg-gray-900 text-white py-12 px-6">
+    <div class="max-w-6xl mx-auto text-center">
+      <p class="text-gray-400">© 2025 Juan Pérez - Ingeniero de Sistemas</p>
+    </div>
+  </footer>
+
+  <script>
+    const certificates = [
+      {
+        title: "AWS Solutions Architect",
+        issuer: "Amazon Web Services",
+        description: "Certificación profesional en diseño y despliegue de sistemas escalables, seguros y robustos en AWS. Incluye conocimientos en EC2, S3, RDS, Lambda, VPC, IAM y arquitecturas de alta disponibilidad.",
+        year: "2024",
+        id: "AWS-SA-2024-1234",
+        color: "orange",
+        skills: ["EC2", "S3", "Lambda", "RDS", "CloudFormation", "VPC"]
+      },
+      {
+        title: "Kubernetes Administrator (CKA)",
+        issuer: "Cloud Native Computing Foundation",
+        description: "Certificación que valida habilidades en administración de clusters Kubernetes en producción, incluyendo instalación, configuración, gestión de redes, almacenamiento y troubleshooting.",
+        year: "2024",
+        id: "CKA-2024-5678",
+        color: "blue",
+        skills: ["Pods", "Deployments", "Services", "Networking", "Storage", "Security"]
+      },
+      {
+        title: "Google Cloud Professional Architect",
+        issuer: "Google Cloud",
+        description: "Certificación profesional en diseño, desarrollo y gestión de soluciones robustas, seguras y escalables en Google Cloud Platform.",
+        year: "2023",
+        id: "GCP-PRO-2023-9012",
+        color: "green",
+        skills: ["Compute Engine", "Cloud Storage", "BigQuery", "Kubernetes Engine"]
+      },
+      {
+        title: "Certified Scrum Master (CSM)",
+        issuer: "Scrum Alliance",
+        description: "Certificación en metodologías ágiles Scrum para gestión efectiva de proyectos y equipos de desarrollo de software.",
+        year: "2023",
+        id: "CSM-2023-3456",
+        color: "purple",
+        skills: ["Scrum Framework", "Sprint Planning", "Daily Standups", "Retrospectives"]
+      },
+      {
+        title: "MongoDB Developer Associate",
+        issuer: "MongoDB University",
+        description: "Certificación en desarrollo de aplicaciones con MongoDB, incluyendo modelado de datos, queries, agregaciones y optimización de rendimiento.",
+        year: "2023",
+        id: "MDB-DEV-2023-7890",
+        color: "red",
+        skills: ["CRUD Operations", "Aggregation", "Indexing", "Replication", "Sharding"]
+      },
+      {
+        title: "Azure DevOps Engineer Expert",
+        issuer: "Microsoft",
+        description: "Certificación en implementación de procesos DevOps, CI/CD pipelines y automatización en Azure.",
+        year: "2024",
+        id: "AZ-400-2024-1122",
+        color: "indigo",
+        skills: ["Azure Pipelines", "Git", "Docker", "Terraform", "Monitoring"]
+      },
+      {
+        title: "CompTIA Security+",
+        issuer: "CompTIA",
+        description: "Certificación fundamental en ciberseguridad, cubriendo amenazas, vulnerabilidades, criptografía y gestión de riesgos.",
+        year: "2023",
+        id: "SEC+-2023-4455",
+        color: "yellow",
+        skills: ["Network Security", "Cryptography", "Risk Management", "Incident Response"]
+      },
+      {
+        title: "React Developer Certification",
+        issuer: "Meta",
+        description: "Certificación oficial en desarrollo avanzado con React, incluyendo hooks, context, performance optimization y testing.",
+        year: "2023",
+        id: "REACT-2023-6677",
+        color: "pink",
+        skills: ["Hooks", "Context API", "Redux", "Testing", "Performance"]
+      },
+      {
+        title: "Python Professional Certification",
+        issuer: "Python Institute",
+        description: "Certificación profesional en desarrollo con Python, incluyendo OOP, manejo de archivos, módulos y mejores prácticas.",
+        year: "2022",
+        id: "PCPP-2022-8899",
+        color: "teal",
+        skills: ["OOP", "Data Structures", "File I/O", "Modules", "Testing"]
+      },
+      {
+        title: "Docker Certified Associate",
+        issuer: "Docker Inc",
+        description: "Certificación en containerización con Docker, incluyendo imágenes, contenedores, networking y orquestación.",
+        year: "2023",
+        id: "DCA-2023-1010",
+        color: "cyan",
+        skills: ["Containers", "Images", "Volumes", "Networks", "Docker Compose"]
+      },
+      {
+        title: "Tableau Desktop Specialist",
+        issuer: "Tableau",
+        description: "Certificación en visualización de datos y creación de dashboards interactivos con Tableau.",
+        year: "2022",
+        id: "TDS-2022-2020",
+        color: "lime",
+        skills: ["Data Visualization", "Dashboards", "Calculations", "Filters"]
+      },
+      {
+        title: "Machine Learning Specialization",
+        issuer: "Stanford Online",
+        description: "Certificación en fundamentos de Machine Learning, incluyendo algoritmos supervisados y no supervisados.",
+        year: "2023",
+        id: "ML-2023-3030",
+        color: "amber",
+        skills: ["Supervised Learning", "Neural Networks", "Unsupervised Learning"]
+      },
+      {
+        title: "HashiCorp Terraform Associate",
+        issuer: "HashiCorp",
+        description: "Certificación en Infrastructure as Code con Terraform para automatización de infraestructura cloud.",
+        year: "2024",
+        id: "TF-ASSOC-2024-4040",
+        color: "rose",
+        skills: ["IaC", "Providers", "State Management", "Modules"]
+      },
+      {
+        title: "CISSP - Certified Information Systems Security Professional",
+        issuer: "ISC²",
+        description: "Certificación avanzada en seguridad de sistemas de información y gestión de riesgos empresariales.",
+        year: "2022",
+        id: "CISSP-2022-5050",
+        color: "violet",
+        skills: ["Security Architecture", "Risk Management", "Cryptography", "Access Control"]
+      },
+      {
+        title: "iOS Developer Certification",
+        issuer: "Apple",
+        description: "Certificación en desarrollo de aplicaciones iOS con Swift y SwiftUI.",
+        year: "2022",
+        id: "IOS-DEV-2022-6060",
+        color: "fuchsia",
+        skills: ["Swift", "SwiftUI", "UIKit", "Core Data", "Networking"]
+      },
+      {
+        title: "Node.js Application Developer",
+        issuer: "OpenJS Foundation",
+        description: "Certificación en desarrollo backend con Node.js, incluyendo APIs REST, bases de datos y seguridad.",
+        year: "2023",
+        id: "NODEJS-2023-7070",
+        color: "sky",
+        skills: ["Express.js", "REST APIs", "Authentication", "Database Integration"]
+      },
+      {
+        title: "SAFe 6 Agilist",
+        issuer: "Scaled Agile",
+        description: "Certificación en Scaled Agile Framework para implementación de metodologías ágiles a escala empresarial.",
+        year: "2023",
+        id: "SA-2023-8080",
+        color: "emerald",
+        skills: ["SAFe Principles", "PI Planning", "Agile Release Train", "DevOps"]
+      },
+      {
+        title: "Redis Certified Developer",
+        issuer: "Redis University",
+        description: "Certificación en bases de datos en memoria con Redis, incluyendo estructuras de datos y patrones de uso.",
+        year: "2022",
+        id: "RU-2022-9090",
+        color: "slate",
+        skills: ["Data Structures", "Caching", "Pub/Sub", "Persistence"]
+      },
+      {
+        title: "Jenkins Engineer Certification",
+        issuer: "CloudBees",
+        description: "Certificación en CI/CD con Jenkins, incluyendo pipelines, plugins y automatización de builds.",
+        year: "2023",
+        id: "CJE-2023-1111",
+        color: "orange",
+        skills: ["Pipelines", "Plugins", "Build Automation", "Integration"]
+      },
+      {
+        title: "Microsoft Power BI Data Analyst",
+        issuer: "Microsoft",
+        description: "Certificación en análisis de datos y Business Intelligence con Power BI.",
+        year: "2022",
+        id: "PBI-2022-2222",
+        color: "yellow",
+        skills: ["Data Modeling", "DAX", "Power Query", "Visualizations"]
+      }
+    ];
+
+    function openModal(index) {
+      const cert = certificates[index];
+      const modal = document.getElementById('modal');
+      const modalBody = document.getElementById('modal-body');
+      
+      modalBody.innerHTML = `
+        <div class="p-8">
+          <div class="flex justify-between items-start mb-6">
+            <div class="w-16 h-16 bg-${cert.color}-100 rounded-xl flex items-center justify-center">
+              <span class="text-3xl">${index < 6 ? '🏆' : '✨'}</span>
+            </div>
+            <button onclick="closeModal()" class="text-gray-400 hover:text-gray-600 transition">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+              </svg>
+            </button>
+          </div>
+          
+          <h3 class="text-2xl font-bold text-gray-900 mb-2">${cert.title}</h3>
+          <p class="text-lg text-${cert.color}-600 mb-4">${cert.issuer}</p>
+          
+          <div class="bg-gray-50 rounded-lg p-4 mb-6">
+            <p class="text-gray-700 leading-relaxed">${cert.description}</p>
+          </div>
+          
+          <div class="mb-6">
+            <h4 class="text-sm font-semibold text-gray-900 mb-3">Habilidades cubiertas:</h4>
+            <div class="flex flex-wrap gap-2">
+              ${cert.skills.map(skill => `
+                <span class="px-3 py-1 bg-${cert.color}-100 text-${cert.color}-700 rounded-full text-sm font-medium">
+                  ${skill}
+                </span>
+              `).join('')}
+            </div>
+          </div>
+          
+          <div class="flex justify-between items-center pt-6 border-t">
+            <div>
+              <p class="text-sm text-gray-500">Año de obtención</p>
+              <p class="text-lg font-semibold text-gray-900">${cert.year}</p>
+            </div>
+            <div class="text-right">
+              <p class="text-sm text-gray-500">ID de certificación</p>
+              <p class="text-sm font-mono text-gray-900">${cert.id}</p>
+            </div>
+          </div>
+        </div>
+      `;
+      
+      modal.classList.add('active');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeModal(event) {
+      if (!event || event.target.id === 'modal') {
+        const modal = document.getElementById('modal');
+        modal.classList.remove('active');
+        document.body.style.overflow = 'auto';
+      }
+    }
+
+    // Cerrar con tecla ESC
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') {
+        closeModal();
+      }
+    });
+  </script>
+</body>
+</html>
