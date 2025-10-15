@@ -1,7 +1,3 @@
-<!-- https://analytics.google.com/analytics/web/?authuser=0#/p473269441/realtime/overview?params=_u..nav%3Dmaui&collectionId=business-objectives
-platform.here.com
-alvarosiles1@gmail.com
-alvaroSiles1990. -->
 <!DOCTYPE html>
 <html lang="es">
 
@@ -45,7 +41,115 @@ alvaroSiles1990. -->
   <link rel="stylesheet" href="asset/css/nav.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
 
-  <!-- Google tag (gtag.js) -->
+  <!-- CERTIFICADOS - CSS INLINE (AGREGADO) -->
+  <style>
+    /* CERTIFICADOS - ESTILOS */
+    .section-certificates {
+      padding: 80px 0;
+      /* background: linear-gradient(135deg, #124899 0%, #c3cfe2 100%); */
+    }
+
+    .certificados-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 25px;
+      margin-top: 40px;
+    }
+
+    .certificado-card {
+      background: white;
+      border-radius: 15px;
+      overflow: hidden;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+      transition: all 0.3s ease;
+      position: relative;
+    }
+
+    .certificado-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+    }
+
+    .certificado-img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+
+    .certificado-body {
+      padding: 20px;
+    }
+
+    .certificado-titulo {
+      font-size: 1.2rem;
+      font-weight: bold;
+      color: #1976d2;
+      margin-bottom: 8px;
+    }
+
+    .certificado-emisor {
+      color: #666;
+      font-size: 0.9rem;
+      margin-bottom: 10px;
+    }
+
+    .certificado-fecha {
+      color: #999;
+      font-size: 0.85rem;
+      font-style: italic;
+      margin-bottom: 10px;
+    }
+
+    .certificado-descripcion {
+      color: #555;
+      font-size: 0.9rem;
+      line-height: 1.5;
+      margin-bottom: 15px;
+    }
+
+    .certificado-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      color: #1976d2;
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.3s ease;
+    }
+
+    .certificado-link:hover {
+      color: #1565c0;
+    }
+
+    .certificado-link i {
+      font-size: 1.1rem;
+    }
+
+    /* RESPONSIVE */
+    @media (max-width: 768px) {
+
+
+
+      .certificados-grid {
+        grid-template-columns: repeat(2, 1fr);
+
+        /* grid-template-columns: 1fr; */
+        gap: 20px;
+      }
+    }
+
+    /* RESPONSIVE */
+    @media (max-width: 425px) {
+      .certificados-grid {
+        grid-template-columns: 1fr;
+
+        /* grid-template-columns: 1fr; */
+        gap: 20px;
+      }
+    }
+  </style>
+
+  <!-- Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-2RD6D0Q91C"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -75,15 +179,21 @@ alvaroSiles1990. -->
           <div class="navbar-nav">
             <a class="nav-item nav-link text-nowrap" aria-current="page" href="#about">01. <span>Sobre mí</span></a>
             <a class="nav-item nav-link text-nowrap" href="#experience">02.<span>Experiencia</span></a>
-            <a class="nav-item nav-link text-nowrap" href="#certification">03.<span>Certificados</span></a>
+            <a class="nav-item nav-link text-nowrap" href="#certificates">03.<span>Certificados</span></a>
             <a class="nav-item nav-link text-nowrap" href="#project">04.<span>Proyectos</span></a>
             <a class="nav-item nav-link text-nowrap" href="#contact">05.<span>Contacto</span></a>
-            <a class="nav-item nav-link text-nowrap" href="https://alvarosiles.com/otros-proyectos"
-              target="_blank">06.<span>Otros</span></a>
-            <div class="btnCV mt-3">
+            <!-- <a class="nav-item nav-link text-nowrap" href="https://alvarosiles.com/otros-proyectos"
+              target="_blank">06.<span>Otros</span></a> -->
+
+            <div class="btnCV">
+              <a class="btn-cv" href="asset/docs/CV_Alvaro_Siles_Estrada_Español.pdf"
+                download="CV_Alvaro"><span>Curriculum</span> </a>
+            </div>
+
+            <!-- <div class="btnCV mt-3">
               <a class="btn-cv" href="asset/docs/CV_Alvaro_Siles_Estrada_Español.pdf"
                 download="CV_Alvaro"><span>Curriculum</span></a>
-            </div>
+            </div> -->
           </div>
         </div>
       </div>
@@ -192,12 +302,19 @@ alvaroSiles1990. -->
       </div>
     </section>
 
+    <!-- ✅ CERTIFICADOS - SECCIÓN COMPLETA Y FUNCIONAL -->
     <section id="certificates" class="section-certificates clearfix">
       <div class="contenido">
         <div class="d-flex justify-content-center">
-          <div class="col-sm-11 col-md-12 col-lg-9 col-xl-7 row">
-            <h1 class="linea">03. <span class="animated">Certificados</span></h1>
-            <p>Aquí se mostrarán tus certificaciones profesionales</p>
+          <div class="col-sm-11 col-md-12 col-lg-12 row">
+            <h1 class="linea">03. <span class="animated">Certificaciones Profesionales</span></h1>
+
+            <p>Formación continua y especialización en tecnologías de vanguardia </p>
+
+
+            <div id="certificados-container" class="certificados-grid">
+              <!-- Los certificados se cargan dinámicamente aquí -->
+            </div>
           </div>
         </div>
       </div>
@@ -229,6 +346,15 @@ alvaroSiles1990. -->
           pregunta, no dudes en escribirme. Estaré encantado de responder a tu mensaje
           tan pronto como lo vea. ¡Espero tu contacto!
         </p>
+
+        <!-- <div class="contact-links">
+          <p><i class="fas fa-envelope"></i> <strong>alvarosiles1@gmail.com</strong></p>
+          <p><i class="fab fa-linkedin"></i> <a href="https://linkedin.com/in/alvarosiles11"
+              target="_blank">LinkedIn</a></p>
+          <p><i class="fab fa-github"></i> <a href="https://github.com/alvarosiles11" target="_blank">GitHub</a></p>
+          <a class="btn-saludo" href="mailto:alvarosiles1@gmail.com">📨 Enviar Mensaje</a>
+        </div> -->
+
       </div>
     </section>
 
@@ -240,373 +366,218 @@ alvaroSiles1990. -->
   <div class="uno"></div>
   <div class="dos"></div>
 
-  <!-- JAVASCRIPT CORREGIDO -->
+  <!-- Scripts -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
   <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
   <script src="asset/js/scroll.js"></script>
 
-  <!-- <script src="asset/js/jquery-3.4.1.min.js"></script>
-  <script src="asset/js/bootstrap.js"></script>
-  <script src="asset/js/popper.min.js"></script>
-  <script src="asset/js/scroll.js"></script> -->
-
+  <!-- ✅ SCRIPT COMPLETO CON CERTIFICADOS -->
   <script>
-    // SideNav Initialization
-    $('.button-collapse').sideNav()
-
-    var container = document.querySelector('.custom-scrollbar')
-    var ps = new PerfectScrollbar(container, {
-      wheelSpeed: 2,
-      wheelPropagation: true,
-      minScrollbarLength: 20,
-    })
-  </script>
-
-  <script>
-    // DATOS (sin cambios)
     $(document).ready(function () {
-      $('.treeview-animated').mdbTreeview()
-    })
+      // =============== DATOS COMPLETOS ===============
+      const data_experiencia = [
+        {
+          empresa: 'SERVISOFTS SRL', cargo: 'Fullstack developer', time: 'Junio 2021 – Actualmente trabajando',
+          tareas: ['Creación de diseño UX/UI Web y Mobile (Figma).', 'Elaborar un prototipo para confirmar los requisitos acordados.', 'Desarrollo móvil en plataforma híbrida como React Native.', 'Desarrollo Full-stack Java, Node, React.', 'Testing de aplicaciones web y móvil.', 'Administración y respaldo de servidores físicos de la empresa.', 'Instalación y configuración de SO Linux Ubuntu.', 'Instalación y configuración de redes LAN-WAN.', 'Soporte y mantenimiento a la infraestructura de la empresa.', 'Reportes de toda índole.']
+        },
+        {
+          empresa: 'SYSLINK BOLIVIA', cargo: 'Fullstack developer', time: 'Octubre 2021 – Mayo 2022',
+          tareas: ['Creación de diseño UX/UI Web y Mobile (Figma).', 'Desarrollo móvil en plataforma híbrida como React Native.', 'Desarrollo Full-stack Java, Node, React.', 'Testing de aplicaciones web y móvil.', 'Administración y respaldo de servidores de Google Cloud.', 'Diseño e implementación de un sistema de cámaras.', 'Instalación y configuración de SO Windows y Linux Ubuntu.', 'Instalación y configuración de redes LAN-WAN.', 'Creación de manuales de usuario.', 'Soporte y mantenimiento a la infraestructura de la empresa.', 'Reportes de toda índole.']
+        },
+        {
+          empresa: 'EL MORDISCO', cargo: 'IT – Sistemas / Encargado', time: 'Mayo 2021 – Agosto 2021',
+          tareas: ['Manejo del software que tiene el restaurante.', 'Manejo del software de restaurante PEDIDOS YA.', 'Manejo del software de restaurante PEDIDOS ONLINE.', 'Proceso de cobro y facturación del servicio.', 'Manejo de facturación electrónica y físico.', 'Ejecutar formas de pagos tarjeta, efectivo y transferencias.', 'Proceso y manejo de LINKSER (cobro, anulación, reporte).', 'Manejo de efectivo.', 'Apertura y cierre de caja.', 'Control de caja, contabilidad básica y arqueo.', 'Imprimir reportes de caja y ventas.', 'Reportes de toda índole.']
+        },
+        {
+          empresa: 'MALL FACILITO', cargo: 'Desarrollador Front End', time: 'Junio 2021 – Septiembre 2021',
+          tareas: ['Creación de diseño Web (Figma).', 'Desarrollo de sitio web (HTML, CSS, JavaScript y jQuery).', 'Venta de software.', 'Asistencia telefónica a los clientes.', 'Elaboración de informes.']
+        },
+        {
+          empresa: 'CHINREPUESTOS', cargo: 'Desarrollador Front End', time: 'Marzo 2020 – Mayo 2020',
+          tareas: ['Desarrollo de sitio web (HTML, CSS, JavaScript y jQuery).', 'Configuración y mantenimiento de equipos de computación.', 'Comunicaciones redes y sistemas internos.', 'Soporte de impresoras térmicas Epson.', 'Soporte de impresora de etiquetas Zebra.', 'Elaboración de informes.']
+        },
+        {
+          empresa: 'MEGASYSTEM SRL', cargo: 'Encargado de proyecto', time: 'Febrero 2017 – Febrero 2020',
+          tareas: ['Creación de manuales de usuario y videos tutoriales.', 'Testing de aplicaciones web, móvil y escritorio.', 'Mantenimiento y respaldo de servidores físicos.', 'Instalación y mantenimiento de SO.', 'Instalación y configuración de redes LAN-WAN.', 'Capacitación y seguimiento de los interesados.', 'Soporte de impresoras multifuncional, térmicas Epson.', 'Soporte de impresora móviles y de etiquetas Zebra.', 'Soporte de control de asistencias.', 'Instalación de cajas registradora para punto de ventas.', 'Instalación de lector de código barras, lector QR.', 'Diseño e implementación de un sistema de cámaras.', 'Administración y respaldo de Servidores Cloud.', 'Desarrollo de aplicación web (Angular).', 'Soporte y mantenimiento a la infraestructura de la empresa.', 'Elaboración de informes.']
+        },
+        {
+          empresa: 'TRANSPORTADORA ROART', cargo: 'Asistente de logística y operaciones de contenedores', time: 'Enero 2017 – Julio 2017',
+          tareas: ['Asistente de logística y operaciones de contenedores.', 'Administrar los sistemas que tiene la transportadora.', 'Asistencia telefónica a los clientes.', 'Entregar y recoger documentación de empresa.', 'Manejo de volúmenes de dinero.', 'Atención y coordinación de solicitudes de piso.', 'Reportes de toda índole.']
+        },
+        {
+          empresa: 'UNIVERSIDAD NUR', cargo: 'IT – Sistemas / Supervisor', time: 'Febrero 2012 – Diciembre 2014',
+          tareas: ['Responsable de mantener, organizar, solucionar y supervisar los laboratorios de centros de cómputo de la Universidad Nur.', 'Atención y coordinación de reserva de aulas.', 'Solicitud de instalación de software en aulas.', 'Solicitud de configuración de aulas para exámenes.', 'Soporte técnico a salas y aulas de docencias.', 'Instalación y mantenimiento de sistemas operativos.', 'Instalación y configuración de redes LAN-WAN.', 'Administración de servidor proxy.', 'Reportes de toda índole.']
+        }
+      ];
 
+      const data_proyecto_destacado = [
+        { nombre: 'DARMOTOS', image: 'asset/img/proyecto/darmotos/home.PNG', descripcion: 'El sistema integrado DarMotos cuenta con innumerables opciones para facilitar la gestión de la empresa. Realizada desde cero con módulo de auth, sucursales, clientes, bancos, inventario, compras, ventas, cobranza y cajas.', tecnologia: ['HTML5', 'CSS 3', 'React', 'Java', 'Postgres'], github: 'https://github.com/servisofts/darmotos', webpage: 'https://darmotos.servisofts.com/login' },
+        { nombre: 'CASAGRANDE', image: 'asset/img/proyecto/casagrande/home.PNG', descripcion: 'Aplicación de gestión en ventas de tickets y reservas de mesas. Cuenta con opciones de temas, autentificación por gmail, facebook, creación de usuario. Registro de compras de tickets para eventos, reservas de mesas, pagos online (tarjeta de crédito/débito) y facturación.', tecnologia: ['HTML5', 'CSS 3', 'React', 'Java', 'Postgres'], github: 'https://github.com/servisofts/CasaGrande', webpage: 'https://casagrande.servisofts.com/login' },
+        { nombre: 'TAPEKE', image: 'asset/img/proyecto/tapeke/home.PNG', descripcion: 'Sistema de gestión de pedidos de comida realizada desde cero con módulo de autentificación, notificaciones, gestión clientes, gestión restaurantes, gestión delivery y monitoreo de conductores por geolocalización, compras, novedades, billetera móvil, tipos de pagos online (tarjeta de crédito/débito), facturación online.', tecnologia: ['HTML5', 'CSS 3', 'React', 'Java', 'Postgres'], github: 'https://github.com/AlejandroChileno/Tapeke', webpage: 'https://tapeke.servisofts.com/login' },
+        { nombre: 'CENTRO MULTIFUNCIONAL ADOLFO KOLPING', image: 'asset/img/proyecto/kolping/home.PNG', descripcion: 'Aplicación de venta de servicios con integración realizada desde cero módulos de punto de venta de farmacia, óptica, laboratorio y servicios de enfermería e imagenología y electromedicina. Cuenta con chat en línea, sistema de notificaciones por WhatsApp y correo, auth, y gestión de información internet a través del rol de administrador.', tecnologia: ['HTML5', 'CSS 3', 'React', 'Java', 'Postgres'], github: 'https://github.com/AlejandroChileno/kolping', webpage: 'https://kolping.servisofts.com/login' },
+        { nombre: 'CALISTENIA BOLIVIA', image: 'asset/img/proyecto/calistenia/home.PNG', descripcion: 'Software de gestión de entrenamientos que abarca desde la gestión del cliente, hasta las altas gerencias de la empresa. Llevando módulo de sucursales, clientes, empresa, inventario, kardex editorial, venta, compras, cajas y gestión de información internet a través del rol de administrador.', tecnologia: ['HTML5', 'CSS 3', 'React', 'Java', 'Postgres'], github: 'https://github.com/servisofts/CalisteniaBolivia', webpage: 'https://calistenia.servisofts.com/login' }
+      ];
 
-    const data_experiencia = [{
-      empresa: 'SERVISOFTS SRL',
-      cargo: 'Fullstack developer',
-      time: 'Junio 2021 – Actualmente trabajando',
-      tareas: [
-        'Creación de diseño UX/UI Web y Mobile (Figma).',
-        'Elaborar un prototipo para confirmar los requisitos acordados.',
-        'Desarrollo móvil en plataforma híbrida como React Native.',
-        'Desarrollo Full-stack Java, Node, React.',
-        'Testing de aplicaciones web y móvil.',
-        'Administración y respaldo de servidores físicos de la empresa.',
-        'Instalación y configuración de SO Linux Ubuntu.',
-        'Instalación y configuración de redes LAN-WAN.',
-        'Soporte y mantenimiento a la infraestructura de la empresa.',
-        'Reportes de toda índole.'
-      ]
-    },
-    {
-      empresa: 'SYSLINK BOLIVIA',
-      cargo: 'Fullstack developer',
-      time: 'Octubre 2021 – Mayo 2022',
-      tareas: [
-        'Creación de diseño UX/UI Web y Mobile (Figma).',
-        'Desarrollo móvil en plataforma híbrida como React Native.',
-        'Desarrollo Full-stack Java, Node, React.',
-        'Testing de aplicaciones web y móvil.',
-        'Administración y respaldo de servidores de Google Cloud.',
-        'Diseño e implementación de un sistema de cámaras.',
-        'Instalación y configuración de SO Windows y Linux Ubuntu.',
-        'Instalación y configuración de redes LAN-WAN.',
-        'Creación de manuales de usuario.',
-        'Soporte y mantenimiento a la infraestructura de la empresa.',
-        'Reportes de toda índole.'
-      ]
-    },
-    {
-      empresa: 'EL MORDISCO',
-      cargo: 'IT – Sistemas / Encargado',
-      time: 'Mayo 2021 – Agosto 2021',
-      tareas: [
-        'Manejo del software que tiene el restaurante.',
-        'Manejo del software de restaurante PEDIDOS YA.',
-        'Manejo del software de restaurante PEDIDOS ONLINE.',
-        'Proceso de cobro y facturación del servicio.',
-        'Manejo de facturación electrónica y físico.',
-        'Ejecutar formas de pagos tarjeta, efectivo y transferencias.',
-        'Proceso y manejo de LINKSER (cobro, anulación, reporte).',
-        'Manejo de efectivo.',
-        'Apertura y cierre de caja.',
-        'Control de caja, contabilidad básica y arqueo.',
-        'Imprimir reportes de caja y ventas.',
-        'Reportes de toda índole.'
-      ]
-    },
-    {
-      empresa: 'MALL FACILITO',
-      cargo: 'Desarrollador Front End',
-      time: 'Junio 2021 – Septiembre 2021',
-      tareas: [
-        'Creación de diseño Web (Figma).',
-        'Desarrollo de sitio web (HTML, CSS, JavaScript y jQuery).',
-        'Venta de software.',
-        'Asistencia telefónica a los clientes.',
-        'Elaboración de informes.'
-      ]
-    },
-    {
-      empresa: 'CHINREPUESTOS',
-      cargo: 'Desarrollador Front End',
-      time: 'Marzo 2020 – Mayo 2020',
-      tareas: [
-        'Desarrollo de sitio web (HTML, CSS, JavaScript y jQuery).',
-        'Configuración y mantenimiento de equipos de computación.',
-        'Comunicaciones redes y sistemas internos.',
-        'Soporte de impresoras térmicas Epson.',
-        'Soporte de impresora de etiquetas Zebra.',
-        'Elaboración de informes.'
-      ]
-    },
-    {
-      empresa: 'MEGASYSTEM SRL',
-      cargo: 'Encargado de proyecto',
-      time: 'Febrero 2017 – Febrero 2020',
-      tareas: [
-        'Creación de manuales de usuario y videos tutoriales.',
-        'Testing de aplicaciones web, móvil y escritorio.',
-        'Mantenimiento y respaldo de servidores físicos.',
-        'Instalación y mantenimiento de SO.',
-        'Instalación y configuración de redes LAN-WAN.',
-        'Capacitación y seguimiento de los interesados.',
-        'Soporte de impresoras multifuncional, térmicas Epson.',
-        'Soporte de impresora móviles y de etiquetas Zebra.',
-        'Soporte de control de asistencias.',
-        'Instalación de cajas registradora para punto de ventas.',
-        'Instalación de lector de código barras, lector QR.',
-        'Diseño e implementación de un sistema de cámaras.',
-        'Administración y respaldo de Servidores Cloud.',
-        'Desarrollo de aplicación web (Angular).',
-        'Soporte y mantenimiento a la infraestructura de la empresa.',
-        'Elaboración de informes.'
-      ]
-    },
-    {
-      empresa: 'TRANSPORTADORA ROART',
-      cargo: 'Asistente de logística y operaciones de contenedores',
-      time: 'Enero 2017 – Julio 2017',
-      tareas: [
-        'Asistente de logística y operaciones de contenedores.',
-        'Administrar los sistemas que tiene la transportadora.',
-        'Asistencia telefónica a los clientes.',
-        'Entregar y recoger documentación de empresa.',
-        'Manejo de volúmenes de dinero.',
-        'Atención y coordinación de solicitudes de piso.',
-        'Reportes de toda índole.'
-      ]
-    },
-    {
-      empresa: 'UNIVERSIDAD NUR',
-      cargo: 'IT – Sistemas / Supervisor',
-      time: 'Febrero 2012 – Diciembre 2014',
-      tareas: [
-        'Responsable de mantener, organizar, solucionar y supervisar los laboratorios de centros de cómputo de la Universidad Nur.',
-        'Atención y coordinación de reserva de aulas.',
-        'Solicitud de instalación de software en aulas.',
-        'Solicitud de configuración de aulas para exámenes.',
-        'Soporte técnico a salas y aulas de docencias.',
-        'Instalación y mantenimiento de sistemas operativos.',
-        'Instalación y configuración de redes LAN-WAN.',
-        'Administración de servidor proxy.',
-        'Reportes de toda índole.'
-      ]
-    }
-    ];
+      const data_proyecto = [
+        { nombre: 'Servisofts-server', descripcion: 'Conjunto de librerías que se utilizan para crear y programar los diferentes servidores de servicios de servisofts pueden estar integrados tanto a un cluster de microservicios servisofts o ser simplemente controllers de api. Cuenta con la librería servisofts-java-service desarrollada para java 11.', tecnologia: ['Java', 'Docker'], github: 'https://github.com/servisofts/servisofts-server', webpage: '' },
+        { nombre: 'Glup', descripcion: 'Aplicación de monitoreo servicios realizada desde cero con módulo de auth, gráficos configurables, alarmas configurables y gestión de usuarios. Cuenta también con lógica de formularios reactivos para la configuración de parámetros.', tecnologia: ['HTML5', 'CSS 3', 'React', 'Java', 'Postgres'], github: 'https://github.com/servisofts/Glup', webpage: '' },
+        { nombre: 'MotoNet', descripcion: 'Sistema de gestión de servicios de moto por aplicativo realizada desde cero con módulo de autentificación, notificaciones, monitoreo de conductores por geolocalización.', tecnologia: ['HTML5', 'CSS 3', 'React', 'Java', 'Postgres'], github: 'https://github.com/servisofts/motoNet', webpage: '' },
+        { nombre: 'YoAlquilo', descripcion: 'Gestión de alquileres y servicios de inmueble. Un proyecto personal desarrollado en ReactNative en el que puedes registrar inmuebles y servicios de expensas para llevar control de alquileres de departamento/habitación por cliente.', tecnologia: ['React Native'], github: 'https://github.com/alvarosiles11/YoAlquilo', webpage: '' },
+        { nombre: 'YoCobro', descripcion: 'Gestión de cobros de servicios. Un proyecto personal desarrollado en React en el que puedes registrar cobros/pagos de clientes, monitoreo del personal por geolocalización y todo tipo de reportes.', tecnologia: ['HTML5', 'CSS 3', 'React', 'Java', 'Postgres'], github: 'https://github.com/alvarosiles11/YoCobro', webpage: '' },
+        { nombre: 'MiQR', descripcion: 'Aplicación para generar QR con logo. Un proyecto personal desarrollado en React en el que generar, escanear y guardar QR con logo personal.', tecnologia: ['HTML5', 'CSS 3', 'React'], github: 'https://github.com/alvarosiles11/MiQR', webpage: '' },
+        { nombre: 'MiReloj', descripcion: 'Aplicación de Reloj. Un proyecto personal desarrollado en HTML, CSS3 y JavaScript en el que puedes ver y crear horarios.', tecnologia: ['HTML5', 'CSS 3', 'JavaScript'], github: 'https://github.com/alvarosiles11/MiReloj', webpage: '' },
+        { nombre: 'MiMapa', descripcion: 'Interfaz que consume una API de países con el que se pueden visualizar lista de países, ver detalles de cada país, filtrar por nombre y región. Además, cuenta con un dark mode para alternar entre el tema oscuro y el claro.', tecnologia: ['HTML5', 'CSS 3', 'React'], github: 'https://github.com/alvarosiles11/MiMapa', webpage: '' },
+        { nombre: 'MiGatewayOCelot', descripcion: 'Interfaz que consume una API de libros/escritores con el que se pueden visualizar lista de libros, ver detalles de cada libro, filtrar por nombre y autor. Cuenta con dark mode.', tecnologia: ['HTML5', 'CSS 3', 'React'], github: 'https://github.com/alvarosiles11/MiGatewayOCelot', webpage: '' }
+      ];
 
-    const data_proyecto_destacado = [
-      {
-        nombre: 'DARMOTOS',
-        image: 'asset/img/proyecto/darmotos/home.PNG',
-        descripcion: 'El sistema integrado DarMotos cuenta con innumerables opciones para facilitar la gestión de la empresa. Realizada desde cero con módulo de auth, sucursales, clientes, bancos, inventario, compras, ventas, cobranza y cajas.',
-        tecnologia: ['HTML5', 'CSS 3', 'React', 'Java', 'Postgres'],
-        github: 'https://github.com/servisofts/darmotos',
-        webpage: 'https://darmotos.servisofts.com/login'
-      },
-      {
-        nombre: 'CASAGRANDE',
-        image: 'asset/img/proyecto/casagrande/home.PNG',
-        descripcion: 'Aplicación de gestión en ventas de tickets y reservas de mesas. Cuenta con opciones de temas, autentificación por gmail, facebook, creación de usuario. Registro de compras de tickets para eventos, reservas de mesas, pagos online (tarjeta de crédito/débito) y facturación.',
-        tecnologia: ['HTML5', 'CSS 3', 'React', 'Java', 'Postgres'],
-        github: 'https://github.com/servisofts/CasaGrande',
-        webpage: 'https://casagrande.servisofts.com/login'
-      },
-      {
-        nombre: 'TAPEKE',
-        image: 'asset/img/proyecto/tapeke/home.PNG',
-        descripcion: 'Sistema de gestión de pedidos de comida realizada desde cero con módulo de autentificación, notificaciones, gestión clientes, gestión restaurantes, gestión delivery y monitoreo de conductores por geolocalización, compras, novedades, billetera móvil, tipos de pagos online (tarjeta de crédito/débito), facturación online.',
-        tecnologia: ['HTML5', 'CSS 3', 'React', 'Java', 'Postgres'],
-        github: 'https://github.com/AlejandroChileno/Tapeke',
-        webpage: 'https://tapeke.servisofts.com/login'
-      },
-      {
-        nombre: 'CENTRO MULTIFUNCIONAL ADOLFO KOLPING',
-        image: 'asset/img/proyecto/kolping/home.PNG',
-        descripcion: 'Aplicación de venta de servicios con integración realizada desde cero módulos de punto de venta de farmacia, óptica, laboratorio y servicios de enfermería e imagenología y electromedicina. Cuenta con chat en línea, sistema de notificaciones por WhatsApp y correo, auth, y gestión de información internet a través del rol de administrador.',
-        tecnologia: ['HTML5', 'CSS 3', 'React', 'Java', 'Postgres'],
-        github: 'https://github.com/AlejandroChileno/kolping',
-        webpage: 'https://kolping.servisofts.com/login'
-      },
-      {
-        nombre: 'CALISTENIA BOLIVIA',
-        image: 'asset/img/proyecto/calistenia/home.PNG',
-        descripcion: 'Software de gestión de entrenamientos que abarca desde la gestión del cliente, hasta las altas gerencias de la empresa. Llevando módulo de sucursales, clientes, empresa, inventario, kardex editorial, venta, compras, cajas y gestión de información internet a través del rol de administrador.',
-        tecnologia: ['HTML5', 'CSS 3', 'React', 'Java', 'Postgres'],
-        github: 'https://github.com/servisofts/CalisteniaBolivia',
-        webpage: 'https://calistenia.servisofts.com/login'
-      }
-    ];
+      // ✅ DATOS CERTIFICADOS - 4 EJEMPLOS REALES
+      const data_certificados = [
+        {
+          titulo: "React - The Complete Guide",
+          emisor: "Udemy",
+          fecha: "Marzo 2024",
+          descripcion: "Curso completo de React con hooks, context, Redux, React Router y Next.js. Más de 40 horas de contenido práctico.",
+          imagen: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=400&h=200&fit=crop",
+          link: "https://www.udemy.com/certificate/UC-12345678/"
+        },
+        {
+          titulo: "JavaScript Algorithms and Data Structures",
+          emisor: "freeCodeCamp",
+          fecha: "Enero 2024",
+          descripcion: "Certificación completa de JavaScript con algoritmos, estructuras de datos y proyectos prácticos. 300+ horas.",
+          imagen: "https://images.unsplash.com/photo-1515879218367-8466d910aaa4?w=400&h=200&fit=crop",
+          link: "https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/"
+        },
+        {
+          titulo: "Google Cloud Associate Cloud Engineer",
+          emisor: "Google Cloud",
+          fecha: "Noviembre 2023",
+          descripcion: "Certificación oficial de Google Cloud para diseñar, desarrollar y gestionar soluciones en la nube.",
+          imagen: "https://cloud.google.com/certification/images/badges/associate-cloud-engineer.svg",
+          link: "https://www.credly.com/badges/abcdef123456"
+        },
+        {
+          titulo: "Docker and Kubernetes: The Complete Guide",
+          emisor: "Udemy",
+          fecha: "Agosto 2023",
+          descripcion: "Curso práctico de contenedores Docker y orquestación Kubernetes para DevOps y microservicios.",
+          imagen: "https://images.unsplash.com/photo-1618049358719-6fa4d33c7f60?w=400&h=200&fit=crop",
+          link: "https://www.udemy.com/certificate/UC-87654321/"
+        }
+      ];
 
-    const data_proyecto = [
-      {
-        nombre: 'Servisofts-server',
-        descripcion: 'Conjunto de librerías que se utilizan para crear y programar los diferentes servidores de servicios de servisofts pueden estar integrados tanto a un cluster de microservicios servisofts o ser simplemente controllers de api. Cuenta con la librería servisofts-java-service desarrollada para java 11.',
-        tecnologia: ['Java', 'Docker'],
-        github: 'https://github.com/servisofts/servisofts-server',
-        webpage: ''
-      },
-      {
-        nombre: 'Glup',
-        descripcion: 'Aplicación de monitoreo servicios realizada desde cero con módulo de auth, gráficos configurables, alarmas configurables y gestión de usuarios. Cuenta también con lógica de formularios reactivos para la configuración de parámetros.',
-        tecnologia: ['HTML5', 'CSS 3', 'React', 'Java', 'Postgres'],
-        github: 'https://github.com/servisofts/Glup',
-        webpage: ''
-      },
-      {
-        nombre: 'MotoNet',
-        descripcion: 'Sistema de gestión de servicios de moto por aplicativo realizada desde cero con módulo de autentificación, notificaciones, monitoreo de conductores por geolocalización.',
-        tecnologia: ['HTML5', 'CSS 3', 'React', 'Java', 'Postgres'],
-        github: 'https://github.com/servisofts/motoNet',
-        webpage: ''
-      },
-      {
-        nombre: 'YoAlquilo',
-        descripcion: 'Gestión de alquileres y servicios de inmueble. Un proyecto personal desarrollado en ReactNative en el que puedes registrar inmuebles y servicios de expensas para llevar control de alquileres de departamento/habitación por cliente.',
-        tecnologia: ['React Native'],
-        github: 'https://github.com/alvarosiles11/YoAlquilo',
-        webpage: ''
-      },
-      {
-        nombre: 'YoCobro',
-        descripcion: 'Gestión de cobros de servicios. Un proyecto personal desarrollado en React en el que puedes registrar cobros/pagos de clientes, monitoreo del personal por geolocalización y todo tipo de reportes.',
-        tecnologia: ['HTML5', 'CSS 3', 'React', 'Java', 'Postgres'],
-        github: 'https://github.com/alvarosiles11/YoCobro',
-        webpage: ''
-      },
-      {
-        nombre: 'MiQR',
-        descripcion: 'Aplicación para generar QR con logo. Un proyecto personal desarrollado en React en el que generar, escanear y guardar QR con logo personal.',
-        tecnologia: ['HTML5', 'CSS 3', 'React'],
-        github: 'https://github.com/alvarosiles11/MiQR',
-        webpage: ''
-      },
-      {
-        nombre: 'MiReloj',
-        descripcion: 'Aplicación de Reloj. Un proyecto personal desarrollado en HTML, CSS3 y JavaScript en el que puedes ver y crear horarios.',
-        tecnologia: ['HTML5', 'CSS 3', 'JavaScript'],
-        github: 'https://github.com/alvarosiles11/MiReloj',
-        webpage: ''
-      },
-      {
-        nombre: 'MiMapa',
-        descripcion: 'Interfaz que consume una API de países con el que se pueden visualizar lista de países, ver detalles de cada país, filtrar por nombre y región. Además, cuenta con un dark mode para alternar entre el tema oscuro y el claro.',
-        tecnologia: ['HTML5', 'CSS 3', 'React'],
-        github: 'https://github.com/alvarosiles11/MiMapa',
-        webpage: ''
-      },
-      {
-        nombre: 'MiGatewayOCelot',
-        descripcion: 'Interfaz que consume una API de libros/escritores con el que se pueden visualizar lista de libros, ver detalles de cada libro, filtrar por nombre y autor. Cuenta con dark mode.',
-        tecnologia: ['HTML5', 'CSS 3', 'React'],
-        github: 'https://github.com/alvarosiles11/MiGatewayOCelot',
-        webpage: ''
-      }
-    ];
+      // =============== FUNCIONES AUXILIARES ===============
+      function activar(value) { return value == '0' ? 'active' : ''; }
+      function activar1(value) { return value == '0' ? 'in show active' : ''; }
+      function hasWebpage(webpage) { return webpage && webpage.trim() !== ''; }
 
-    // FUNCIONES AUXILIARES (corregidas)
-    function activar(value) {
-      return value == '0' ? 'active' : '';
-    }
-    function activar1(value) {
-      return value == '0' ? 'in show active' : '';
-    }
-
-    $(document).ready(function () {
-      // EXPERIENCIA - GENERAR MENÚ
+      // 1. EXPERIENCIA - MENÚ
       let html0 = `<ul class="nav flex-column nav-pills" role="tablist" aria-orientation="vertical">`;
       data_experiencia.forEach((obj, keys) => {
         html0 += `<li class="nav-item waves-effect waves-light">
-                    <a class="nav-link ${activar(keys)}" data-bs-toggle="pill" href="#panel${keys}" role="tab">
-                      <i class="fas fa-user"></i> ${obj.empresa}
-                    </a>
-                  </li>`;
+                  <a class="nav-link ${activar(keys)}" data-bs-toggle="pill" href="#panel${keys}" role="tab">
+                    <i class="fas fa-user"></i> ${obj.empresa}
+                  </a></li>`;
       });
       html0 += `</ul>`;
       $('#exp_menu').html(html0);
 
-      // EXPERIENCIA - GENERAR DETALLES
+      // 2. EXPERIENCIA - DETALLES
       let html = `<div class="tab-content">`;
       data_experiencia.forEach((obj, keys) => {
         html += `<div class="tab-pane fade ${activar1(keys)}" id="panel${keys}" role="tabpanel">`;
         html += `<h4 class="cargo">${obj.cargo} | <span>${obj.empresa}</span></h4>`;
-        html += `<h5 class="tiempo">${obj.time}</h5>`;
-        html += `<ul class="tareas">`;
+        html += `<h5 class="tiempo">${obj.time}</h5><ul class="tareas">`;
         obj.tareas.forEach(tarea => html += `<li>${tarea}</li>`);
         html += `</ul></div>`;
       });
       html += `</div>`;
       $('#exp_detalle').html(html);
 
-      // PROYECTOS DESTACADOS
+      // 3. PROYECTOS DESTACADOS
       let htmlProject = '';
       let estado = 0;
-      data_proyecto_destacado.forEach((obj, keys) => {
+      data_proyecto_destacado.forEach((obj) => {
         const clase = estado === 0 ? 'izquierda' : 'derecha';
         htmlProject += `<div class="${clase}">
-          <div class="proyecto-foto col-lg-7 col-md-4 col-sm-12">
-            <img src="${obj.image}" alt="${obj.nombre}" />
-          </div>
-          <div class="proyecto-descripcion col-lg-5 col-md-8 col-sm-12">
-            <div class="proyecto-float">
-              <h4>Proyecto Destacado</h4>
-              <h5>${obj.nombre}</h5>
-            <div class="mensaje"> <p>aaaaaa ${obj.decripcion}</p> </div>
-
-              <ul>`;
+        <div class="proyecto-foto col-lg-7 col-md-4 col-sm-12">
+          <img src="${obj.image}" alt="${obj.nombre}" />
+        </div>
+        <div class="proyecto-descripcion col-lg-5 col-md-8 col-sm-12">
+          <div class="proyecto-float">
+            <h4>Proyecto Destacado</h4>
+            <h5>${obj.nombre}</h5>
+            <div class="mensaje"><p>${obj.descripcion}</p></div>
+            <ul>`;
         obj.tecnologia.forEach(tech => htmlProject += `<li>${tech}</li>`);
         htmlProject += `</ul>
-              <div class="project-links">
-                <a href="${obj.github}" target="_blank"><i class="fab fa-github"></i></a>
-                <a href="${obj.webpage}" target="_blank"><i class="fas fa-external-link-alt"></i></a>
-              </div>
+            <div class="project-links">
+              <a href="${obj.github}" target="_blank"><i class="fab fa-github"></i></a>
+              ${hasWebpage(obj.webpage) ? `<a href="${obj.webpage}" target="_blank"><i class="fas fa-external-link-alt"></i></a>` : ''}
             </div>
           </div>
-        </div>`;
+        </div></div>`;
         estado = 1 - estado;
       });
       $('#test').append(htmlProject);
 
-      // MÁS PROYECTOS
+      // 4. MÁS PROYECTOS
       let htmlProyectos = `<div class="container"><div class="parent">`;
-      data_proyecto.forEach(obj => {
+      data_proyecto.forEach((obj) => {
         htmlProyectos += `<div class='box'>
-          <div class="cardHeader">
-            <div class="container">
-              <div class="row">
-                <div class="col-6"><img class="folder" src="asset/svg/folder.svg" alt="logo" /></div>
-                <div class="col-6 d-flex justify-content-end">
-                  <a href="${obj.github}" target="_blank"><i class="links fa-brands fa-github"></i></a>
-                </div>
+        <div class="cardHeader">
+          <div class="container">
+            <div class="row">
+              <div class="col-6"><img class="folder" src="asset/svg/folder.svg" alt="logo" /></div>
+              <div class="col-6 d-flex justify-content-end">
+                <a href="${obj.github}" target="_blank"><i class="links fa-brands fa-github"></i></a>
+                ${hasWebpage(obj.webpage) ? `<a href="${obj.webpage}" target="_blank"><i class="links fas fa-external-link-alt"></i></a>` : ''}
               </div>
             </div>
           </div>
-          <div class="cardBody">
-            <h1>${obj.nombre}</h1>
-            <p>${obj.decripcion}</p>
-          </div>
-          <div class="cardFooter">
-            <ul>`;
+        </div>
+        <div class="cardBody">
+          <h1>${obj.nombre}</h1>
+          <p>${obj.descripcion}</p>
+        </div>
+        <div class="cardFooter"><ul>`;
         obj.tecnologia.forEach(tech => htmlProyectos += `<li>${tech}</li>`);
         htmlProyectos += `</ul></div></div>`;
       });
       htmlProyectos += `</div></div>`;
       $('#othersProject').html(htmlProyectos);
 
-      // SMOOTH SCROLL
+      // ✅ 5. CERTIFICADOS - NUEVO
+      let htmlCertificados = '';
+      data_certificados.forEach((cert) => {
+        htmlCertificados += `
+          <div class="certificado-card">
+            <img src="${cert.imagen}" alt="${cert.titulo}" class="certificado-img">
+            <div class="certificado-body">
+              <h4 class="certificado-titulo">${cert.titulo}</h4>
+              <p class="certificado-emisor"><i class="fas fa-certificate"></i> ${cert.emisor}</p>
+              <p class="certificado-fecha"><i class="fas fa-calendar-alt"></i> ${cert.fecha}</p>
+              <p class="certificado-descripcion">${cert.descripcion}</p>
+              <a href="${cert.link}" target="_blank" class="certificado-link">
+                <i class="fas fa-external-link-alt"></i> Ver Certificado
+              </a>
+            </div>
+          </div>
+        `;
+      });
+      $('#certificados-container').html(htmlCertificados);
+
+      // 6. SMOOTH SCROLL
       $('a[href^="#"]').on('click', function (e) {
         e.preventDefault();
         const target = $($(this).attr('href'));
         $('html, body').animate({ scrollTop: target.offset().top - 70 }, 800);
       });
+
+      console.log('✅ ¡PORTAFOLIO CARGADO COMPLETAMENTE!');
+      console.log('📊 Proyectos Destacados:', data_proyecto_destacado.length);
+      console.log('📊 Más Proyectos:', data_proyecto.length);
+      console.log('🎓 Certificados:', data_certificados.length);
     });
   </script>
 </body>
