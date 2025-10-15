@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carlos Mendoza - Ingeniero de Sistemas</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+        
+        * {
+            font-family: 'Inter', sans-serif;
+        }
+        
+        .nav-link {
+            position: relative;
+            transition: color 0.3s ease;
+        }
+        
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -4px;
+            left: 0;
+            background-color: #3b82f6;
+            transition: width 0.3s ease;
+        }
+        
+        .nav-link:hover::after {
+            width: 100%;
+        }
+        
+        .certificate-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .certificate-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+        }
+        
+        .skill-tag {
+            transition: all 0.3s ease;
+        }
+        
+        .skill-tag:hover {
+            background-color: #3b82f6;
+            color: white;
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-900">
+    
+     Navigation 
+    <nav class="fixed top-0 w-full bg-white/80 backdrop-blur-md z-50 border-b border-slate-200">
+        <div class="max-w-6xl mx-auto px-6 py-4">
+            <div class="flex justify-between items-center">
+                <div class="text-xl font-semibold text-slate-900">Carlos Mendoza</div>
+                <div class="hidden md:flex gap-8">
+                    <a href="#about" class="nav-link text-slate-600 hover:text-slate-900">Sobre mí</a>
+                    <a href="#experience" class="nav-link text-slate-600 hover:text-slate-900">Experiencia</a>
+                    <a href="#certificates" class="nav-link text-slate-600 hover:text-slate-900">Certificados</a>
+                    <a href="#projects" class="nav-link text-slate-600 hover:text-slate-900">Proyectos</a>
+                    <a href="#contact" class="nav-link text-slate-600 hover:text-slate-900">Contacto</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+     Hero Section 
+    <section class="pt-32 pb-20 px-6">
+        <div class="max-w-6xl mx-auto">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h1 class="text-5xl md:text-6xl font-bold text-slate-900 mb-4 leading-tight text-balance">
+                        Carlos Mendoza
+                    </h1>
+                    <p class="text-2xl text-slate-600 mb-6">Ingeniero de Sistemas</p>
+                    <p class="text-lg text-slate-600 leading-relaxed mb-8">
+                        Desarrollo soluciones tecnológicas innovadoras que combinan arquitectura robusta con experiencias de usuario excepcionales. Especializado en desarrollo full-stack, cloud computing y arquitectura de software escalable.
+                    </p>
+                    <div class="flex gap-4">
+                        <a href="#contact" class="bg-slate-900 text-white px-6 py-3 rounded-lg hover:bg-slate-800 transition-colors">
+                            Contáctame
+                        </a>
+                        <a href="#projects" class="border-2 border-slate-900 text-slate-900 px-6 py-3 rounded-lg hover:bg-slate-900 hover:text-white transition-colors">
+                            Ver Proyectos
+                        </a>
+                    </div>
+                </div>
+                <div class="flex justify-center">
+                    <div class="w-80 h-80 bg-gradient-to-br from-blue-500 to-slate-700 rounded-2xl"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+     About Section 
+    <section id="about" class="py-20 px-6 bg-white">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-4xl font-bold text-slate-900 mb-12">Sobre mí</h2>
+            <div class="grid md:grid-cols-2 gap-12">
+                <div>
+                    <p class="text-lg text-slate-600 leading-relaxed mb-6">
+                        Con más de 8 años de experiencia en ingeniería de software, he liderado proyectos de transformación digital para empresas Fortune 500 y startups innovadoras. Mi enfoque combina excelencia técnica con visión estratégica de negocio.
+                    </p>
+                    <p class="text-lg text-slate-600 leading-relaxed">
+                        Actualmente trabajo como Arquitecto de Soluciones Senior, diseñando sistemas distribuidos de alta disponibilidad y mentoreando equipos de desarrollo en mejores prácticas de ingeniería.
+                    </p>
+                </div>
+                <div>
+                    <h3 class="text-xl font-semibold text-slate-900 mb-4">Tecnologías</h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="skill-tag px-4 py-2 bg-slate-100 text-slate-700 rounded-full text-sm">JavaScript</span>
+                        <span class="skill-tag px-4 py-2 bg-slate-100 text-slate-700 rounded-full text-sm">TypeScript</span>
+                        <span class="skill-tag px-4 py-2 bg-slate-100 text-slate-700 rounded-full text-sm">React</span>
+                        <span class="skill-tag px-4 py-2 bg-slate-100 text-slate-700 rounded-full text-sm">Node.js</span>
+                        <span class="skill-tag px-4 py-2 bg-slate-100 text-slate-700 rounded-full text-sm">Python</span>
+                        <span class="skill-tag px-4 py-2 bg-slate-100 text-slate-700 rounded-full text-sm">AWS</span>
+                        <span class="skill-tag px-4 py-2 bg-slate-100 text-slate-700 rounded-full text-sm">Docker</span>
+                        <span class="skill-tag px-4 py-2 bg-slate-100 text-slate-700 rounded-full text-sm">Kubernetes</span>
+                        <span class="skill-tag px-4 py-2 bg-slate-100 text-slate-700 rounded-full text-sm">PostgreSQL</span>
+                        <span class="skill-tag px-4 py-2 bg-slate-100 text-slate-700 rounded-full text-sm">MongoDB</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+     Experience Section 
+    <section id="experience" class="py-20 px-6">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-4xl font-bold text-slate-900 mb-12">Experiencia</h2>
+            <div class="space-y-8">
+                <div class="border-l-2 border-blue-500 pl-6">
+                    <div class="flex justify-between items-start mb-2">
+                        <div>
+                            <h3 class="text-xl font-semibold text-slate-900">Arquitecto de Soluciones Senior</h3>
+                            <p class="text-slate-600">TechCorp Solutions</p>
+                        </div>
+                        <span class="text-sm text-slate-500">2022 — Presente</span>
+                    </div>
+                    <p class="text-slate-600 leading-relaxed">
+                        Diseño e implementación de arquitecturas cloud-native para aplicaciones empresariales. Liderazgo técnico de equipos multidisciplinarios y definición de estándares de desarrollo.
+                    </p>
+                </div>
+                
+                <div class="border-l-2 border-slate-300 pl-6">
+                    <div class="flex justify-between items-start mb-2">
+                        <div>
+                            <h3 class="text-xl font-semibold text-slate-900">Ingeniero de Software Full Stack</h3>
+                            <p class="text-slate-600">Digital Innovations Inc.</p>
+                        </div>
+                        <span class="text-sm text-slate-500">2019 — 2022</span>
+                    </div>
+                    <p class="text-slate-600 leading-relaxed">
+                        Desarrollo de aplicaciones web escalables utilizando React, Node.js y AWS. Implementación de CI/CD y mejora de performance en un 40%.
+                    </p>
+                </div>
+                
+                <div class="border-l-2 border-slate-300 pl-6">
+                    <div class="flex justify-between items-start mb-2">
+                        <div>
+                            <h3 class="text-xl font-semibold text-slate-900">Desarrollador Backend</h3>
+                            <p class="text-slate-600">StartupLab</p>
+                        </div>
+                        <span class="text-sm text-slate-500">2017 — 2019</span>
+                    </div>
+                    <p class="text-slate-600 leading-relaxed">
+                        Construcción de APIs RESTful y microservicios. Optimización de bases de datos y implementación de sistemas de caché distribuido.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+     Certificates Section 
+    <section id="certificates" class="py-20 px-6 bg-white">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-4xl font-bold text-slate-900 mb-4">Certificaciones Profesionales</h2>
+            <p class="text-lg text-slate-600 mb-12">Formación continua y especialización en tecnologías de vanguardia</p>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                 Certificate 1 
+                <div class="certificate-card bg-gradient-to-br from-blue-50 to-slate-50 p-6 rounded-xl border border-slate-200">
+                    <div class="w-12 h-12 bg-blue-500 rounded-lg flex items-center justify-center mb-4">
+                        <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold text-slate-900 mb-2">AWS Solutions Architect Professional</h3>
+                    <p class="text-slate-600 mb-3">Amazon Web Services</p>
+                    <p class="text-sm text-slate-500 mb-4">Certificación avanzada en diseño de arquitecturas cloud escalables y seguras en AWS.</p>
+                    <div class="flex items-center justify-between">
+                        <span class="text-xs font-medium text-blue-600 bg-blue-100 px-3 py-1 rounded-full">2024</span>
+                        <span class="text-xs text-slate-500">ID: AWS-PSA-2024-8472</span>
+                    </div>
+                </div>
+
+                 Certificate 2 
+                <div class="certificate-card bg-gradient-to-br from-emerald-50 to-slate-50 p-6 rounded-xl border border-slate-200">
+                    <div class="w-12 h-12 bg-emerald-500 rounded-lg flex items-center justify-center mb-4">
+                        <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold text-slate-900 mb-2">Certified Kubernetes Administrator</h3>
+                    <p class="text-slate-600 mb-3">Cloud Native Computing Foundation</p>
+                    <p class="text-sm text-slate-500 mb-4">Administración y orquestación de contenedores en entornos de producción.</p>
+                    <div class="flex items-center justify-between">
+                        <span class="text-xs font-medium text-emerald-600 bg-emerald-100 px-3 py-1 rounded-full">2023</span>
+                        <span class="text-xs text-slate-500">ID: CKA-2023-5691</span>
+                    </div>
+                </div>
+
+                 Certificate 3 
+                <div class="certificate-card bg-gradient-to-br from-purple-50 to-slate-50 p-6 rounded-xl border border-slate-200">
+                    <div class="w-12 h-12 bg-purple-500 rounded-lg flex items-center justify-center mb-4">
+                        <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold text-slate-900 mb-2">Google Cloud Professional Architect</h3>
+                    <p class="text-slate-600 mb-3">Google Cloud Platform</p>
+                    <p class="text-sm text-slate-500 mb-4">Diseño e implementación de soluciones empresariales en Google Cloud.</p>
+                    <div class="flex items-center justify-between">
+                        <span class="text-xs font-medium text-purple-600 bg-purple-100 px-3 py-1 rounded-full">2023</span>
+                        <span class="text-xs text-slate-500">ID: GCP-PA-2023-3847</span>
+                    </div>
+                </div>
+
+                 Certificate 4 
+                <div class="certificate-card bg-gradient-to-br from-orange-50 to-slate-50 p-6 rounded-xl border border-slate-200">
+                    <div class="w-12 h-12 bg-orange-500 rounded-lg flex items-center justify-center mb-4">
+                        <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold text-slate-900 mb-2">Professional Scrum Master III</h3>
+                    <p class="text-slate-600 mb-3">Scrum.org</p>
+                    <p class="text-sm text-slate-500 mb-4">Liderazgo ágil y facilitación de equipos de alto rendimiento.</p>
+                    <div class="flex items-center justify-between">
+                        <span class="text-xs font-medium text-orange-600 bg-orange-100 px-3 py-1 rounded-full">2022</span>
+                        <span class="text-xs text-slate-500">ID: PSM3-2022-9156</span>
+                    </div>
+                </div>
+
+                 Certificate 5 
+                <div class="certificate-card bg-gradient-to-br from-cyan-50 to-slate-50 p-6 rounded-xl border border-slate-200">
+                    <div class="w-12 h-12 bg-cyan-500 rounded-lg flex items-center justify-center mb-4">
+                        <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold text-slate-900 mb-2">MongoDB Certified Developer</h3>
+                    <p class="text-slate-600 mb-3">MongoDB University</p>
+                    <p class="text-sm text-slate-500 mb-4">Desarrollo y optimización de aplicaciones con bases de datos NoSQL.</p>
+                    <div class="flex items-center justify-between">
+                        <span class="text-xs font-medium text-cyan-600 bg-cyan-100 px-3 py-1 rounded-full">2022</span>
+                        <span class="text-xs text-slate-500">ID: MDB-DEV-2022-7234</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+     Projects Section 
+    <section id="projects" class="py-20 px-6">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-4xl font-bold text-slate-900 mb-12">Proyectos Destacados</h2>
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="bg-white p-6 rounded-xl border border-slate-200 hover:shadow-lg transition-shadow">
+                    <div class="w-full h-48 bg-gradient-to-br from-blue-400 to-blue-600 rounded-lg mb-4"></div>
+                    <h3 class="text-2xl font-semibold text-slate-900 mb-2">Plataforma E-Commerce Cloud</h3>
+                    <p class="text-slate-600 mb-4">Sistema de comercio electrónico escalable con microservicios, procesamiento de pagos y análisis en tiempo real.</p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="text-xs px-3 py-1 bg-slate-100 text-slate-700 rounded-full">React</span>
+                        <span class="text-xs px-3 py-1 bg-slate-100 text-slate-700 rounded-full">Node.js</span>
+                        <span class="text-xs px-3 py-1 bg-slate-100 text-slate-700 rounded-full">AWS</span>
+                        <span class="text-xs px-3 py-1 bg-slate-100 text-slate-700 rounded-full">Kubernetes</span>
+                    </div>
+                </div>
+                
+                <div class="bg-white p-6 rounded-xl border border-slate-200 hover:shadow-lg transition-shadow">
+                    <div class="w-full h-48 bg-gradient-to-br from-emerald-400 to-emerald-600 rounded-lg mb-4"></div>
+                    <h3 class="text-2xl font-semibold text-slate-900 mb-2">Sistema de Gestión Hospitalaria</h3>
+                    <p class="text-slate-600 mb-4">Aplicación integral para gestión de pacientes, citas médicas y registros electrónicos de salud.</p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="text-xs px-3 py-1 bg-slate-100 text-slate-700 rounded-full">Angular</span>
+                        <span class="text-xs px-3 py-1 bg-slate-100 text-slate-700 rounded-full">Python</span>
+                        <span class="text-xs px-3 py-1 bg-slate-100 text-slate-700 rounded-full">PostgreSQL</span>
+                        <span class="text-xs px-3 py-1 bg-slate-100 text-slate-700 rounded-full">Docker</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+     Contact Section 
+    <section id="contact" class="py-20 px-6 bg-white">
+        <div class="max-w-4xl mx-auto text-center">
+            <h2 class="text-4xl font-bold text-slate-900 mb-4">¿Trabajamos juntos?</h2>
+            <p class="text-lg text-slate-600 mb-8">Estoy disponible para proyectos freelance y oportunidades de colaboración</p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center mb-12">
+                <a href="mailto:carlos.mendoza@email.com" class="bg-slate-900 text-white px-8 py-3 rounded-lg hover:bg-slate-800 transition-colors">
+                    Enviar Email
+                </a>
+                <a href="#" class="border-2 border-slate-900 text-slate-900 px-8 py-3 rounded-lg hover:bg-slate-900 hover:text-white transition-colors">
+                    Descargar CV
+                </a>
+            </div>
+            <div class="flex justify-center gap-6">
+                <a href="#" class="text-slate-600 hover:text-slate-900 transition-colors">
+                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                    </svg>
+                </a>
+                <a href="#" class="text-slate-600 hover:text-slate-900 transition-colors">
+                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                    </svg>
+                </a>
+                <a href="#" class="text-slate-600 hover:text-slate-900 transition-colors">
+                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/>
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </section>
+
+     Footer 
+    <footer class="py-8 px-6 border-t border-slate-200">
+        <div class="max-w-6xl mx-auto text-center text-slate-600">
+            <p>&copy; 2025 Carlos Mendoza. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
